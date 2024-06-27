@@ -1,0 +1,31 @@
+import { ReactNode } from 'react';
+import './Badges.css';
+import { twMerge } from 'tailwind-merge';
+import clsx from 'clsx';
+
+interface BadgeProps {
+  variant: "gray" | "lightGray" | "teal" | "blue" | "red" | "yellow" | "white";
+  children: ReactNode;
+}
+const variantClasses: Record<BadgeProps["variant"], string> = {
+  gray: "bg-gray-100 text-gray-800",
+  lightGray: "bg-gray-50 text-gray-500",
+  teal: "bg-teal-100 text-teal-800",
+  blue: "bg-blue-100 text-blue-800",
+  red: "bg-red-100 text-red-800",
+  yellow: "bg-yellow-100 text-yellow-800",
+  white: "bg-white/10 text-white",
+};
+
+
+const Badges: React.FC<BadgeProps> = ({ variant = "gray", children }) => {
+  const baseClasses =
+    "inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium";
+  const variantClass = variantClasses[variant] || variantClasses.gray;
+  const classes = twMerge(baseClasses, clsx(variantClass));
+
+  return <span className={classes}>{children}</span>;
+};
+
+
+export default Badges;
