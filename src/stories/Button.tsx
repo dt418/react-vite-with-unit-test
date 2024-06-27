@@ -1,6 +1,6 @@
 import './button.css';
 
-interface ButtonProps {
+type ButtonProps  = {
   /**
    * Is this the principal call to action on the page?
    */
@@ -45,3 +45,5 @@ export const Button = ({
     </button>
   );
 };
+
+Button.dispalyName = 'Button';
