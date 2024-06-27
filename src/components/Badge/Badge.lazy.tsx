@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyBadges = lazy(() => import('./Badges'));
+const LazyBadges = lazy(() => import('./Badge'));
 
 const Badges = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode }

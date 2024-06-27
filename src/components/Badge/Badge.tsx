@@ -1,13 +1,14 @@
 import { ReactNode } from 'react';
-import './Badges.css';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
 
-interface BadgeProps {
-  variant: "gray" | "lightGray" | "teal" | "blue" | "red" | "yellow" | "white";
+export type BageVariant = 'gray' | 'blue' | 'lightGray' | 'red' | 'teal' | 'white' | 'yellow';
+
+type BadgeProps  = {
+  variant: BageVariant;
   children: ReactNode;
 }
-const variantClasses: Record<BadgeProps["variant"], string> = {
+const variantClasses: Record<BadgeProps['variant'], string> = {
   gray: "bg-gray-100 text-gray-800",
   lightGray: "bg-gray-50 text-gray-500",
   teal: "bg-teal-100 text-teal-800",
