@@ -7,7 +7,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = (props) => {
   return (
     <div data-testid="Button" {...props}>
-      Button component
+      Button
     </div>
   );
 };

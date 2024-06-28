@@ -6,7 +6,7 @@ const Button = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
 ) => (
   <Suspense fallback={null}>
-    <LazyButton {...props}/>
+    <LazyButton {...props} />
   </Suspense>
 );
 

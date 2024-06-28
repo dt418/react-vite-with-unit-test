@@ -16,6 +16,7 @@ const variantClasses: Record<BadgeProps['variant'], string> = {
   red: "bg-red-100 text-red-800",
   yellow: "bg-yellow-100 text-yellow-800",
   white: "bg-white/10 text-white",
+  
 };
 
 
