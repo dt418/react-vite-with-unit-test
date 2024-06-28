@@ -1,8 +1,9 @@
 import { pascalCase } from "change-case";
-import { NodePlopAPI } from "plop";
 
-
-export default function (plop : NodePlopAPI) {
+export default function (
+  /** @type {import('plop').NodePlopAPI} */
+  plop
+) {
   // Helper to convert text to PascalCase
   plop.setHelper("pascalCase", (text) => pascalCase(text));
   plop.setGenerator("component", {
@@ -37,4 +38,4 @@ export default function (plop : NodePlopAPI) {
       },
     ],
   });
-};
+}
