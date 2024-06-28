@@ -1,0 +1,12 @@
+import { render, screen } from '@testing-library/react';
+import {{pascalCase componentName}} from './{{pascalCase componentName}}';
+
+describe('<{{pascalCase componentName}} />', () => {
+  test('it should mount', () => {
+    render(<{{pascalCase componentName}} />);
+
+    const {{pascalCase componentName}}Test = screen.getByTestId('{{pascalCase componentName}}');
+
+    expect({{pascalCase componentName}}Test).toBeInTheDocument();
+  });
+});

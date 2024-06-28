@@ -1,0 +1,13 @@
+import React, { lazy, Suspense } from "react";
+
+const Lazy{{pascalCase componentName}} = lazy(() => import("./{{pascalCase componentName}}"));
+
+const {{pascalCase componentName}} = (
+  props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+) => (
+  <Suspense fallback={null}>
+    <Lazy{{pascalCase componentName}} {...props}/>
+  </Suspense>
+);
+
+export default {{pascalCase componentName}};
