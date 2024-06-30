@@ -14,20 +14,22 @@ interface ModalProps {
   defaultValue: ModalValue;
 }
 
-export const Modal = ({ closeModal, onSubmit, defaultValue = {
-  id:'0',
-  para:'',
-  criterion: 0,
-  value:'',
-  type: 0
-}}: ModalProps) => {
+export const Modal = ({
+  closeModal,
+  onSubmit,
+  defaultValue = {
+    id: "0",
+    para: "",
+    criterion: 0,
+    value: "",
+    type: 0,
+  },
+}: ModalProps) => {
   const fields = Object.keys(Object.values(dataJSON)[0]).filter(
-    (item: any) => !item.startsWith("delta_")
+    (item: string) => !item.startsWith("delta_")
   );
 
-  const [formState, setFormState] = useState(
-    defaultValue 
-  );
+  const [formState, setFormState] = useState(defaultValue);
   const [errors, setErrors] = useState<string[]>([]);
 
   const validateForm = () => {
@@ -35,7 +37,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue = {
       setErrors([]);
       return true;
     } else {
-      let errorFields = [];
+      const errorFields = [];
       for (const [key, value] of Object.entries(formState)) {
         console.log(key);
         console.log(value);
@@ -144,7 +146,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue = {
                     onChange={handleChange}
                     value={formState.para}
                   >
-                    {fields.map((item: any, idx: number) => (
+                    {fields.map((item: string, idx: number) => (
                       <option key={idx} value={item}>
                         {item}
                       </option>
