@@ -2,18 +2,18 @@ import { BaseSyntheticEvent, ChangeEvent, useState } from 'react';
 
 import dataJSON from '../../public/data.json';
 
-interface ModalValue {
+type ModalValue = {
   id: string;
   para: string;
   criterion: number;
   value: string;
   type: number;
-}
-interface ModalProps {
+};
+type ModalProps = {
   closeModal: () => void;
   onSubmit: <TData>(data: TData) => void;
   defaultValue: ModalValue;
-}
+};
 
 export const Modal = ({
   closeModal,
@@ -46,7 +46,12 @@ export const Modal = ({
           errorFields.push(key == 'id' ? 'Bond ID' : key);
         } else {
           if (key == 'id') {
-            if (!(Object.keys(dataJSON).includes(value) || value == 'ALL')) {
+            if (
+              !(
+                Object.keys(dataJSON).includes(value as string) ||
+                value == 'ALL'
+              )
+            ) {
               errorFields.push('INVALID_ID_' + value);
             }
           }

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
-interface Props {
+type Props = {
   children: React.ReactNode;
   exceptionRef?: React.RefObject<HTMLElement>;
   onClick: () => void;
   className?: string;
-}
+};
 
 const ClickOutside: React.FC<Props> = ({
   children,

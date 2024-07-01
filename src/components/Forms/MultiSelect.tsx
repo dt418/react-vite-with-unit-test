@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-interface Option {
+type Option = {
   value: string;
   text: string;
   selected: boolean;
   element?: HTMLElement;
-}
+};
 
-interface DropdownProps {
+type DropdownProps = {
   id: string;
-}
+};
 
 const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
   const [options, setOptions] = useState<Option[]>([]);

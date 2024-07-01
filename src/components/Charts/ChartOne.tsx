@@ -115,12 +115,12 @@ const options: ApexOptions = {
   },
 };
 
-interface ChartOneState {
+type ChartOneState = {
   series: {
     name: string;
     data: number[];
   }[];
-}
+};
 
 const ChartOne: React.FC = () => {
   const [state, setState] = useState<ChartOneState>({

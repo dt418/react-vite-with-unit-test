@@ -1,13 +1,13 @@
-export interface StockData {
+export type StockData = {
   price: number;
   delta_price: number;
   rating: string;
   delta_rating: number;
-}
+};
 
-export interface StockDataCollection {
+export type StockDataCollection = {
   [key: string]: StockData;
-}
+};
 
 export const stockData: StockDataCollection = {
   'SAWAD.BK': {

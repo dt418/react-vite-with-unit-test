@@ -62,12 +62,12 @@ const options: ApexOptions = {
   },
 };
 
-interface ChartTwoState {
+type ChartTwoState = {
   series: {
     name: string;
     data: number[];
   }[];
-}
+};
 
 const ChartTwo: React.FC = () => {
   const [state, setState] = useState<ChartTwoState>({

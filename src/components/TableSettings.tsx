@@ -1,17 +1,17 @@
 import { BsFillPencilFill, BsFillTrashFill } from 'react-icons/bs';
 
-interface TableRow {
+type TableRow = {
   id: number;
   para: string;
   value: string | number;
   criterion: number;
   type: number;
-}
-interface TableProps<TRow> {
+};
+type TableProps<TRow> = {
   rows: TRow[];
   deleteRow: (id: number) => void;
   editRow: (id: number) => void;
-}
+};
 export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
   return (
     <div className="max-w-full overflow-x-auto table-wrapper">

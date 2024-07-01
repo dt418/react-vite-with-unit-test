@@ -2,9 +2,9 @@ import { ApexOptions } from 'apexcharts';
 import React, { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-interface ChartThreeState {
+type ChartThreeState = {
   series: number[];
-}
+};
 
 const options: ApexOptions = {
   chart: {
