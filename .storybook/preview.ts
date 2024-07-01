@@ -1,23 +1,25 @@
-import type { Preview, ReactRenderer } from "@storybook/react";
-import { withThemeByClassName,withThemeByDataAttribute } from "@storybook/addon-themes";
+import type { Preview, ReactRenderer } from '@storybook/react';
+import {
+  withThemeByClassName,
+  withThemeByDataAttribute,
+} from '@storybook/addon-themes';
 import '../src/css/style.css';
-
 
 const decorators = [
   withThemeByClassName<ReactRenderer>({
     themes: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
-    defaultTheme: "light",
+    defaultTheme: 'light',
   }),
   withThemeByDataAttribute<ReactRenderer>({
     themes: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
-    defaultTheme: "light",
-    attributeName: "data-theme",
+    defaultTheme: 'light',
+    attributeName: 'data-theme',
   }),
 ];
 
