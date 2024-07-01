@@ -1,7 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
+
 import Badge, { BageVariant } from './Badge';
 
-const variants: BageVariant[] = ['gray', 'blue', 'lightGray', 'red', 'teal', 'white', 'yellow'];
+const variants: BageVariant[] = [
+  'gray',
+  'blue',
+  'lightGray',
+  'red',
+  'teal',
+  'white',
+  'yellow',
+];
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Components/Bagde',
@@ -19,8 +28,8 @@ const meta = {
         type: 'select',
       },
       options: variants,
-      description: 'The variant to render badge color and background'
-    }
+      description: 'The variant to render badge color and background',
+    },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: {},
@@ -28,9 +37,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-
-
 
 export const Gray: Story = {
   args: {

@@ -1,4 +1,4 @@
-import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs";
+import { BsFillPencilFill, BsFillTrashFill } from 'react-icons/bs';
 
 interface TableRow {
   id: number;
@@ -52,14 +52,14 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <span>
                     {row.criterion == 0
-                      ? "goes down by"
+                      ? 'goes down by'
                       : row.criterion == 1
-                        ? "goes up by"
+                        ? 'goes up by'
                         : row.criterion == 2
-                          ? "is smaller than"
+                          ? 'is smaller than'
                           : row.criterion == 3
-                            ? "is greater than"
-                            : "is equal to"}
+                            ? 'is greater than'
+                            : 'is equal to'}
                   </span>
                 </td>
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
@@ -68,10 +68,10 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <span>
                     {row.type == 0
-                      ? "Info"
+                      ? 'Info'
                       : row.type == 1
-                        ? "Warning"
-                        : "Alert"}
+                        ? 'Warning'
+                        : 'Alert'}
                   </span>
                 </td>
 

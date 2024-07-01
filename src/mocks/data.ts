@@ -10,928 +10,928 @@ export interface StockDataCollection {
 }
 
 export const stockData: StockDataCollection = {
-  "SAWAD.BK": {
+  'SAWAD.BK': {
     price: 107,
     delta_price: 2,
-    rating: "A",
+    rating: 'A',
     delta_rating: 1,
   },
-  "BFIT.BK": {
+  'BFIT.BK': {
     price: 103,
     delta_price: 5,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: -1,
   },
-  "AMANAH.BK": {
+  'AMANAH.BK': {
     price: 102,
     delta_price: 8,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: -1,
   },
-  "TK.BK": {
+  'TK.BK': {
     price: 184,
     delta_price: 4,
-    rating: "AA+",
+    rating: 'AA+',
     delta_rating: 0,
   },
-  "LITm.BK": {
+  'LITm.BK': {
     price: 131,
     delta_price: 6,
-    rating: "CCC-",
+    rating: 'CCC-',
     delta_rating: 1,
   },
-  "AEONTS.BK": {
+  'AEONTS.BK': {
     price: 182,
     delta_price: 7,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 0,
   },
-  "ASK.BK": {
+  'ASK.BK': {
     price: 119,
     delta_price: 5,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: 1,
   },
-  "MTC.BK": {
+  'MTC.BK': {
     price: 172,
     delta_price: 9,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "NCAP.BK": {
+  'NCAP.BK': {
     price: 130,
     delta_price: 7,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "PL.BK": {
+  'PL.BK': {
     price: 125,
     delta_price: 3,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: -1,
   },
-  "THANI.BK": {
+  'THANI.BK': {
     price: 105,
     delta_price: 5,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 1,
   },
-  "TIDLOR.BK": {
+  'TIDLOR.BK': {
     price: 176,
     delta_price: 6,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: 0,
   },
-  "MTC*.BK": {
+  'MTC*.BK': {
     price: 189,
     delta_price: 2,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "ECL.BK": {
+  'ECL.BK': {
     price: 102,
     delta_price: 9,
-    rating: "B",
+    rating: 'B',
     delta_rating: 1,
   },
-  "SAT*.BK": {
+  'SAT*.BK': {
     price: 195,
     delta_price: 4,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: -1,
   },
-  "STANLY.BK": {
+  'STANLY.BK': {
     price: 192,
     delta_price: 8,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: -1,
   },
-  "AH*.BK": {
+  'AH*.BK': {
     price: 197,
     delta_price: 7,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "PCSGH.BK": {
+  'PCSGH.BK': {
     price: 104,
     delta_price: 5,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
-  "TKT.BK": {
+  'TKT.BK': {
     price: 104,
     delta_price: 6,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 0,
   },
-  "SAT.BK": {
+  'SAT.BK': {
     price: 172,
     delta_price: 5,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: 1,
   },
-  "KCE.BK": {
+  'KCE.BK': {
     price: 120,
     delta_price: 8,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "DELTA.BK": {
+  'DELTA.BK': {
     price: 155,
     delta_price: 4,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: -1,
   },
-  "HANA.BK": {
+  'HANA.BK': {
     price: 182,
     delta_price: 6,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "DELTA*.BK": {
+  'DELTA*.BK': {
     price: 187,
     delta_price: 9,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "SVI.BK": {
+  'SVI.BK': {
     price: 174,
     delta_price: 7,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 0,
   },
-  "KCE*.BK": {
+  'KCE*.BK': {
     price: 121,
     delta_price: 2,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: -1,
   },
-  "HANA*.BK": {
+  'HANA*.BK': {
     price: 162,
     delta_price: 3,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
-  "ETRON.BK": {
+  'ETRON.BK': {
     price: 171,
     delta_price: 5,
-    rating: "A",
+    rating: 'A',
     delta_rating: 1,
   },
-  "SPALI.BK": {
+  'SPALI.BK': {
     price: 131,
     delta_price: 8,
-    rating: "CCC+",
+    rating: 'CCC+',
     delta_rating: 1,
   },
-  "AP.BK": {
+  'AP.BK': {
     price: 120,
     delta_price: 4,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 0,
   },
-  "LH.BK": {
+  'LH.BK': {
     price: 162,
     delta_price: 6,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: -1,
   },
-  "QH.BK": {
+  'QH.BK': {
     price: 128,
     delta_price: 7,
-    rating: "CCC-",
+    rating: 'CCC-',
     delta_rating: 1,
   },
-  "PF.BK": {
+  'PF.BK': {
     price: 178,
     delta_price: 5,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "PSH.BK": {
+  'PSH.BK': {
     price: 110,
     delta_price: 2,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 0,
   },
-  "SIRI.BK": {
+  'SIRI.BK': {
     price: 124,
     delta_price: 3,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "ANAN.BK": {
+  'ANAN.BK': {
     price: 169,
     delta_price: 4,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
-  "ORI.BK": {
+  'ORI.BK': {
     price: 196,
     delta_price: 6,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 1,
   },
-  "SPALI*.BK": {
+  'SPALI*.BK': {
     price: 104,
     delta_price: 8,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "NOBLE.BK": {
+  'NOBLE.BK': {
     price: 176,
     delta_price: 9,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "AP*.BK": {
+  'AP*.BK': {
     price: 106,
     delta_price: 3,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 1,
   },
-  "LALIN.BK": {
+  'LALIN.BK': {
     price: 101,
     delta_price: 6,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: -1,
   },
-  "LPN.BK": {
+  'LPN.BK': {
     price: 122,
     delta_price: 5,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "ASAP.BK": {
+  'ASAP.BK': {
     price: 195,
     delta_price: 2,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 1,
   },
-  "THRE.BK": {
+  'THRE.BK': {
     price: 107,
     delta_price: 7,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: -1,
   },
-  "BKI.BK": {
+  'BKI.BK': {
     price: 127,
     delta_price: 4,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "THREL.BK": {
+  'THREL.BK': {
     price: 121,
     delta_price: 8,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: -1,
   },
-  "BLA.BK": {
+  'BLA.BK': {
     price: 195,
     delta_price: 3,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 0,
   },
-  "AIRA.BK": {
+  'AIRA.BK': {
     price: 134,
     delta_price: 6,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 1,
   },
-  "CGH.BK": {
+  'CGH.BK': {
     price: 120,
     delta_price: 5,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: -1,
   },
-  "CIMBT.BK": {
+  'CIMBT.BK': {
     price: 148,
     delta_price: 7,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 0,
   },
-  "KKP.BK": {
+  'KKP.BK': {
     price: 158,
     delta_price: 4,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "KTB.BK": {
+  'KTB.BK': {
     price: 178,
     delta_price: 8,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: -1,
   },
-  "LHFG.BK": {
+  'LHFG.BK': {
     price: 139,
     delta_price: 3,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 1,
   },
-  "SCB.BK": {
+  'SCB.BK': {
     price: 151,
     delta_price: 9,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "TCAP.BK": {
+  'TCAP.BK': {
     price: 170,
     delta_price: 5,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: -1,
   },
-  "TISCO.BK": {
+  'TISCO.BK': {
     price: 165,
     delta_price: 2,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "TMB.BK": {
+  'TMB.BK': {
     price: 129,
     delta_price: 7,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "SCB*.BK": {
+  'SCB*.BK': {
     price: 184,
     delta_price: 4,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: -1,
   },
-  "THANI*.BK": {
+  'THANI*.BK': {
     price: 131,
     delta_price: 3,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 1,
   },
-  "SCCC.BK": {
+  'SCCC.BK': {
     price: 160,
     delta_price: 6,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "SCC.BK": {
+  'SCC.BK': {
     price: 110,
     delta_price: 9,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: -1,
   },
-  "TPIPL.BK": {
+  'TPIPL.BK': {
     price: 177,
     delta_price: 4,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 1,
   },
-  "SCCC*.BK": {
+  'SCCC*.BK': {
     price: 168,
     delta_price: 2,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 0,
   },
-  "DTAC.BK": {
+  'DTAC.BK': {
     price: 122,
     delta_price: 5,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: -1,
   },
-  "THCOM.BK": {
+  'THCOM.BK': {
     price: 144,
     delta_price: 7,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 1,
   },
-  "ADVANC.BK": {
+  'ADVANC.BK': {
     price: 154,
     delta_price: 8,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "TRUE.BK": {
+  'TRUE.BK': {
     price: 176,
     delta_price: 6,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: -1,
   },
-  "INTUCH.BK": {
+  'INTUCH.BK': {
     price: 159,
     delta_price: 9,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 1,
   },
-  "DTAC*.BK": {
+  'DTAC*.BK': {
     price: 152,
     delta_price: 3,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "TPIPL*.BK": {
+  'TPIPL*.BK': {
     price: 175,
     delta_price: 2,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: -1,
   },
-  "FNS.BK": {
+  'FNS.BK': {
     price: 165,
     delta_price: 8,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "JMT.BK": {
+  'JMT.BK': {
     price: 148,
     delta_price: 7,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 1,
   },
-  "TIDLOR*.BK": {
+  'TIDLOR*.BK': {
     price: 154,
     delta_price: 3,
-    rating: "AA+",
+    rating: 'AA+',
     delta_rating: -1,
   },
-  "TK*.BK": {
+  'TK*.BK': {
     price: 102,
     delta_price: 4,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 0,
   },
-  "CHAYO.BK": {
+  'CHAYO.BK': {
     price: 190,
     delta_price: 8,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "KTC.BK": {
+  'KTC.BK': {
     price: 107,
     delta_price: 6,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 1,
   },
-  "AAV.BK": {
+  'AAV.BK': {
     price: 174,
     delta_price: 4,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: 0,
   },
-  "BA.BK": {
+  'BA.BK': {
     price: 160,
     delta_price: 5,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: -1,
   },
-  "THAI.BK": {
+  'THAI.BK': {
     price: 155,
     delta_price: 7,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "AOT.BK": {
+  'AOT.BK': {
     price: 125,
     delta_price: 9,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "BTS.BK": {
+  'BTS.BK': {
     price: 150,
     delta_price: 2,
-    rating: "A",
+    rating: 'A',
     delta_rating: -1,
   },
-  "BEM.BK": {
+  'BEM.BK': {
     price: 166,
     delta_price: 8,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 1,
   },
-  "DMT.BK": {
+  'DMT.BK': {
     price: 135,
     delta_price: 4,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "RATCH.BK": {
+  'RATCH.BK': {
     price: 168,
     delta_price: 6,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "GULF.BK": {
+  'GULF.BK': {
     price: 174,
     delta_price: 3,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 0,
   },
-  "EA.BK": {
+  'EA.BK': {
     price: 187,
     delta_price: 5,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "BCPG.BK": {
+  'BCPG.BK': {
     price: 115,
     delta_price: 7,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: -1,
   },
-  "BGRIM.BK": {
+  'BGRIM.BK': {
     price: 123,
     delta_price: 2,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 0,
   },
-  "GPSC.BK": {
+  'GPSC.BK': {
     price: 167,
     delta_price: 4,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 1,
   },
-  "TMT.BK": {
+  'TMT.BK': {
     price: 168,
     delta_price: 6,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: -1,
   },
-  "TRC.BK": {
+  'TRC.BK': {
     price: 182,
     delta_price: 7,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "TTCL.BK": {
+  'TTCL.BK': {
     price: 175,
     delta_price: 5,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 1,
   },
-  "ITD.BK": {
+  'ITD.BK': {
     price: 120,
     delta_price: 9,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "UNIQ.BK": {
+  'UNIQ.BK': {
     price: 158,
     delta_price: 3,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "STEC.BK": {
+  'STEC.BK': {
     price: 126,
     delta_price: 8,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "CK.BK": {
+  'CK.BK': {
     price: 109,
     delta_price: 4,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: -1,
   },
-  "NWR.BK": {
+  'NWR.BK': {
     price: 105,
     delta_price: 7,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 1,
   },
-  "STEC*.BK": {
+  'STEC*.BK': {
     price: 146,
     delta_price: 5,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 0,
   },
-  "PTTEP.BK": {
+  'PTTEP.BK': {
     price: 167,
     delta_price: 6,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "TTA.BK": {
+  'TTA.BK': {
     price: 122,
     delta_price: 8,
-    rating: "A",
+    rating: 'A',
     delta_rating: 1,
   },
-  "THREL*.BK": {
+  'THREL*.BK': {
     price: 118,
     delta_price: 2,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 0,
   },
-  "ASIMAR.BK": {
+  'ASIMAR.BK': {
     price: 194,
     delta_price: 4,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: -1,
   },
-  "PSL.BK": {
+  'PSL.BK': {
     price: 147,
     delta_price: 3,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 1,
   },
-  "TVO.BK": {
+  'TVO.BK': {
     price: 155,
     delta_price: 7,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 0,
   },
-  "TVI.BK": {
+  'TVI.BK': {
     price: 116,
     delta_price: 5,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: -1,
   },
-  "TTA*.BK": {
+  'TTA*.BK': {
     price: 124,
     delta_price: 8,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: 1,
   },
-  "PTTGC.BK": {
+  'PTTGC.BK': {
     price: 185,
     delta_price: 2,
-    rating: "B",
+    rating: 'B',
     delta_rating: 0,
   },
-  "RCL.BK": {
+  'RCL.BK': {
     price: 164,
     delta_price: 5,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: -1,
   },
-  "TOP.BK": {
+  'TOP.BK': {
     price: 176,
     delta_price: 4,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "BCP.BK": {
+  'BCP.BK': {
     price: 170,
     delta_price: 6,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 0,
   },
-  "BBL.BK": {
+  'BBL.BK': {
     price: 144,
     delta_price: 9,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 1,
   },
-  "EASTW.BK": {
+  'EASTW.BK': {
     price: 105,
     delta_price: 3,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: -1,
   },
-  "GUNKUL.BK": {
+  'GUNKUL.BK': {
     price: 102,
     delta_price: 8,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 0,
   },
-  "TISCO*.BK": {
+  'TISCO*.BK': {
     price: 146,
     delta_price: 5,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 1,
   },
-  "QH*.BK": {
+  'QH*.BK': {
     price: 167,
     delta_price: 7,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
-  "KKP*.BK": {
+  'KKP*.BK': {
     price: 139,
     delta_price: 6,
-    rating: "A",
+    rating: 'A',
     delta_rating: 1,
   },
-  "MINT.BK": {
+  'MINT.BK': {
     price: 163,
     delta_price: 4,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "BJC.BK": {
+  'BJC.BK': {
     price: 123,
     delta_price: 5,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 1,
   },
-  "THIP.BK": {
+  'THIP.BK': {
     price: 153,
     delta_price: 7,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "ROBINS.BK": {
+  'ROBINS.BK': {
     price: 180,
     delta_price: 9,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: -1,
   },
-  "HMPRO.BK": {
+  'HMPRO.BK': {
     price: 105,
     delta_price: 6,
-    rating: "A",
+    rating: 'A',
     delta_rating: 1,
   },
-  "BGRIM*.BK": {
+  'BGRIM*.BK': {
     price: 102,
     delta_price: 5,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 0,
   },
-  "CPALL.BK": {
+  'CPALL.BK': {
     price: 189,
     delta_price: 8,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "CPF.BK": {
+  'CPF.BK': {
     price: 160,
     delta_price: 4,
-    rating: "CCC+",
+    rating: 'CCC+',
     delta_rating: -1,
   },
-  "MAKRO.BK": {
+  'MAKRO.BK': {
     price: 157,
     delta_price: 7,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 0,
   },
-  "BIGC.BK": {
+  'BIGC.BK': {
     price: 140,
     delta_price: 3,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 1,
   },
-  "CENTEL.BK": {
+  'CENTEL.BK': {
     price: 178,
     delta_price: 5,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "CPN.BK": {
+  'CPN.BK': {
     price: 144,
     delta_price: 9,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: -1,
   },
-  "CRC.BK": {
+  'CRC.BK': {
     price: 145,
     delta_price: 4,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 1,
   },
-  "DOHOME.BK": {
+  'DOHOME.BK': {
     price: 136,
     delta_price: 8,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 0,
   },
-  "GLOBAL.BK": {
+  'GLOBAL.BK': {
     price: 176,
     delta_price: 6,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: -1,
   },
-  "ILM.BK": {
+  'ILM.BK': {
     price: 179,
     delta_price: 7,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: 1,
   },
-  "MEGA.BK": {
+  'MEGA.BK': {
     price: 195,
     delta_price: 2,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 0,
   },
-  "OSP.BK": {
+  'OSP.BK': {
     price: 184,
     delta_price: 4,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 1,
   },
-  "TACC.BK": {
+  'TACC.BK': {
     price: 153,
     delta_price: 6,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "ICHI.BK": {
+  'ICHI.BK': {
     price: 172,
     delta_price: 9,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "CPL.BK": {
+  'CPL.BK': {
     price: 165,
     delta_price: 8,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "SAPPE.BK": {
+  'SAPPE.BK': {
     price: 142,
     delta_price: 5,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "AJ.BK": {
+  'AJ.BK': {
     price: 141,
     delta_price: 3,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: 1,
   },
-  "TKN.BK": {
+  'TKN.BK': {
     price: 175,
     delta_price: 6,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
-  "CBG.BK": {
+  'CBG.BK': {
     price: 144,
     delta_price: 8,
-    rating: "B+",
+    rating: 'B+',
     delta_rating: 1,
   },
-  "MALEE.BK": {
+  'MALEE.BK': {
     price: 127,
     delta_price: 4,
-    rating: "AA-",
+    rating: 'AA-',
     delta_rating: 0,
   },
-  "ZEN.BK": {
+  'ZEN.BK': {
     price: 106,
     delta_price: 2,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: -1,
   },
-  "HTC.BK": {
+  'HTC.BK': {
     price: 156,
     delta_price: 7,
-    rating: "BB",
+    rating: 'BB',
     delta_rating: 1,
   },
-  "TMT*.BK": {
+  'TMT*.BK': {
     price: 190,
     delta_price: 3,
-    rating: "CCC",
+    rating: 'CCC',
     delta_rating: 0,
   },
-  "SFLEX.BK": {
+  'SFLEX.BK': {
     price: 103,
     delta_price: 9,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 1,
   },
-  "TU.BK": {
+  'TU.BK': {
     price: 149,
     delta_price: 6,
-    rating: "A+",
+    rating: 'A+',
     delta_rating: -1,
   },
-  "CFRESH.BK": {
+  'CFRESH.BK': {
     price: 154,
     delta_price: 5,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 0,
   },
-  "RBF.BK": {
+  'RBF.BK': {
     price: 186,
     delta_price: 8,
-    rating: "AAA",
+    rating: 'AAA',
     delta_rating: 1,
   },
-  "SAPPE*.BK": {
+  'SAPPE*.BK': {
     price: 164,
     delta_price: 7,
-    rating: "BBB-",
+    rating: 'BBB-',
     delta_rating: -1,
   },
-  "CPF*.BK": {
+  'CPF*.BK': {
     price: 158,
     delta_price: 2,
-    rating: "A",
+    rating: 'A',
     delta_rating: 0,
   },
-  "ZEN*.BK": {
+  'ZEN*.BK': {
     price: 127,
     delta_price: 9,
-    rating: "BB+",
+    rating: 'BB+',
     delta_rating: 1,
   },
-  "HTC*.BK": {
+  'HTC*.BK': {
     price: 193,
     delta_price: 3,
-    rating: "BBB",
+    rating: 'BBB',
     delta_rating: 0,
   },
-  "SFLEX*.BK": {
+  'SFLEX*.BK': {
     price: 151,
     delta_price: 5,
-    rating: "AA",
+    rating: 'AA',
     delta_rating: -1,
   },
 };

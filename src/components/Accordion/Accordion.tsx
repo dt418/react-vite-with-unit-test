@@ -1,25 +1,24 @@
-import clsx from "clsx";
-import { FC, HTMLProps, ReactNode, useState } from "react";
-import { twMerge } from "tailwind-merge";
+import clsx from 'clsx';
+import { FC, HTMLProps, ReactNode, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type AccordionItemContent = {
   title: string;
-  content: ReactNode
-}
+  content: ReactNode;
+};
 
 type AccordionItemProps = {
   title: string;
   children: ReactNode;
-  className?: HTMLProps<HTMLElement>["className"];
+  className?: HTMLProps<HTMLElement>['className'];
   isOpen: boolean;
   onToggle: () => void;
-}
+};
 
 type AccordionProps = {
-  items: AccordionItemContent[],
-  className?: HTMLProps<HTMLElement>["className"];
-}
-
+  items: AccordionItemContent[];
+  className?: HTMLProps<HTMLElement>['className'];
+};
 
 const AccordionItem: FC<AccordionItemProps> = ({
   title,
@@ -31,8 +30,8 @@ const AccordionItem: FC<AccordionItemProps> = ({
   return (
     <div
       className={twMerge(
-        "p-4 border border-gray-300 rounded-lg mb-2",
-        className
+        'p-4 border border-gray-300 rounded-lg mb-2',
+        className,
       )}
     >
       <summary
@@ -53,7 +52,7 @@ const Accordion: FC<AccordionProps> = ({ items, className }) => {
   };
 
   return (
-    <div data-testid="Accordion" className={clsx("accordion", className)}>
+    <div data-testid="Accordion" className={clsx('accordion', className)}>
       {items.map((item, index) => (
         <AccordionItem
           key={index}

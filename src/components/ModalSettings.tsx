@@ -1,5 +1,6 @@
-import { BaseSyntheticEvent, ChangeEvent, useState } from "react";
-import dataJSON from "../../public/data.json";
+import { BaseSyntheticEvent, ChangeEvent, useState } from 'react';
+
+import dataJSON from '../../public/data.json';
 
 interface ModalValue {
   id: string;
@@ -18,15 +19,15 @@ export const Modal = ({
   closeModal,
   onSubmit,
   defaultValue = {
-    id: "0",
-    para: "",
+    id: '0',
+    para: '',
     criterion: 0,
-    value: "",
+    value: '',
     type: 0,
   },
 }: ModalProps) => {
   const fields = Object.keys(Object.values(dataJSON)[0]).filter(
-    (item: string) => !item.startsWith("delta_")
+    (item: string) => !item.startsWith('delta_'),
   );
 
   const [formState, setFormState] = useState(defaultValue);
@@ -42,11 +43,11 @@ export const Modal = ({
         console.log(key);
         console.log(value);
         if (!value) {
-          errorFields.push(key == "id" ? "Bond ID" : key);
+          errorFields.push(key == 'id' ? 'Bond ID' : key);
         } else {
-          if (key == "id") {
-            if (!(Object.keys(dataJSON).includes(value) || value == "ALL")) {
-              errorFields.push("INVALID_ID_" + value);
+          if (key == 'id') {
+            if (!(Object.keys(dataJSON).includes(value) || value == 'ALL')) {
+              errorFields.push('INVALID_ID_' + value);
             }
           }
         }
@@ -58,26 +59,26 @@ export const Modal = ({
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLSelectElement | HTMLInputElement>
+    e: ChangeEvent<HTMLSelectElement | HTMLInputElement>,
   ) => {
     console.log(formState.criterion);
     console.log(e.target.name);
-    console.log(e.target.name == "para" && e.target.value == "rating");
+    console.log(e.target.name == 'para' && e.target.value == 'rating');
     console.log(formState.criterion > 1 && formState.criterion < 4);
     console.log(e.target.value);
     console.log(
-      e.target.name == "para" &&
-        e.target.value == "rating" &&
+      e.target.name == 'para' &&
+        e.target.value == 'rating' &&
         formState.criterion > 1 &&
-        formState.criterion < 4
+        formState.criterion < 4,
     );
     if (
-      e.target.name == "para" &&
-      e.target.value == "rating" &&
+      e.target.name == 'para' &&
+      e.target.value == 'rating' &&
       formState.criterion > 1 &&
       formState.criterion < 4
     ) {
-      setFormState({ ...formState, ["criterion"]: 0 });
+      setFormState({ ...formState, ['criterion']: 0 });
     }
 
     console.log(formState.criterion);
@@ -98,7 +99,7 @@ export const Modal = ({
     <div
       className="modal-container fixed z-50 flex top-25 bottom-5 "
       onClick={(e: BaseSyntheticEvent) => {
-        if (e.target.className === "modal-container") closeModal();
+        if (e.target.className === 'modal-container') closeModal();
       }}
     >
       <div className="modal rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark overflow-auto">
@@ -184,14 +185,14 @@ export const Modal = ({
                   <div className="flex flex-wrap items-center"></div>
                   <span className="m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke bg-gray py-1.5 px-2.5 text-sm font-medium dark:border-strokedark dark:bg-white/30">
                     {formState.criterion == 0
-                      ? "goes down by"
+                      ? 'goes down by'
                       : formState.criterion == 1
-                        ? "goes up by"
+                        ? 'goes up by'
                         : formState.criterion == 2
-                          ? "is smaller than"
+                          ? 'is smaller than'
                           : formState.criterion == 3
-                            ? "is greater than"
-                            : "is equal to"}
+                            ? 'is greater than'
+                            : 'is equal to'}
                   </span>
                   <select
                     className="absolute top-0 left-0 z-20 h-full w-full bg-transparent opacity-0"
@@ -201,10 +202,10 @@ export const Modal = ({
                   >
                     <option value="0">goes down by</option>
                     <option value="1">goes up by</option>
-                    {!(formState.para == "rating") && (
+                    {!(formState.para == 'rating') && (
                       <option value="2">is smaller than</option>
                     )}
-                    {!(formState.para == "rating") && (
+                    {!(formState.para == 'rating') && (
                       <option value="3">is greater than</option>
                     )}
 
@@ -255,13 +256,13 @@ export const Modal = ({
                 <div className="relative z-20 w-full rounded border border-stroke p-1.5 pr-8 font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
                   <div className="flex flex-wrap items-center"></div>
                   <span
-                    className={`${formState.type === 0 ? "bg-[#04b20c]" : formState.type === 1 ? "bg-[#eab90f]" : "bg-[#e13f32]"} m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke py-1.5 px-2.5 text-white font-medium dark:border-strokedark`}
+                    className={`${formState.type === 0 ? 'bg-[#04b20c]' : formState.type === 1 ? 'bg-[#eab90f]' : 'bg-[#e13f32]'} m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke py-1.5 px-2.5 text-white font-medium dark:border-strokedark`}
                   >
                     {formState.type === 0
-                      ? "Info"
+                      ? 'Info'
                       : formState.type === 1
-                        ? "Warning"
-                        : "Alert"}
+                        ? 'Warning'
+                        : 'Alert'}
                   </span>
                   <select
                     className="absolute top-0 left-0 z-20 h-full w-full bg-transparent opacity-0"
@@ -294,25 +295,25 @@ export const Modal = ({
                 </div>
               </div>
             </div>
-            {errors.filter((item: string) => item.startsWith("INVALID_ID"))
+            {errors.filter((item: string) => item.startsWith('INVALID_ID'))
               .length > 0 && (
               <>
                 <br />
                 <div className="error">
                   {errors
-                    .filter((item: string) => item.startsWith("INVALID_ID"))[0]
-                    .replace("INVALID_ID_", "")}{" "}
+                    .filter((item: string) => item.startsWith('INVALID_ID'))[0]
+                    .replace('INVALID_ID_', '')}{' '}
                   is not a valid bond
                 </div>
               </>
             )}
-            {errors.filter((item: string) => !item.startsWith("INVALID_ID"))
+            {errors.filter((item: string) => !item.startsWith('INVALID_ID'))
               .length > 0 && (
               <div className="error">
-                Please input{" "}
+                Please input{' '}
                 {errors
-                  .filter((item: string) => !item.startsWith("INVALID_ID"))
-                  .join(", ")}
+                  .filter((item: string) => !item.startsWith('INVALID_ID'))
+                  .join(', ')}
               </div>
             )}
 

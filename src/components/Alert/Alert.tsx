@@ -2,7 +2,7 @@ import React from 'react';
 
 type AlertProps = {
   // define your props here
-}
+};
 
 const Alert: React.FC<AlertProps> = (props) => {
   return (

@@ -1,12 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from 'react';
 
-const LazyAlert = lazy(() => import("./Alert"));
+const LazyAlert = lazy(() => import('./Alert'));
 
 const Alert = (
-  props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+  props: JSX.IntrinsicAttributes & { children?: React.ReactNode },
 ) => (
   <Suspense fallback={null}>
-    <LazyAlert {...props}/>
+    <LazyAlert {...props} />
   </Suspense>
 );
 
