@@ -10,17 +10,22 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', '@typescript-eslint', 'simple-import-sort', 'prettier'],
+  plugins: [
+    'react-refresh',
+    '@typescript-eslint',
+    'simple-import-sort',
+    'prettier',
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
     '@typescript-eslint/no-unused-vars': 'error',
-    // to enforce using type for object type definitions, can be type or interface 
+    // to enforce using type for object type definitions, can be type or interface
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error'],
   },
 };

@@ -25,13 +25,17 @@ const variantClasses: Record<BadgeProps['variant'], string> = {
   white: 'bg-white/10 text-white',
 };
 
-const Badges: React.FC<BadgeProps> = ({ variant = 'gray', children }) => {
+const Badge: React.FC<BadgeProps> = ({ variant = 'gray', children }) => {
   const baseClasses =
     'inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium';
   const variantClass = variantClasses[variant] || variantClasses.gray;
   const classes = twMerge(baseClasses, clsx(variantClass));
 
-  return <span className={classes}>{children}</span>;
+  return (
+    <span className={classes} data-testid="Badge">
+      {children}
+    </span>
+  );
 };
 
-export default Badges;
+export default Badge;
