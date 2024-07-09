@@ -10,5 +10,8 @@ export default defineConfig({
     include: [...configDefaults.include],
     exclude: [...configDefaults.exclude],
     setupFiles: ['./test/vitest.setup.ts'],
+    coverage: {
+      reportsDirectory: './coverage',
+    },
   },
 });
