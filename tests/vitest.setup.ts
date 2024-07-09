@@ -11,7 +11,7 @@ afterEach(() => {
 
 // Start worker before all tests
 beforeAll(() => {
-  worker.listen();
+  worker.listen({ onUnhandledRequest: 'bypass' });
 });
 
 //  Close worker after all tests
