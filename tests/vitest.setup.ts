@@ -3,14 +3,23 @@ import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { afterEach } from 'vitest';
 
-import { server } from '@/mocks/node';
+import { worker } from '@/mocks/node';
 
-server.events.on('request:start', ({ request }) => {
-  console.log('MSW intercepted:', request.method, request.url);
-});
-beforeAll(() => server.listen());
 afterEach(() => {
   cleanup();
-  server.resetHandlers();
 });
-afterAll(() => server.close());
+
+// Start worker before all tests
+beforeAll(() => {
+  worker.listen();
+});
+
+//  Close worker after all tests
+afterAll(() => {
+  worker.close();
+});
+
+// Reset handlers after each test `important for test isolation`
+afterEach(() => {
+  worker.resetHandlers();
+});
