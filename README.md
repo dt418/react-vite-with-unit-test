@@ -91,7 +91,7 @@ Include `test/vitest.setup.ts` into [tsconfig.app.json](./tsconfig.app.json) to 
   //existing config
   "include": [
     //existing include,
-    "test/vitest.setup.ts"
+    "tests/vitest.setup.ts"
   ]
 }
 ```
