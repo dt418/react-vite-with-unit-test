@@ -89,7 +89,7 @@ const variants = cva(
   },
 );
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof variants> & {
     // define your props here
     loading?: boolean;
