@@ -1,12 +1,12 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
+
+import { ButtonListProps } from './ButtonList';
 
 const LazyButtonList = lazy(() => import('./ButtonList'));
 
-const ButtonList = (
-  props: JSX.IntrinsicAttributes & { children?: React.ReactNode },
-) => (
+const ButtonList = (props: ButtonListProps) => (
   <Suspense fallback={null}>
-    <LazyButtonList {...props} buttons={[]} />
+    <LazyButtonList {...props} />
   </Suspense>
 );
 
