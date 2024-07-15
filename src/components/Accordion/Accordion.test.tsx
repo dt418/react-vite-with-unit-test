@@ -7,7 +7,7 @@ describe('<Accordion />', () => {
   test('it should mount', () => {
     render(<Accordion items={[]} />);
 
-    const accordionElement = screen.getByTestId('Accordion');
+    const accordionElement = screen.getByTestId('accordion');
 
     expect(accordionElement).toBeInTheDocument();
   });

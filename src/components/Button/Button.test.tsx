@@ -7,7 +7,7 @@ describe('<Button />', () => {
   test('it should mount', () => {
     render(<Button />);
 
-    const ButtonTest = screen.getByTestId('Button');
+    const ButtonTest = screen.getByTestId('button');
 
     expect(ButtonTest).toBeInTheDocument();
   });

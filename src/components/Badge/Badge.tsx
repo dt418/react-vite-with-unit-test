@@ -32,7 +32,7 @@ const Badge: React.FC<BadgeProps> = ({ variant = 'gray', children }) => {
   const classes = twMerge(baseClasses, clsx(variantClass));
 
   return (
-    <span className={classes} data-testid="Badge">
+    <span className={classes} data-testid="badge">
       {children}
     </span>
   );

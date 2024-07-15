@@ -52,7 +52,7 @@ const Accordion: FC<AccordionProps> = ({ items, className }) => {
   };
 
   return (
-    <div data-testid="Accordion" className={clsx('accordion', className)}>
+    <div data-testid="accordion" className={clsx('accordion', className)}>
       {items.map((item, index) => (
         <AccordionItem
           key={index}

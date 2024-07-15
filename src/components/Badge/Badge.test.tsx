@@ -6,7 +6,7 @@ import Badge from './Badge';
 describe('<Badge />', () => {
   test('it should mount', () => {
     render(<Badge variant="blue">Badge</Badge>);
-    const BadgeScreen = screen.getByTestId('Badge');
+    const BadgeScreen = screen.getByTestId('badge');
 
     expect(BadgeScreen).toBeInTheDocument();
   });

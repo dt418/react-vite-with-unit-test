@@ -6,7 +6,7 @@ describe('<Alert />', () => {
   test('it should mount', () => {
     render(<Alert />);
 
-    const AlertTest = screen.getByTestId('Alert');
+    const AlertTest = screen.getByTestId('alert');
 
     expect(AlertTest).toBeInTheDocument();
   });

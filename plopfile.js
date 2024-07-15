@@ -1,4 +1,17 @@
-import { pascalCase } from 'change-case';
+import {
+  camelCase,
+  capitalCase,
+  constantCase,
+  dotCase,
+  kebabCase,
+  noCase,
+  pascalCase,
+  pascalSnakeCase,
+  pathCase,
+  sentenceCase,
+  snakeCase,
+  trainCase,
+} from 'change-case';
 
 export default function (
   /** @type {import('plop').NodePlopAPI} */
@@ -6,6 +19,18 @@ export default function (
 ) {
   // Helper to convert text to PascalCase
   plop.setHelper('pascalCase', (text) => pascalCase(text));
+  plop.setHelper('camelCase', (text) => camelCase(text));
+  plop.setHelper('capitalCase', (text) => capitalCase(text));
+  plop.setHelper('constantCase', (text) => constantCase(text));
+  plop.setHelper('dotCase', (text) => dotCase(text));
+  plop.setHelper('kebabCase', (text) => kebabCase(text));
+  plop.setHelper('noCase', (text) => noCase(text));
+  plop.setHelper('pascalSnakeCase', (text) => pascalSnakeCase(text));
+  plop.setHelper('pathCase', (text) => pathCase(text));
+  plop.setHelper('sentenceCase', (text) => sentenceCase(text));
+  plop.setHelper('snakeCase', (text) => snakeCase(text));
+  plop.setHelper('trainCase', (text) => trainCase(text));
+
   plop.setGenerator('component', {
     description: 'Create a React component with TypeScript support',
     prompts: [
