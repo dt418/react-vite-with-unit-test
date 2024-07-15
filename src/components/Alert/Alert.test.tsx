@@ -4,7 +4,7 @@ import Alert from './Alert';
 
 describe('<Alert />', () => {
   test('it should mount', () => {
-    render(<Alert />);
+    render(<Alert title="alert" type="warning" description="Description" />);
 
     const AlertTest = screen.getByTestId('alert');
 

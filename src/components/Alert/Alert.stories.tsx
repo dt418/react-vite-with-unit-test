@@ -21,5 +21,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    title: 'Alert',
+    description: 'Alert description',
+    type: 'warning',
+  },
 };

@@ -129,7 +129,7 @@ const config: Config = {
           950: '#150507',
         },
         warning: {
-          DEFAULT: 'FFA70B',
+          DEFAULT: '#FFA70B',
           50: '#FFF9F0',
           100: '#FFF2DB',
           200: '#FFE3B3',
