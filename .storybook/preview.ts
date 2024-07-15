@@ -1,7 +1,6 @@
 import type { Preview, ReactRenderer } from '@storybook/react';
 import {
   withThemeByClassName,
-  withThemeByDataAttribute,
 } from '@storybook/addon-themes';
 import '../src/css/style.css';
 
@@ -12,14 +11,6 @@ const decorators = [
       dark: 'dark',
     },
     defaultTheme: 'light',
-  }),
-  withThemeByDataAttribute<ReactRenderer>({
-    themes: {
-      light: '',
-      dark: 'dark',
-    },
-    defaultTheme: 'light',
-    attributeName: 'data-theme',
   }),
 ];
 
