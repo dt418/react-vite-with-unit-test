@@ -7,8 +7,8 @@ describe('<{{pascalCase componentName}} />', () => {
   test('it should mount', () => {
     render(<{{pascalCase componentName}} />);
 
-    const {{pascalCase componentName}}Test = screen.getByTestId('{{camelCase componentName}}');
+    const {{camelCase componentName}}Test = screen.getByTestId('{{camelCase componentName}}');
 
-    expect({{pascalCase componentName}}Test).toBeInTheDocument();
+    expect({{camelCase componentName}}Test).toBeInTheDocument();
   });
 });

@@ -30,6 +30,13 @@ export default function (
   plop.setHelper('sentenceCase', (text) => sentenceCase(text));
   plop.setHelper('snakeCase', (text) => snakeCase(text));
   plop.setHelper('trainCase', (text) => trainCase(text));
+  // Custom helper to convert path to PascalCase
+  plop.setHelper('pascalPath', (text) => {
+    return text
+      .split('/')
+      .map((segment) => pascalCase(segment))
+      .join('/');
+  });
 
   plop.setGenerator('component', {
     description: 'Create a React component with TypeScript support',
@@ -39,28 +46,43 @@ export default function (
         name: 'componentName',
         message: 'Component name:',
       },
-    ],
-    actions: [
       {
-        type: 'add',
-        path: 'src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.tsx',
-        templateFile: 'plop-templates/component.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.lazy.tsx',
-        templateFile: 'plop-templates/componentLazy.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.stories.tsx',
-        templateFile: 'plop-templates/storybook.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.test.tsx',
-        templateFile: 'plop-templates/test.hbs',
+        type: 'input',
+        name: 'subfolder',
+        message: 'Subfolder (optional, e.g., common or common/buttons):',
+        default: '', // Default to an empty string if no subfolder is provided
       },
     ],
+    actions: (data) => {
+      const pathPrefix = data.subfolder
+        ? `src/components/${pascalCase(pathCase(data.subfolder))}/`
+        : 'src/components/';
+      return [
+        {
+          type: 'add',
+          path: `${pathPrefix}{{pascalCase componentName}}/{{pascalCase componentName}}.tsx`,
+          templateFile: 'plop-templates/component.hbs',
+          skipIfExists: true,
+        },
+        {
+          type: 'add',
+          path: `${pathPrefix}{{pascalCase componentName}}/{{pascalCase componentName}}.lazy.tsx`,
+          templateFile: 'plop-templates/componentLazy.hbs',
+          skipIfExists: true,
+        },
+        {
+          type: 'add',
+          path: `${pathPrefix}{{pascalCase componentName}}/{{pascalCase componentName}}.stories.tsx`,
+          templateFile: 'plop-templates/storybook.hbs',
+          skipIfExists: true,
+        },
+        {
+          type: 'add',
+          path: `${pathPrefix}{{pascalCase componentName}}/{{pascalCase componentName}}.test.tsx`,
+          templateFile: 'plop-templates/test.hbs',
+          skipIfExists: true,
+        },
+      ];
+    },
   });
 }

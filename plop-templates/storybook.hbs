@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import {{pascalCase componentName}} from './{{pascalCase componentName}}';
 
 const meta = {
-  title: 'Components/{{pascalCase componentName}}',
+  title: 'Components/{{#if subfolder}}{{pascalPath subfolder}}/{{/if}}{{pascalCase componentName}}',
   component: {{pascalCase componentName}},
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

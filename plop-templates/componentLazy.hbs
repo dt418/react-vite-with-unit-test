@@ -1,12 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from 'react';
 
-const Lazy{{pascalCase componentName}} = lazy(() => import("./{{pascalCase componentName}}"));
+import { {{pascalCase componentName}}Props } from './{{pascalCase componentName}}';
 
-const {{pascalCase componentName}} = (
-  props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
-) => (
+const Lazy{{pascalCase componentName}} = lazy(() => import('./{{pascalCase componentName}}'));
+
+const {{pascalCase componentName}} = (props: {{pascalCase componentName}}Props) => (
   <Suspense fallback={null}>
-    <Lazy{{pascalCase componentName}} {...props}/>
+    <Lazy{{pascalCase componentName}} {...props} />
   </Suspense>
 );
 
