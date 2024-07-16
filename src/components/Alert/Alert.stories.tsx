@@ -24,6 +24,24 @@ export const Default: Story = {
   args: {
     title: 'Alert',
     description: 'Alert description',
-    type: 'warning',
+    type: 'info',
+  },
+};
+export const Success: Story = {
+  args: {
+    ...Default.args,
+    type: 'success',
+  },
+};
+export const Danger: Story = {
+  args: {
+    ...Default.args,
+    type: 'danger',
+  },
+};
+export const Info: Story = {
+  args: {
+    ...Default.args,
+    type: 'info',
   },
 };
