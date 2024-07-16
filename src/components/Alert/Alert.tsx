@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority';
+import { cva, VariantProps } from 'class-variance-authority';
 import React from 'react';
 import {
   FaCheckCircle,
@@ -6,14 +6,6 @@ import {
   FaInfoCircle,
   FaTimesCircle,
 } from 'react-icons/fa';
-
-export type AlertProps = {
-  // define your props here
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-  type?: 'success' | 'danger' | 'warning' | 'info';
-};
 
 const alertClasses = cva(
   'flex w-full border-l-6 px-7 py-8 shadow-md bg-opacity-[10%] md:p-9 dark:bg-opacity-[15%]',
@@ -33,7 +25,7 @@ const alertClasses = cva(
 );
 
 const iconBgClasses = cva(
-  'mr-5 inline-flex w-9 h-9 max-w-[36px] items-center justify-center rounded-lg bg-opacity-30 max-w-[36px]',
+  'mr-5 inline-flex w-9 h-9 max-w-[36px] items-center justify-center rounded-lg bg-opacity-30',
   {
     variants: {
       type: {
@@ -77,6 +69,14 @@ const descriptionClasses = cva('text-base leading-relaxed text-body', {
   },
 });
 
+type AlertVariants = VariantProps<typeof alertClasses>;
+
+export type AlertProps = {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+} & AlertVariants;
+
 const Alert: React.FC<AlertProps> = ({
   title,
   description,
@@ -89,10 +89,12 @@ const Alert: React.FC<AlertProps> = ({
     warning: <FaExclamationTriangle />,
     info: <FaInfoCircle />,
   };
+
+  const alertType = type ?? 'info';
   return (
     <div data-testid="alert" className={alertClasses({ type })}>
       <div className={iconBgClasses({ type })}>
-        {icon || defaultIcons[type]}
+        {icon || defaultIcons[alertType]}
       </div>
       <div className="w-full">
         <h5 className={titleClasses({ type })}>{title}</h5>
