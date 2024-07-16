@@ -1,11 +1,11 @@
 import { cva, VariantProps } from 'class-variance-authority';
 import React from 'react';
 import {
-  FaCheckCircle,
-  FaExclamationTriangle,
-  FaInfoCircle,
-  FaTimesCircle,
-} from 'react-icons/fa';
+  RxCheckCircled,
+  RxCrossCircled,
+  RxExclamationTriangle,
+  RxInfoCircled,
+} from 'react-icons/rx';
 
 const alertClasses = cva(
   'flex w-full border-l-6 px-7 py-8 shadow-md bg-opacity-[10%] md:p-9 dark:bg-opacity-[15%]',
@@ -29,10 +29,10 @@ const iconBgClasses = cva(
   {
     variants: {
       type: {
-        success: 'bg-success text-success',
-        danger: 'bg-danger text-danger',
-        warning: 'bg-warning text-warning',
-        info: 'bg-info text-info',
+        success: 'bg-transparent text-success',
+        danger: 'bg-transparent text-danger',
+        warning: 'bg-transparent text-warning',
+        info: 'bg-transparent text-info',
       },
     },
     defaultVariants: {
@@ -78,10 +78,10 @@ export type AlertProps = {
 
 const Alert: React.FC<AlertProps> = ({ title, description, type = 'info' }) => {
   const defaultIcons = {
-    success: <FaCheckCircle />,
-    danger: <FaTimesCircle />,
-    warning: <FaExclamationTriangle />,
-    info: <FaInfoCircle />,
+    success: <RxCheckCircled size={28} />,
+    danger: <RxCrossCircled size={28} />,
+    warning: <RxExclamationTriangle size={28} />,
+    info: <RxInfoCircled size={28} />,
   };
 
   const alertType = type ?? 'info';

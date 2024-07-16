@@ -23,7 +23,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: 'Alert',
-    description: 'Alert description',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores facilis ratione ut possimus hic mollitia incidunt dolorem consequatur laborum aspernatur deleniti est impedit consectetur, eaque earum nulla? Beatae, corporis minima.',
     type: 'info',
   },
 };
@@ -37,6 +38,12 @@ export const Danger: Story = {
   args: {
     ...Default.args,
     type: 'danger',
+  },
+};
+export const Warning: Story = {
+  args: {
+    ...Default.args,
+    type: 'warning',
   },
 };
 export const Info: Story = {
