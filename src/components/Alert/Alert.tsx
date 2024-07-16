@@ -74,15 +74,9 @@ type AlertVariants = VariantProps<typeof alertClasses>;
 export type AlertProps = {
   title: string;
   description: string;
-  icon?: React.ReactNode;
 } & AlertVariants;
 
-const Alert: React.FC<AlertProps> = ({
-  title,
-  description,
-  icon,
-  type = 'info',
-}) => {
+const Alert: React.FC<AlertProps> = ({ title, description, type = 'info' }) => {
   const defaultIcons = {
     success: <FaCheckCircle />,
     danger: <FaTimesCircle />,
@@ -93,9 +87,7 @@ const Alert: React.FC<AlertProps> = ({
   const alertType = type ?? 'info';
   return (
     <div data-testid="alert" className={alertClasses({ type })}>
-      <div className={iconBgClasses({ type })}>
-        {icon || defaultIcons[alertType]}
-      </div>
+      <div className={iconBgClasses({ type })}>{defaultIcons[alertType]}</div>
       <div className="w-full">
         <h5 className={titleClasses({ type })}>{title}</h5>
         <p className={descriptionClasses({ type })}>{description}</p>
