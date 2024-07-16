@@ -11,7 +11,7 @@ describe('<Alert />', () => {
     expect(alertElement).toBeInTheDocument();
   });
 
-  test('renders the alert with the correct title and type', () => {
+  test('renders the alert with the correct title and message', () => {
     render(
       <Alert title="Alert title" type="warning" message="Alert message" />,
     );
