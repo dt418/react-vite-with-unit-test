@@ -73,10 +73,10 @@ type AlertVariants = VariantProps<typeof alertClasses>;
 
 export type AlertProps = {
   title: string;
-  description: string;
+  message: string;
 } & AlertVariants;
 
-const Alert: React.FC<AlertProps> = ({ title, description, type = 'info' }) => {
+const Alert: React.FC<AlertProps> = ({ title, message, type = 'info' }) => {
   const defaultIcons = {
     success: <RxCheckCircled size={28} />,
     danger: <RxCrossCircled size={28} />,
@@ -90,7 +90,7 @@ const Alert: React.FC<AlertProps> = ({ title, description, type = 'info' }) => {
       <div className={iconBgClasses({ type })}>{defaultIcons[alertType]}</div>
       <div className="w-full">
         <h5 className={titleClasses({ type })}>{title}</h5>
-        <p className={descriptionClasses({ type })}>{description}</p>
+        <p className={descriptionClasses({ type })}>{message}</p>
       </div>
     </div>
   );
