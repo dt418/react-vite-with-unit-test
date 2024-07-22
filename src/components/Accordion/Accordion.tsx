@@ -76,11 +76,7 @@ const AccordionItem = forwardRef<HTMLDivElement | null, AccordionItemProps>(
     );
   },
 );
-const Accordion: FC<AccordionProps> = ({
-  items = [],
-  className,
-  type = 'single',
-}) => {
+const Accordion: FC<AccordionProps> = ({ items = [], className, type }) => {
   return (
     <RadixAccordion.Root
       type={type}
