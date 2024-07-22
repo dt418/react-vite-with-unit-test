@@ -10,6 +10,7 @@
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
+    "storybook:docs": "storybook dev --docs",
     "build-storybook": "storybook build",
     "generate": "plop component",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
@@ -46,7 +47,6 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
-    "@storybook/addon-docs": "^8.2.5",
     "@storybook/addon-essentials": "^8.2.5",
     "@storybook/addon-interactions": "^8.2.5",
     "@storybook/addon-links": "^8.2.5",
