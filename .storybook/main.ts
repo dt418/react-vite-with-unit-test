@@ -9,7 +9,11 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
     '@storybook/addon-themes',
+    '@storybook/addon-docs',
   ],
+  core: {
+    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
+  },
   framework: {
     name: '@storybook/react-vite',
     options: {},

@@ -22,10 +22,22 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    type: 'multiple',
     items: [
       {
-        title: 'Accordion Title',
-        content: <p>Accordion Content</p>,
+        value: '1',
+        title: 'Accordion 1',
+        content: 'Content',
+      },
+      {
+        value: '2',
+        title: 'Accordion 2',
+        content: 'Content 2',
+      },
+      {
+        value: '3',
+        title: 'Accordion 3',
+        content: 'Content 3',
       },
     ],
   },

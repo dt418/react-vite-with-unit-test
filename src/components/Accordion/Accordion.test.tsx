@@ -5,7 +5,14 @@ import Accordion from './Accordion';
 
 describe('<Accordion />', () => {
   test('it should mount', () => {
-    render(<Accordion items={[]} />);
+    render(
+      <Accordion
+        type="single"
+        items={[
+          { value: '1', title: 'accordion 1', content: 'accordion content' },
+        ]}
+      />,
+    );
 
     const accordionElement = screen.getByTestId('accordion');
 
