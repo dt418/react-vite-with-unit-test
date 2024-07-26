@@ -1,11 +1,29 @@
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { VitePWA } from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    ViteImageOptimizer({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      include: ['src/images', 'src/assets', 'public'],
+      exclude: 'node_modules/**',
+      png: {
+        quality: 85,
+      },
+      jpeg: {
+        quality: 85,
+      },
+      svg: {
+        multipass: true,
+      },
+      webp: {
+        quality: 85,
+      },
+    }),
     react(),
     tsconfigPaths(),
     VitePWA({
@@ -48,5 +66,7 @@ export default defineConfig({
       },
     }),
   ],
-  build: { chunkSizeWarningLimit: 1600 },
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 });
