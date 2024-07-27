@@ -16,6 +16,7 @@ import Settings from './pages/Pages/Settings';
 import Profile from './pages/Profile';
 import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
+import Avatars from './pages/UiElements/Avatars';
 import Buttons from './pages/UiElements/Buttons';
 
 function App() {
@@ -131,6 +132,15 @@ function App() {
             <>
               <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
               <Buttons />
+            </>
+          }
+        />
+        <Route
+          path="/ui/avatars"
+          element={
+            <>
+              <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <Avatars />
             </>
           }
         />

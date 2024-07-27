@@ -160,6 +160,7 @@ const config: Config = {
         },
         ...mauve,
         ...violet,
+        ...defaultTheme.colors,
       },
       fontSize: {
         'title-xxl': ['44px', '55px'],
