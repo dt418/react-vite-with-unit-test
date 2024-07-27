@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Breadcrumb from '@/components/Breadcrumbs/Breadcrumb';
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import ChartOne from '@/components/Charts/ChartOne';
 import ChartThree from '@/components/Charts/ChartThree';
 import ChartTwo from '@/components/Charts/ChartTwo';
