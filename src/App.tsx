@@ -75,7 +75,7 @@ function App() {
             </>
           }
         />
-        <Route path="form">
+        <Route path="forms">
           <Route
             path="form-elements"
             element={
