@@ -1,5 +1,5 @@
 import './css/style.css';
-import './css/satoshi.css';
+import './css/montserrat.css';
 import 'flatpickr/dist/flatpickr.min.css';
 
 import React from 'react';

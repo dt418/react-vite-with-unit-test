@@ -1,6 +1,6 @@
 import { mauve, violet } from '@radix-ui/colors';
 import { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import { colors, fontFamily, screens } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: Config = {
@@ -8,13 +8,14 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      satoshi: ['Satoshi', 'sans-serif'],
+      satoshi: ['Satoshi', ...fontFamily.serif],
+      montserrat: ['Montserrat', ...fontFamily.serif],
     },
     screens: {
       '2xsm': '375px',
       xsm: '425px',
       '3xl': '2000px',
-      ...defaultTheme.screens,
+      ...screens,
     },
     extend: {
       colors: {
@@ -160,7 +161,7 @@ const config: Config = {
         },
         ...mauve,
         ...violet,
-        ...defaultTheme.colors,
+        ...colors,
       },
       fontSize: {
         'title-xxl': ['44px', '55px'],
