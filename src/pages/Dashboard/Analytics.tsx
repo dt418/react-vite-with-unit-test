@@ -1,44 +1,15 @@
-// import flatpickr from 'flatpickr';
-// import { Vietnamese } from 'flatpickr/dist/l10n/vn';
-// import { useEffect } from 'react';
-
 import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import Flatpickr from 'react-flatpickr';
 
 import { cn } from '@/utils/cn';
 
 export const Analytics = () => {
-  // useEffect(() => {
-  //   // Init flatpickr
-  //   flatpickr('.datepicker', {
-  //     mode: 'range',
-  //     static: true,
-  //     monthSelectorType: 'static',
-  //     locale: Vietnamese,
-  //     dateFormat: 'd/m/Y',
-  //     prevArrow:
-  //       '<svg className="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M5.4 10.8l1.4-1.4-4-4 4-4L5.4 0 0 5.4z" /></svg>',
-  //     nextArrow:
-  //       '<svg className="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M1.4 10.8L0 9.4l4-4-4-4L1.4 0l5.4 5.4z" /></svg>',
-  //   });
-  // }, []);
-
   return (
     <>
       <div className="2xl:gap-7.5 grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12 flex flex-wrap items-center justify-between gap-3">
           <div className="relative">
             <div className="flatpickr-wrapper">
-              {/* <input
-                className="datepicker w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark flatpickr-input"
-                placeholder="Select dates"
-                data-class="flatpickr-right"
-                type="text"
-                readOnly
-                onChange={(date) => {
-                  console.log(date);
-                }}
-              /> */}
               <Flatpickr
                 onChange={(date) => {
                   console.log(date.toLocaleString());
@@ -48,8 +19,14 @@ export const Analytics = () => {
                 )}
                 options={{
                   mode: 'range',
+                  static: true,
+                  monthSelectorType: 'static',
                   locale: Vietnamese,
-                  dateFormat: 'j/m/Y',
+                  dateFormat: 'd/m/Y',
+                  prevArrow:
+                    '<svg className="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M5.4 10.8l1.4-1.4-4-4 4-4L5.4 0 0 5.4z" /></svg>',
+                  nextArrow:
+                    '<svg className="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M1.4 10.8L0 9.4l4-4-4-4L1.4 0l5.4 5.4z" /></svg>',
                 }}
                 placeholder="Select dates"
               />
