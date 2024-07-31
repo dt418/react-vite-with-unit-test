@@ -13,7 +13,9 @@ export const Analytics = () => {
           <div className="relative">
             <div className="flatpickr-wrapper">
               <Flatpickr
-                defaultValue={'20/07/2024'}
+                onChange={(date) => {
+                  console.log('date', date.toLocaleString());
+                }}
                 className={cn(
                   'w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark flatpickr-input',
                 )}
