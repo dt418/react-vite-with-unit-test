@@ -115,6 +115,12 @@ span.flatpickr-weekday,
 .flatpickr-months .flatpickr-month {
   @apply dark:!fill-white dark:!text-white;
 }
+.flatpickr-months .arrowUp::after{
+  @apply dark:!border-b-white;
+}
+.flatpickr-months .arrowDown::after{
+  @apply dark:!border-t-white;
+}
 .flatpickr-months .flatpickr-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
   @apply dark:!bg-boxdark;
 }
