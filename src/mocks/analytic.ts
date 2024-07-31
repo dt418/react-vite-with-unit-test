@@ -6,16 +6,21 @@ export const analyticOptions: ApexOptions = {
     toolbar: {
       show: false,
     },
-    background: '#1e293b',
+    fontFamily: 'Montserrat, sans-serif',
   },
   plotOptions: {
     bar: {
       columnWidth: '50%',
       distributed: true,
+      borderRadius: 2,
+      borderRadiusApplication: 'around',
     },
   },
   dataLabels: {
     enabled: false,
+  },
+  grid: {
+    show: false,
   },
   xaxis: {
     categories: Array.from({ length: 30 }, (_, i) => i + 1),
@@ -23,6 +28,12 @@ export const analyticOptions: ApexOptions = {
       style: {
         colors: '#ffffff',
       },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
     },
   },
   yaxis: {
@@ -35,15 +46,10 @@ export const analyticOptions: ApexOptions = {
   tooltip: {
     theme: 'dark',
   },
-  title: {
-    text: 'Visitors Analytics',
-    align: 'left',
-    style: {
-      fontSize: '16px',
-      color: '#ffffff',
-    },
-  },
   colors: ['#3b82f6'],
+  legend: {
+    show: false,
+  },
 };
 
 export const analyticSeries: ApexAxisChartSeries = [

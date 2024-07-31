@@ -1,6 +1,8 @@
 import { Vietnamese } from 'flatpickr/dist/l10n/vn';
+import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
+import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
 
 export const Analytics = () => {
@@ -11,9 +13,7 @@ export const Analytics = () => {
           <div className="relative">
             <div className="flatpickr-wrapper">
               <Flatpickr
-                onChange={(date) => {
-                  console.log(date.toLocaleString());
-                }}
+                defaultValue={'20/07/2024'}
                 className={cn(
                   'w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark flatpickr-input',
                 )}
@@ -452,6 +452,19 @@ export const Analytics = () => {
               </svg>
             </span>
           </div>
+        </div>
+        <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5">
+          <div>
+            <h3 className="text-xl font-semibold text-black dark:text-white">
+              Visitors Analytics
+            </h3>
+          </div>
+          <ReactApexChart
+            options={analyticOptions}
+            series={analyticSeries}
+            type="bar"
+            height={380}
+          />
         </div>
       </div>
     </>
