@@ -115,6 +115,9 @@ span.flatpickr-weekday,
 .flatpickr-months .flatpickr-month {
   @apply dark:!fill-white dark:!text-white;
 }
+.flatpickr-months .flatpickr-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+  @apply dark:!bg-boxdark;
+}
 .flatpickr-day.inRange {
   @apply dark:!shadow-7;
   box-shadow: -5px 0 0 #EFF4FB, 5px 0 0 #EFF4FB;
