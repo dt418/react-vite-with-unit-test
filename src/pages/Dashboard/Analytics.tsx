@@ -21,6 +21,7 @@ export const Analytics = () => {
               options={{
                 mode: 'range',
                 static: true,
+                defaultDate: ['01/08/2024', '15/08/2024'],
                 monthSelectorType: 'static',
                 locale: Vietnamese,
                 dateFormat: 'd/m/Y',
