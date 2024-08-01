@@ -10,7 +10,10 @@ const SelectGroupTwo: React.FC = () => {
 
   return (
     <div>
-      <label className="mb-3 block text-black dark:text-white">
+      <label
+        className="mb-3 block text-black dark:text-white"
+        aria-labelledby="selectCountry"
+      >
         Select Country
       </label>
 
@@ -47,6 +50,7 @@ const SelectGroupTwo: React.FC = () => {
         </span>
 
         <select
+          id="selectCountry"
           value={selectedOption}
           onChange={(e) => {
             setSelectedOption(e.target.value);

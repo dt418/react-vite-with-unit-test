@@ -38,6 +38,7 @@ export default defineConfig({
     VitePWA({
       injectRegister: 'auto',
       registerType: 'autoUpdate',
+      scope: '/',
       includeAssets: [
         'favicon.svg',
         'favicon.ico',
@@ -45,9 +46,9 @@ export default defineConfig({
         'apple-touch-icon.png',
       ],
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'AwesomeApp',
-        description: 'My Awesome App description',
+        name: 'TailAdmin',
+        short_name: 'TailAdmin',
+        description: 'TailAdmin - Tailwind CSS Admin Dashboard Template',
         theme_color: '#ffffff',
         icons: [
           {

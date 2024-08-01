@@ -21,10 +21,14 @@ const FormLayout = () => {
               <div className="p-6.5">
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                   <div className="w-full xl:w-1/2">
-                    <label className="mb-2.5 block text-black dark:text-white">
+                    <label
+                      className="mb-2.5 block text-black dark:text-white"
+                      htmlFor="firstName"
+                    >
                       First name
                     </label>
                     <input
+                      id="fistName"
                       type="text"
                       placeholder="Enter your first name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -32,10 +36,14 @@ const FormLayout = () => {
                   </div>
 
                   <div className="w-full xl:w-1/2">
-                    <label className="mb-2.5 block text-black dark:text-white">
+                    <label
+                      className="mb-2.5 block text-black dark:text-white"
+                      htmlFor="lastName"
+                    >
                       Last name
                     </label>
                     <input
+                      id="lastName"
                       type="text"
                       placeholder="Enter your last name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -44,10 +52,14 @@ const FormLayout = () => {
                 </div>
 
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="email"
+                  >
                     Email <span className="text-meta-1">*</span>
                   </label>
                   <input
+                    id="email"
                     type="email"
                     placeholder="Enter your email address"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -55,10 +67,14 @@ const FormLayout = () => {
                 </div>
 
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="subject"
+                  >
                     Subject
                   </label>
                   <input
+                    id="subject"
                     type="text"
                     placeholder="Select subject"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -68,10 +84,14 @@ const FormLayout = () => {
                 <SelectGroupOne />
 
                 <div className="mb-6">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="message"
+                  >
                     Message
                   </label>
                   <textarea
+                    id="message"
                     rows={6}
                     placeholder="Type your message"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -97,10 +117,14 @@ const FormLayout = () => {
             <form action="#">
               <div className="p-6.5">
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="email"
+                  >
                     Email
                   </label>
                   <input
+                    id="email"
                     type="email"
                     placeholder="Enter your email address"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -108,10 +132,14 @@ const FormLayout = () => {
                 </div>
 
                 <div>
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="password"
+                  >
                     Password
                   </label>
                   <input
+                    id="password"
                     type="password"
                     placeholder="Enter password"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -171,10 +199,14 @@ const FormLayout = () => {
             <form action="#">
               <div className="p-6.5">
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="name"
+                  >
                     Name
                   </label>
                   <input
+                    id="name"
                     type="text"
                     placeholder="Enter your full name"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -182,10 +214,14 @@ const FormLayout = () => {
                 </div>
 
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="email"
+                  >
                     Email
                   </label>
                   <input
+                    id="email"
                     type="email"
                     placeholder="Enter your email address"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -193,10 +229,14 @@ const FormLayout = () => {
                 </div>
 
                 <div className="mb-4.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="password"
+                  >
                     Password
                   </label>
                   <input
+                    id="passwrord"
                     type="password"
                     placeholder="Enter password"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -204,10 +244,14 @@ const FormLayout = () => {
                 </div>
 
                 <div className="mb-5.5">
-                  <label className="mb-2.5 block text-black dark:text-white">
+                  <label
+                    className="mb-2.5 block text-black dark:text-white"
+                    htmlFor="confirmPassword"
+                  >
                     Re-type Password
                   </label>
                   <input
+                    id="confirmPassword"
                     type="password"
                     placeholder="Re-enter password"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"

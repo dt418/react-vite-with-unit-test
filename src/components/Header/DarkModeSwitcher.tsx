@@ -9,8 +9,10 @@ const DarkModeSwitcher = () => {
         className={`relative m-0 block h-7.5 w-14 rounded-full ${
           colorMode === 'dark' ? 'bg-primary' : 'bg-stroke'
         }`}
+        aria-labelledby="darkModeSwitcher"
       >
         <input
+          id="darkModeSwitcher"
           type="checkbox"
           onChange={() => {
             if (typeof setColorMode === 'function') {

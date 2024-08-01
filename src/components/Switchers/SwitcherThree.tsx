@@ -6,8 +6,8 @@ const SwitcherThree = () => {
   return (
     <div>
       <label
-        htmlFor="toggle3"
         className="flex cursor-pointer select-none items-center"
+        aria-labelledby="toggle3"
       >
         <div className="relative">
           <input
