@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
@@ -37,150 +37,157 @@ function App() {
   ) : (
     <DefaultLayout>
       <Routes>
-        <Route
-          index
-          element={
-            <>
-              <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <ECommerce />
-            </>
-          }
-        />
-        <Route path="dashboard">
+        <Route path="/">
           <Route
-            path="analytics"
+            index
             element={
               <>
-                <PageTitle title="Analytics Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <Analytics />
+                <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <ECommerce />
               </>
             }
           />
-        </Route>
-        <Route
-          path="calendar"
-          element={
-            <>
-              <PageTitle title="Calendar | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Calendar />
-            </>
-          }
-        />
-        <Route
-          path="profile"
-          element={
-            <>
-              <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Profile />
-            </>
-          }
-        />
-        <Route path="forms">
+          <Route path="dashboard">
+            <Route index element={<Navigate to=".." replace />} />
+            <Route
+              path="analytics"
+              element={
+                <>
+                  <PageTitle title="Analytics Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <Analytics />
+                </>
+              }
+            />
+          </Route>
           <Route
-            path="form-elements"
+            path="calendar"
             element={
               <>
-                <PageTitle title="Form Elements | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <FormElements />
+                <PageTitle title="Calendar | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <Calendar />
               </>
             }
           />
           <Route
-            path="form-layout"
+            path="profile"
             element={
               <>
-                <PageTitle title="Form Layout | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <FormLayout />
+                <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <Profile />
               </>
             }
           />
-        </Route>
-        <Route
-          path="tables"
-          element={
-            <>
-              <PageTitle title="Tables | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Tables />
-            </>
-          }
-        />
-        <Route path="pages">
+          <Route path="forms">
+            <Route index element={<Navigate to="form-elements" replace />} />
+            <Route
+              path="form-elements"
+              element={
+                <>
+                  <PageTitle title="Form Elements | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <FormElements />
+                </>
+              }
+            />
+            <Route
+              path="form-layout"
+              element={
+                <>
+                  <PageTitle title="Form Layout | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <FormLayout />
+                </>
+              }
+            />
+          </Route>
           <Route
-            path="settings"
+            path="tables"
             element={
               <>
-                <PageTitle title="Settings | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <Settings />
+                <PageTitle title="Tables | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <Tables />
               </>
             }
           />
+          <Route path="pages">
+            <Route index element={<Navigate to="settings" replace />} />
+            <Route
+              path="settings"
+              element={
+                <>
+                  <PageTitle title="Settings | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <Settings />
+                </>
+              }
+            />
+            <Route
+              path="file-manager"
+              element={
+                <>
+                  <PageTitle title="File Manager | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <FileManager />
+                </>
+              }
+            />
+          </Route>
           <Route
-            path="file-manager"
+            path="chart"
             element={
               <>
-                <PageTitle title="File Manager | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <FileManager />
+                <PageTitle title="Basic Chart | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <Chart />
               </>
             }
           />
-        </Route>
-        <Route
-          path="chart"
-          element={
-            <>
-              <PageTitle title="Basic Chart | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Chart />
-            </>
-          }
-        />
-        <Route path="ui">
-          <Route
-            path="alerts"
-            element={
-              <>
-                <PageTitle title="Alerts | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <Alerts />
-              </>
-            }
-          />
-          <Route
-            path="buttons"
-            element={
-              <>
-                <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <Buttons />
-              </>
-            }
-          />
-          <Route
-            path="avatars"
-            element={
-              <>
-                <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <Avatars />
-              </>
-            }
-          />
-        </Route>
-        <Route path="auth">
-          <Route
-            path="signin"
-            element={
-              <>
-                <PageTitle title="Signin | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <SignIn />
-              </>
-            }
-          />
-          <Route
-            path="signup"
-            element={
-              <>
-                <PageTitle title="Signup | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-                <SignUp />
-              </>
-            }
-          />
+          <Route path="ui">
+            <Route index element={<Navigate to="alerts" replace />} />
+            <Route
+              path="alerts"
+              element={
+                <>
+                  <PageTitle title="Alerts | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <Alerts />
+                </>
+              }
+            />
+            <Route
+              path="buttons"
+              element={
+                <>
+                  <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <Buttons />
+                </>
+              }
+            />
+            <Route
+              path="avatars"
+              element={
+                <>
+                  <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <Avatars />
+                </>
+              }
+            />
+          </Route>
+          <Route path="auth">
+            <Route index element={<Navigate to="signin" replace />} />
+            <Route
+              path="signin"
+              element={
+                <>
+                  <PageTitle title="Signin | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <SignIn />
+                </>
+              }
+            />
+            <Route
+              path="signup"
+              element={
+                <>
+                  <PageTitle title="Signup | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                  <SignUp />
+                </>
+              }
+            />
+          </Route>
         </Route>
       </Routes>
     </DefaultLayout>
