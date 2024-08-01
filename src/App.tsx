@@ -1,24 +1,27 @@
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import { lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 import DefaultLayout from './layout/DefaultLayout';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
-import Calendar from './pages/Calendar';
-import Chart from './pages/Chart';
-import Analytics from './pages/Dashboard/Analytics';
-import ECommerce from './pages/Dashboard/ECommerce';
-import FormElements from './pages/Form/FormElements';
-import FormLayout from './pages/Form/FormLayout';
-import FileManager from './pages/Pages/FileManager';
-import Settings from './pages/Pages/Settings';
-import Profile from './pages/Profile';
-import Tables from './pages/Tables';
-import Alerts from './pages/UiElements/Alerts';
-import Avatars from './pages/UiElements/Avatars';
-import Buttons from './pages/UiElements/Buttons';
+
+// Lazy load route components
+const SignIn = lazy(() => import('./pages/Authentication/SignIn'));
+const SignUp = lazy(() => import('./pages/Authentication/SignUp'));
+const Calendar = lazy(() => import('./pages/Calendar'));
+const Chart = lazy(() => import('./pages/Chart'));
+const Analytics = lazy(() => import('./pages/Dashboard/Analytics'));
+const ECommerce = lazy(() => import('./pages/Dashboard/ECommerce'));
+const FormElements = lazy(() => import('./pages/Form/FormElements'));
+const FormLayout = lazy(() => import('./pages/Form/FormLayout'));
+const FileManager = lazy(() => import('./pages/Pages/FileManager'));
+const Settings = lazy(() => import('./pages/Pages/Settings'));
+const Profile = lazy(() => import('./pages/Profile'));
+const Tables = lazy(() => import('./pages/Tables'));
+const Alerts = lazy(() => import('./pages/UiElements/Alerts'));
+const Avatars = lazy(() => import('./pages/UiElements/Avatars'));
+const Buttons = lazy(() => import('./pages/UiElements/Buttons'));
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -29,15 +32,18 @@ function App() {
   }, [pathname]);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
-  return loading ? (
-    <Loader />
-  ) : (
+  if (loading) {
+    return <Loader />;
+  }
+
+  return (
     <DefaultLayout>
-      <Routes>
-        <Route path="/">
+      <Suspense fallback={<Loader />}>
+        <Routes>
           <Route
             index
             element={
@@ -188,8 +194,8 @@ function App() {
               }
             />
           </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </Suspense>
     </DefaultLayout>
   );
 }

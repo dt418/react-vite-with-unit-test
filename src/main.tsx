@@ -26,7 +26,7 @@ async function enableMocking() {
 enableMocking().then(() => {
   root.render(
     <React.StrictMode>
-      <Router>
+      <Router basename="/">
         <App />
       </Router>
     </React.StrictMode>,
