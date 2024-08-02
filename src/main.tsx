@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './App';
-import reportAccessibility from './utils/reportAccessibility';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -33,4 +32,3 @@ enableMocking().then(() => {
     </React.StrictMode>,
   );
 });
-reportAccessibility(React);
