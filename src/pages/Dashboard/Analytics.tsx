@@ -2,6 +2,7 @@ import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
+import WorldMap from '@/components/WorldMap/WorldMap';
 import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
 
@@ -110,6 +111,14 @@ export const Analytics = () => {
             type="bar"
             height={380}
           />
+        </div>
+        <div className="col-span-12 overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-6">
+          <div className="p-4 md:p-6 xl:p-7.5">
+            <div></div>
+            <div>
+              <WorldMap />
+            </div>
+          </div>
         </div>
       </div>
     </>
