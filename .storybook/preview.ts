@@ -3,6 +3,7 @@ import {
   withThemeByClassName,
 } from '@storybook/addon-themes';
 import '../src/css/style.css';
+import '../src/css/montserrat.css';
 
 const decorators = [
   withThemeByClassName<ReactRenderer>({

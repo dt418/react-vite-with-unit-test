@@ -1,31 +1,36 @@
 import { VectorMap } from '@react-jvectormap/core';
-import { worldMill } from '@react-jvectormap/world';
-import React, { HTMLAttributes } from 'react';
+import { IVectorMapProps } from '@react-jvectormap/core/dist/types';
+import React, { HTMLAttributes, memo } from 'react';
 
-export type WorldMapProps = HTMLAttributes<HTMLDivElement> & {
-  // define your props here
-};
+export type WorldMapProps = HTMLAttributes<HTMLDivElement> &
+  IVectorMapProps & {
+    // define your props here
+  };
 
-const WorldMap: React.FC<WorldMapProps> = (props) => {
+const WorldMap: React.FC<WorldMapProps> = ({
+  map,
+  backgroundColor,
+  regionStyle,
+  ...rest
+}) => {
   return (
-    <div data-testid="worldMap" {...props} className="w-full h-[500px]">
+    <div data-testid="worldMap" className="max-w-full aspect-video h-[500px]">
       <VectorMap
-        map={worldMill}
-        backgroundColor="transparent"
-        regionStyle={{
-          initial: {
-            fill: '#A9BDFF',
-          },
-          hover: {
-            fill: '#3056d3',
-          },
-          selected: {
-            fill: '#2d3436',
-          },
-        }}
+        map={map}
+        backgroundColor={backgroundColor}
+        regionStyle={regionStyle}
+        {...rest}
       />
     </div>
   );
 };
 
-export default WorldMap;
+export const WorldMapStorybook = WorldMap;
+
+export default memo(
+  WorldMap,
+  (prevProps, nextProps) =>
+    prevProps.map === nextProps.map &&
+    prevProps.backgroundColor === nextProps.backgroundColor &&
+    prevProps.regionStyle === prevProps.regionStyle,
+);

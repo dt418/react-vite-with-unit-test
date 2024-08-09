@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 type PageTitleProps = {
@@ -15,4 +15,4 @@ const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
   return null; // This component doesn't render anything
 };
 
-export default PageTitle;
+export default memo(PageTitle, (prev, next) => prev.title === next.title);

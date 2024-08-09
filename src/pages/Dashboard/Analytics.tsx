@@ -1,8 +1,9 @@
+import { worldMill } from '@react-jvectormap/world';
 import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
-import WorldMap from '@/components/WorldMap/WorldMap';
+import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
 
@@ -116,7 +117,21 @@ export const Analytics = () => {
           <div className="p-4 md:p-6 xl:p-7.5">
             <div></div>
             <div>
-              <WorldMap />
+              <WorldMap
+                map={worldMill}
+                backgroundColor="transparent"
+                regionStyle={{
+                  initial: {
+                    fill: '#A9BDFF',
+                  },
+                  hover: {
+                    fill: '#3056d3',
+                  },
+                  selected: {
+                    fill: '#2d3436',
+                  },
+                }}
+              />
             </div>
           </div>
         </div>

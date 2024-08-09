@@ -1,14 +1,14 @@
-import { ReactNode, useState } from 'react';
+import { memo, ReactNode, useState } from 'react';
 
 type SidebarLinkGroupProps = {
   children: (handleClick: () => void, open: boolean) => ReactNode;
   activeCondition: boolean;
 };
 
-const SidebarLinkGroup = ({
+const SidebarLinkGroup: React.FC<SidebarLinkGroupProps> = ({
   children,
   activeCondition,
-}: SidebarLinkGroupProps) => {
+}) => {
   const [open, setOpen] = useState<boolean>(activeCondition);
 
   const handleClick = () => {
@@ -17,5 +17,9 @@ const SidebarLinkGroup = ({
 
   return <li>{children(handleClick, open)}</li>;
 };
-
-export default SidebarLinkGroup;
+export default memo(
+  SidebarLinkGroup,
+  (prevProps, nextProps) =>
+    prevProps.children === nextProps.children &&
+    prevProps.activeCondition === nextProps.activeCondition,
+);
