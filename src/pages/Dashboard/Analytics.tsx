@@ -3,6 +3,7 @@ import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
+import Home from '@/assets/icons/home.svg?react';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
@@ -133,6 +134,7 @@ export const Analytics = () => {
                 }}
               />
             </div>
+            <Home width={30} height={30} className="text-primary" />
           </div>
         </div>
       </div>
