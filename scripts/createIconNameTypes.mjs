@@ -2,6 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+/**
+ * Creates a type definition file for the IconName in the `src/types/utils` directory.
+ * The file is generated based on the filenames of the SVG files in the `src/assets/icons` directory.
+ *
+ * @return {void} This function does not return anything.
+ */
 const createIconNameTypes = () => {
   try {
     const currentFileUrl = import.meta.url;

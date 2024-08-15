@@ -3,7 +3,6 @@ import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
-import SvgIcon from '@/components/SvgIcon/SvgIcon';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
@@ -234,7 +233,6 @@ export const Analytics = () => {
             </div>
           </div>
         </div>
-        <SvgIcon icon="id-card" size={60} color="red" />
       </div>
     </>
   );
