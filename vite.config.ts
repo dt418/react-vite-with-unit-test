@@ -32,6 +32,7 @@ const _plugins = [
       svgoConfig: {
         floatPrecision: 2,
       },
+      icon: 72,
     },
   }),
   react(),
