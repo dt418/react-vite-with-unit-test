@@ -2,6 +2,13 @@ import { useEffect, useState } from 'react';
 
 type SetValue<T> = T | ((val: T) => T);
 
+/**
+ * A custom React hook to manage state stored in local storage.
+ *
+ * @param {string} key - The key to store the value under in local storage.
+ * @param {T} initialValue - The initial value to use if no value is stored in local storage.
+ * @return {[T, (value: SetValue<T>) => void]} An array containing the stored value and a function to update the stored value.
+ */
 function useLocalStorage<T>(
   key: string,
   initialValue: T,

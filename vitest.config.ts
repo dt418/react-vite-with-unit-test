@@ -13,10 +13,10 @@ export default defineConfig({
         svgoConfig: {
           floatPrecision: 2,
         },
-        icon: true,
-        svgProps: {
-          role: 'img',
-        },
+        // icon: true,
+        // svgProps: {
+        //   role: 'img',
+        // },
       },
     }),
   ],
