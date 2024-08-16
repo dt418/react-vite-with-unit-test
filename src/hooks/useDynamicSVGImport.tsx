@@ -1,29 +1,23 @@
-import { useEffect, useState } from 'react';
+import React, { SVGProps, useEffect, useState } from 'react';
 
-export function useDynamicSVGImport(src: string) {
-  const [icon, setIcon] = useState<JSX.Element | null>(null);
+export const useDynamicSVGImport = (name: string) => {
+  const [SvgComponent, setSvgComponent] = useState<React.FC<
+    SVGProps<SVGSVGElement>
+  > | null>(null);
 
   useEffect(() => {
-    const importIcon = async () => {
+    const importSVG = async () => {
       try {
-        // Use dynamic import with svgr plugin support
-        const ImportedIcon = (
-          await import(/* @vite-ignore */ `../assets/icons/${src}.svg?react`)
-        ).default;
-        // Set the icon if it's valid
-        if (ImportedIcon) {
-          setIcon(ImportedIcon);
-        } else {
-          throw new Error('SVG import failed');
-        }
+        const importedSVG = (await import(`../assets/icons/${name}.svg?react`))
+          .default;
+        setSvgComponent(() => importedSVG);
       } catch (error) {
-        console.error('Failed to import SVG:', error);
-        setIcon(null);
+        console.error(`Error importing SVG: ${error}`);
       }
     };
 
-    importIcon();
-  }, [src]);
+    importSVG();
+  }, [name]);
 
-  return icon;
-}
+  return SvgComponent;
+};

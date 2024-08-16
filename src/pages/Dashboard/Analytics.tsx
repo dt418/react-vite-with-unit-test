@@ -3,6 +3,7 @@ import { Vietnamese } from 'flatpickr/dist/l10n/vn';
 import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
+import SvgIcon from '@/components/SvgIcon/SvgIcon.lazy';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import { analyticOptions, analyticSeries } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
@@ -233,6 +234,7 @@ export const Analytics = () => {
             </div>
           </div>
         </div>
+        <SvgIcon icon="bar-chart" size={48} color="green" />
       </div>
     </>
   );

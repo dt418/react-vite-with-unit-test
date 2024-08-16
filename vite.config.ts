@@ -1,4 +1,4 @@
-import MillionLint from '@million/lint';
+// import MillionLint from '@million/lint';
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
@@ -9,6 +9,20 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 const _plugins = [
+  react(),
+  tsconfigPaths(),
+  svgr({
+    svgrOptions: {
+      plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+      svgoConfig: {
+        floatPrecision: 2,
+      },
+      icon: true,
+      svgProps: {
+        role: 'img',
+      },
+    },
+  }),
   ViteImageOptimizer({
     test: /\.(jpe?g|png|gif|svg)$/i,
     include: ['src/images', 'src/assets', 'public'],
@@ -26,17 +40,6 @@ const _plugins = [
       quality: 85,
     },
   }),
-  svgr({
-    svgrOptions: {
-      plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
-      svgoConfig: {
-        floatPrecision: 2,
-      },
-      icon: 72,
-    },
-  }),
-  react(),
-  tsconfigPaths(),
   VitePWA({
     injectRegister: 'auto',
     registerType: 'autoUpdate',
@@ -79,7 +82,7 @@ const _plugins = [
   }),
   mkcert(),
 ];
-_plugins.unshift(MillionLint.vite());
+// _plugins.unshift(MillionLint.vite());
 export default defineConfig({
   plugins: _plugins,
   build: {
