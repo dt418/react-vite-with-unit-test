@@ -14,7 +14,10 @@ const WorldMap: React.FC<WorldMapProps> = ({
   ...rest
 }) => {
   return (
-    <div data-testid="worldMap" className="max-w-full aspect-video h-[500px]">
+    <div
+      data-testid="worldMap"
+      className="d-flex place-items-center w-full aspect-video h-[300px] object-cover max-h-full"
+    >
       <VectorMap
         map={map}
         backgroundColor={backgroundColor}
