@@ -7,6 +7,15 @@ export type WorldMapProps = HTMLAttributes<HTMLDivElement> &
     // define your props here
   };
 
+/**
+ * A React functional component that renders a world map with customizable styles.
+ *
+ * @param {object} map - The map data to be rendered.
+ * @param {string} backgroundColor - The background color of the map.
+ * @param {object} regionStyle - The styles for the regions on the map.
+ * @param {object} rest - Additional props to be passed to the VectorMap component.
+ * @return {JSX.Element} The rendered world map component.
+ */
 const WorldMap: React.FC<WorldMapProps> = ({
   map,
   backgroundColor,
@@ -33,7 +42,5 @@ export const WorldMapStorybook = WorldMap;
 export default memo(
   WorldMap,
   (prevProps, nextProps) =>
-    prevProps.map === nextProps.map &&
-    prevProps.backgroundColor === nextProps.backgroundColor &&
-    prevProps.regionStyle === prevProps.regionStyle,
+    JSON.stringify(prevProps) === JSON.stringify(nextProps),
 );
