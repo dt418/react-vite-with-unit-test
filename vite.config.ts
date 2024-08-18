@@ -82,7 +82,9 @@ const _plugins = [
   }),
   mkcert(),
 ];
+
 _plugins.unshift(MillionLint.vite());
+
 export default defineConfig({
   plugins: _plugins,
   build: {

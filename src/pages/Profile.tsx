@@ -14,12 +14,12 @@ const Profile = () => {
           <img
             src={CoverOne}
             alt="profile cover"
-            className="h-full w-full rounded-tl-sm rounded-tr-sm object-cover object-center"
+            className="size-full rounded-t-sm object-cover object-center"
           />
           <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
             <label
               htmlFor="cover"
-              className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary py-1 px-2 text-sm font-medium text-white hover:bg-opacity-90 xsm:px-4"
+              className="hover:bg-current/90 flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white xsm:px-4"
             >
               <input type="file" name="cover" id="cover" className="sr-only" />
               <span>
@@ -55,7 +55,7 @@ const Profile = () => {
               <img src={userSix} alt="profile" />
               <label
                 aria-labelledby="profile"
-                className="absolute bottom-0 right-0 flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2"
+                className="hover:bg-current/90 absolute bottom-0 right-0 flex size-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white sm:bottom-2 sm:right-2"
               >
                 <svg
                   className="fill-current"
@@ -92,7 +92,7 @@ const Profile = () => {
               Danish Heilium
             </h3>
             <p className="font-medium">Ui/Ux Designer</p>
-            <div className="mx-auto mt-4.5 mb-5.5 grid max-w-94 grid-cols-3 rounded-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]">
+            <div className="mx-auto mb-5.5 mt-4.5 grid max-w-94 grid-cols-3 rounded-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]">
               <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row">
                 <span className="font-semibold text-black dark:text-white">
                   259

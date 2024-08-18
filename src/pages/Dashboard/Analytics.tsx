@@ -11,7 +11,7 @@ import { cn } from '@/utils/cn';
 export const Analytics = () => {
   return (
     <>
-      <div className="2xl:gap-7.5 grid grid-cols-12 gap-4 md:gap-6">
+      <div className="grid grid-cols-12 gap-4 md:gap-6 2xl:gap-7.5">
         <div className="col-span-12 flex flex-wrap items-center justify-between gap-3">
           <div className="relative">
             <Flatpickr
@@ -19,7 +19,7 @@ export const Analytics = () => {
                 console.log('date', date.toLocaleString());
               }}
               className={cn(
-                'w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark flatpickr-input',
+                'flatpickr-input w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark',
               )}
               options={{
                 mode: 'range',
@@ -101,7 +101,7 @@ export const Analytics = () => {
             </span>
           </div>
         </div>
-        <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5">
+        <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5">
           <div>
             <h3 className="text-xl font-semibold text-black dark:text-white">
               Visitors Analytics

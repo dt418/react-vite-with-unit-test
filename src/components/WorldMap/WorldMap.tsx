@@ -25,7 +25,7 @@ const WorldMap: React.FC<WorldMapProps> = ({
   return (
     <div
       data-testid="worldMap"
-      className="d-flex place-items-center w-full aspect-video h-[300px] object-cover max-h-full"
+      className="flex aspect-video h-[300px] max-h-full w-full place-items-center object-cover"
     >
       <VectorMap
         map={map}

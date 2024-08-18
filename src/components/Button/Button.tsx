@@ -11,9 +11,9 @@ const variants = cva(
     'inline-flex',
     'items-center',
     'justify-center',
-    'realtive',
+    'relative',
     'transition',
-    'ountline-none',
+    'outline-none',
     'focus:scale-[0.98]',
     'disabled:cursor-not-allowed',
   ],
@@ -63,10 +63,10 @@ const variants = cva(
           'ring-red-500',
         ],
         link: [
-          'rounded-full outline-none focus:scale-[0.98] font-light text-indigo-500 hover:text-indigo-600 disabled:text-indigo-500/50 disabled:no-underline hover:underline ring-indigo-300 focus-visible:ring-1',
+          'rounded-full font-light text-indigo-500 outline-none ring-indigo-300 hover:text-indigo-600 hover:underline focus:scale-[0.98] focus-visible:ring-1 disabled:text-indigo-500/50 disabled:no-underline',
         ],
         ghost: [
-          'rounded-full outline-none focus:scale-[0.98] font-light text-gray-950 hover:text-gray-600 disabled:text-gray-950 ring-gray-300 focus-visible:ring-1',
+          'rounded-full font-light text-gray-950 outline-none ring-gray-300 hover:text-gray-600 focus:scale-[0.98] focus-visible:ring-1 disabled:text-gray-950',
         ],
       },
       size: {
@@ -97,8 +97,8 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
 
 export const Loading = () => (
   <div role="status" className="absolute inline-flex items-center">
-    <div className="inline-block h-[1.5em] w-[1.5em] animate-spin rounded-full border-2 lg:border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite]">
-      <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)] sr-only">
+    <div className="inline-block size-[1.5em] animate-spin rounded-full border-2 border-solid border-current border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] lg:border-4">
+      <span className="sr-only !absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
         Loading...
       </span>
     </div>

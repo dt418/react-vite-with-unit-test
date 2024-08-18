@@ -14,7 +14,7 @@ const SignIn: React.FC = () => {
       <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="flex flex-wrap items-center">
           <div className="hidden w-full xl:block xl:w-1/2">
-            <div className="py-17.5 px-26 text-center">
+            <div className="px-26 py-17.5 text-center">
               <Link className="mb-5.5 inline-block" to="/">
                 <img className="hidden dark:block" src={Logo} alt="Logo" />
                 <img className="dark:hidden" src={LogoDark} alt="Logo" />
@@ -236,11 +236,11 @@ const SignIn: React.FC = () => {
                   <input
                     type="submit"
                     value="Sign In"
-                    className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition hover:bg-opacity-90"
+                    className="hover:bg-current/90 w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition"
                   />
                 </div>
 
-                <button className="flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-50">
+                <button className="hover:bg-current/50 flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 dark:border-strokedark dark:bg-meta-4">
                   <span>
                     <svg
                       width="20"
