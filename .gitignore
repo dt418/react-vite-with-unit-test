@@ -27,3 +27,4 @@ coverage
 *storybook.log
 # Million Lint
 .million
+.env
