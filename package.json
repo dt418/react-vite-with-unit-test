@@ -23,6 +23,7 @@
     "build-icons": "node scripts/createIconNameTypes.mjs"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.22",
     "@headlessui/react": "^2.1.0",
     "@hookform/resolvers": "^3.9.0",
     "@million/lint": "^1.0.0-rc.84",
