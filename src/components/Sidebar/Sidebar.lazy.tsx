@@ -6,13 +6,13 @@ const LazySidebar = lazy(() => import('./Sidebar'));
 
 const SidebarSkeleton = () => {
   return (
-    <div className="animate-pulse flex flex-col space-y-4 p-4 max-w-xs w-full">
-      <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-      <div className="h-4 bg-gray-300 rounded"></div>
-      <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-      <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-      <div className="h-4 bg-gray-300 rounded"></div>
-      <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+    <div className="flex w-full max-w-xs animate-pulse flex-col space-y-4 p-4">
+      <div className="h-4 w-3/4 rounded bg-gray-2 dark:bg-graydark"></div>
+      <div className="h-4 rounded bg-gray-2 dark:bg-graydark"></div>
+      <div className="h-4 w-5/6 rounded bg-gray-2 dark:bg-graydark"></div>
+      <div className="h-4 w-3/4 rounded bg-gray-2 dark:bg-graydark"></div>
+      <div className="h-4 rounded bg-gray-2 dark:bg-graydark"></div>
+      <div className="h-4 w-5/6 rounded bg-gray-2 dark:bg-graydark"></div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -6,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -27,5 +30,13 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'prettier/prettier': ['error'],
+    "tailwindcss/no-custom-classname": ["error", {
+      "whitelist": ['modal', 'modal-container', '', 'error', 'form-datepicker'],
+    }],
+  },
+  settings: {
+    tailwindcss: {
+      config: path.join(__dirname, "./tailwind.config.ts"),
+    },
   },
 };

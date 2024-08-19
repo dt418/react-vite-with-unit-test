@@ -18,7 +18,7 @@ const SelectGroupTwo: React.FC = () => {
       </label>
 
       <div className="relative z-20 bg-white dark:bg-form-input">
-        <span className="absolute top-1/2 left-4 z-30 -translate-y-1/2">
+        <span className="absolute left-4 top-1/2 z-30 -translate-y-1/2">
           <svg
             width="20"
             height="20"
@@ -56,7 +56,7 @@ const SelectGroupTwo: React.FC = () => {
             setSelectedOption(e.target.value);
             changeTextColor();
           }}
-          className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-12 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input ${
+          className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-12 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input ${
             isOptionSelected ? 'text-black dark:text-white' : ''
           }`}
         >
@@ -74,7 +74,7 @@ const SelectGroupTwo: React.FC = () => {
           </option>
         </select>
 
-        <span className="absolute top-1/2 right-4 z-10 -translate-y-1/2">
+        <span className="absolute right-4 top-1/2 z-10 -translate-y-1/2">
           <svg
             width="24"
             height="24"

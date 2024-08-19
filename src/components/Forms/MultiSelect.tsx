@@ -111,7 +111,7 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
           <div className="relative z-20 inline-block w-full">
             <div className="relative flex flex-col items-center">
               <div ref={trigger} onClick={open} className="w-full">
-                <div className="mb-2 flex rounded border border-stroke py-2 pl-3 pr-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
+                <div className="mb-2 flex rounded border border-stroke px-3 py-2 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
                   <div className="flex flex-auto flex-wrap gap-3">
                     {selected.map((index) => (
                       <div
@@ -150,17 +150,17 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
                       <div className="flex-1">
                         <input
                           placeholder="Select an option"
-                          className="h-full w-full appearance-none bg-transparent p-1 px-2 outline-none"
+                          className="size-full appearance-none bg-transparent p-1 px-2 outline-none"
                           defaultValue={selectedValues()}
                         />
                       </div>
                     )}
                   </div>
-                  <div className="flex w-8 items-center py-1 pl-1 pr-1">
+                  <div className="flex w-8 items-center p-1">
                     <button
                       type="button"
                       onClick={open}
-                      className="h-6 w-6 cursor-pointer outline-none focus:outline-none"
+                      className="size-6 cursor-pointer outline-none focus:outline-none"
                     >
                       <svg
                         width="24"
@@ -184,7 +184,7 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
               </div>
               <div className="w-full px-4">
                 <div
-                  className={`max-h-select absolute top-full left-0 z-40 w-full overflow-y-auto rounded bg-white shadow dark:bg-form-input ${
+                  className={`absolute left-0 top-full z-40 w-full overflow-y-auto rounded bg-white shadow dark:bg-form-input ${
                     isOpen() ? '' : 'hidden'
                   }`}
                   ref={dropdownRef}
@@ -199,7 +199,7 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
                           onClick={(event) => select(index, event)}
                         >
                           <div
-                            className={`relative flex w-full items-center border-l-2 border-transparent p-2 pl-2 ${
+                            className={`relative flex w-full items-center border-l-2 border-transparent p-2 ${
                               option.selected ? 'border-primary' : ''
                             }`}
                           >

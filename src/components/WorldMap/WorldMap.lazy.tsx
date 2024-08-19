@@ -6,7 +6,7 @@ const LazyWorldMap = lazy(() => import('./WorldMap'));
 
 const WorldMapSkeleton = () => (
   <div className="animate-pulse">
-    <div className="w-full aspect-square max-h-[500px] bg-gray dark:bg-graydark rounded"></div>
+    <div className="aspect-square max-h-[500px] w-full rounded bg-gray dark:bg-graydark"></div>
   </div>
 );
 

@@ -6,9 +6,9 @@ const Avatars = () => {
   return (
     <>
       <Breadcrumb pageName="Avatars" />
-      <div className="flex flex-col gap-7 5">
+      <div className="flex flex-col gap-7">
         <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-          <div className="border-b border-stroke px-4 py-4 dark:border-strokedark sm:px-6 xl:px-9">
+          <div className="border-b border-stroke p-4 dark:border-strokedark sm:px-6 xl:px-9">
             <h3 className="font-medium text-black dark:text-white">Style 1</h3>
           </div>
           <div className="px-4 py-9 sm:px-6 xl:px-8.5">
@@ -21,7 +21,7 @@ const Avatars = () => {
           </div>
         </div>
         <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-          <div className="border-b border-stroke px-4 py-4 dark:border-strokedark sm:px-6 xl:px-9">
+          <div className="border-b border-stroke p-4 dark:border-strokedark sm:px-6 xl:px-9">
             <h3 className="font-medium text-black dark:text-white">Style 2</h3>
           </div>
           <div className="px-4 py-9 sm:px-6 xl:px-8.5">
@@ -34,7 +34,7 @@ const Avatars = () => {
           </div>
         </div>
         <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-          <div className="border-b border-stroke px-4 py-4 dark:border-strokedark sm:px-6 xl:px-9">
+          <div className="border-b border-stroke p-4 dark:border-strokedark sm:px-6 xl:px-9">
             <h3 className="font-medium text-black dark:text-white">Style 2</h3>
           </div>
           <div className="px-4 py-9 sm:px-6 xl:px-8.5">

@@ -6,10 +6,10 @@ import { cn } from '@/utils/cn';
 const avatarVariants = cva(['w-full rounded-full'], {
   variants: {
     size: {
-      xs: 'max-w-6 h-6',
-      sm: 'max-w-9.5 h-9.5',
-      md: 'max-w-13 h-13',
-      lg: 'max-w-20 h-20',
+      xs: 'h-6 max-w-6',
+      sm: 'h-9.5 max-w-9.5',
+      md: 'h-13 max-w-13',
+      lg: 'h-20 max-w-20',
     },
   },
   defaultVariants: {
@@ -22,10 +22,10 @@ const avatarPulseVariants = cva(
   {
     variants: {
       size: {
-        xs: 'max-w-2 -right-px -top-px h-2 border',
-        sm: 'max-w-3.5 -right-0.5 -top-0.5 h-3.5 border-2',
-        md: 'max-w-4.5 -right-0.5 -top-0.5 h-4.5 border-[2.7px]',
-        lg: 'max-w-5.5 right-0 top-0 h-5.5 border-[3px]',
+        xs: '-right-px -top-px h-2 max-w-2 border',
+        sm: '-right-0.5 -top-0.5 h-3.5 max-w-3.5 border-2',
+        md: '-right-0.5 -top-0.5 h-4.5 max-w-4.5 border-[2.7px]',
+        lg: 'right-0 top-0 h-5.5 max-w-5.5 border-[3px]',
       },
       color: {
         green: 'bg-[#219653]',

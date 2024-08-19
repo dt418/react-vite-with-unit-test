@@ -8,7 +8,7 @@ import {
 } from 'react-icons/rx';
 
 const alertClasses = cva(
-  'flex w-full border-l-6 px-7 py-8 shadow-md bg-opacity-[10%] md:p-9 dark:bg-opacity-[15%]',
+  'flex w-full border-l-6 bg-opacity-[10%] px-7 py-8 shadow-md dark:bg-opacity-[15%] md:p-9',
   {
     variants: {
       type: {
@@ -25,7 +25,7 @@ const alertClasses = cva(
 );
 
 const iconBgClasses = cva(
-  'mr-5 inline-flex w-9 h-9 max-w-[36px] items-center justify-center rounded-lg bg-opacity-30',
+  'bg-current/30 mr-5 inline-flex size-9 max-w-[36px] items-center justify-center rounded-lg',
   {
     variants: {
       type: {

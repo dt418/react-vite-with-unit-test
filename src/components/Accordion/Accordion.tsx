@@ -28,7 +28,7 @@ const AccordionTrigger = forwardRef<
   <RadixAccordion.Header className="flex">
     <RadixAccordion.Trigger
       className={cn(
-        'text-violet11 shadow-mauve6 hover:bg-mauve2 group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none',
+        'group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none text-violet11 shadow-[0_1px_0] shadow-mauve6 outline-none hover:bg-mauve2',
         className,
       )}
       {...props}
@@ -36,7 +36,7 @@ const AccordionTrigger = forwardRef<
     >
       {children}
       <RxChevronDown
-        className="text-violet10 ease-in transition-transform duration-300 group-data-[state=open]:rotate-180"
+        className="text-violet10 transition-transform duration-300 ease-in group-data-[state=open]:rotate-180"
         aria-hidden
       />
     </RadixAccordion.Trigger>
@@ -49,13 +49,13 @@ const AccordionContent = forwardRef<
 >(({ children, className, ...props }, forwardedRef) => (
   <RadixAccordion.Content
     className={cn(
-      'text-mauve11 bg-mauve2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px]',
+      'overflow-hidden bg-mauve2 text-[15px] text-mauve11 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
       className,
     )}
     {...props}
     ref={forwardedRef}
   >
-    <div className="py-[15px] px-5">{children}</div>
+    <div className="px-5 py-[15px]">{children}</div>
   </RadixAccordion.Content>
 ));
 

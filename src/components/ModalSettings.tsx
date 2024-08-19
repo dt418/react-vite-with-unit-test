@@ -102,7 +102,7 @@ export const Modal = ({
 
   return (
     <div
-      className="modal-container fixed z-50 flex top-25 bottom-5"
+      className="modal-container fixed bottom-5 top-25 z-50 flex"
       aria-hidden="true"
       aria-modal="true"
       aria-labelledby="modal-title"
@@ -110,11 +110,11 @@ export const Modal = ({
         if (e.target.className === 'modal-container') closeModal();
       }}
     >
-      <div className="modal rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark overflow-auto">
-        <div className="border-b border-stroke py-4 px-7 dark:border-strokedark">
-          <div className="w-full flex justify-end">
+      <div className="modal overflow-auto rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+        <div className="border-b border-stroke px-7 py-4 dark:border-strokedark">
+          <div className="flex w-full justify-end">
             <button
-              className="text-xl align-center cursor-pointer"
+              className="cursor-pointer text-center text-xl"
               aria-label="Close modal"
               onClick={closeModal}
             >
@@ -125,8 +125,8 @@ export const Modal = ({
             Bond Alert Modal
           </h2>
           <form>
-            <div className="grid grid-cols-3 gap-5 justify-normal">
-              <div className="form-group w-full col-span-3">
+            <div className="grid grid-cols-3 justify-normal gap-5">
+              <div className="col-span-3 w-full">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
                   htmlFor="id"
@@ -142,7 +142,7 @@ export const Modal = ({
                 />
               </div>
 
-              <div className="form-group">
+              <div className="">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
                   htmlFor="para"
@@ -150,11 +150,11 @@ export const Modal = ({
                   Parameter
                 </label>
                 <div className="relative z-20 w-full rounded border border-stroke p-1.5 pr-8 font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-                  <span className="m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke bg-gray py-1.5 px-2.5 text-sm font-medium dark:border-strokedark dark:bg-white/30">
+                  <span className="m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke bg-gray px-2.5 py-1.5 text-sm font-medium dark:border-strokedark dark:bg-white/30">
                     {formState.para}
                   </span>
                   <select
-                    className="absolute top-0 left-0 z-20 h-full w-full bg-transparent opacity-0"
+                    className="absolute left-0 top-0 z-20 size-full bg-transparent opacity-0"
                     id="para"
                     name="para"
                     onChange={handleChange}
@@ -166,7 +166,7 @@ export const Modal = ({
                       </option>
                     ))}
                   </select>
-                  <span className="absolute top-1/2 right-4 z-10 -translate-y-1/2">
+                  <span className="absolute right-4 top-1/2 z-10 -translate-y-1/2">
                     <svg
                       width="24"
                       height="24"
@@ -187,7 +187,7 @@ export const Modal = ({
                 </div>
               </div>
 
-              <div className="form-group">
+              <div className="">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
                   htmlFor="criterion"
@@ -195,7 +195,7 @@ export const Modal = ({
                   Criterion
                 </label>
                 <div className="relative z-20 w-full rounded border border-stroke p-1.5 pr-8 font-medium outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
-                  <span className="m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke bg-gray py-1.5 px-2.5 text-sm font-medium dark:border-strokedark dark:bg-white/30">
+                  <span className="m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke bg-gray px-2.5 py-1.5 text-sm font-medium dark:border-strokedark dark:bg-white/30">
                     {formState.criterion == 0
                       ? 'goes down by'
                       : formState.criterion == 1
@@ -207,7 +207,7 @@ export const Modal = ({
                             : 'is equal to'}
                   </span>
                   <select
-                    className="absolute top-0 left-0 z-20 h-full w-full bg-transparent opacity-0"
+                    className="absolute left-0 top-0 z-20 size-full bg-transparent opacity-0"
                     id="criterion"
                     name="criterion"
                     onChange={handleChange}
@@ -223,7 +223,7 @@ export const Modal = ({
                     )}
                     <option value="4">is equal to</option>
                   </select>
-                  <span className="absolute top-1/2 right-4 z-10 -translate-y-1/2">
+                  <span className="absolute right-4 top-1/2 z-10 -translate-y-1/2">
                     <svg
                       width="24"
                       height="24"
@@ -244,7 +244,7 @@ export const Modal = ({
                 </div>
               </div>
 
-              <div className="form-group w-full">
+              <div className="w-full">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
                   htmlFor="value"
@@ -260,7 +260,7 @@ export const Modal = ({
                 />
               </div>
 
-              <div className="form-group">
+              <div className="">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
                   htmlFor="type"
@@ -275,7 +275,7 @@ export const Modal = ({
                         : formState.type === 1
                           ? 'bg-[#eab90f]'
                           : 'bg-[#e13f32]'
-                    } m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke py-1.5 px-2.5 text-white font-medium dark:border-strokedark`}
+                    } m-1.5 flex items-center justify-center rounded border-[.5px] border-stroke px-2.5 py-1.5 font-medium text-white dark:border-strokedark`}
                   >
                     {formState.type === 0
                       ? 'Info'
@@ -284,7 +284,7 @@ export const Modal = ({
                         : 'Alert'}
                   </span>
                   <select
-                    className="absolute top-0 left-0 z-20 h-full w-full bg-transparent opacity-0"
+                    className="absolute left-0 top-0 z-20 size-full bg-transparent opacity-0"
                     id="type"
                     name="type"
                     onChange={handleChange}
@@ -294,7 +294,7 @@ export const Modal = ({
                     <option value="1">Warning</option>
                     <option value="2">Alert</option>
                   </select>
-                  <span className="absolute top-1/2 right-4 z-10 -translate-y-1/2">
+                  <span className="absolute right-4 top-1/2 z-10 -translate-y-1/2">
                     <svg
                       width="24"
                       height="24"
@@ -339,7 +339,7 @@ export const Modal = ({
 
             <br></br>
             <button
-              className="btn flex justify-center rounded bg-primary py-2 px-6 font-medium text-gray hover:shadow-1"
+              className="flex justify-center rounded bg-primary px-6 py-2 font-medium text-gray hover:shadow-1"
               type="submit"
               onClick={handleSubmit}
             >
