@@ -4,6 +4,8 @@ import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
 import AnalyticCard from '@/components/AnalyticCard/AnalyticCard.lazy';
+import Button from '@/components/Button/Button';
+import Tooltip from '@/components/Tooltip/Tooltip';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import {
   analyticList,
@@ -185,6 +187,12 @@ export const Analytics = () => {
                 }}
               />
             </div>
+            <Tooltip
+              renderOpener={(props) => (
+                <Button {...props}>Tooltip opener</Button>
+              )}
+              content={'Tooltip content'}
+            />
           </div>
         </div>
       </div>
