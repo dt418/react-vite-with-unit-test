@@ -113,7 +113,9 @@ const Tooltip: React.FC<TooltipProps> = ({
           <div
             data-testid="tooltip-container"
             style={transitionStyles}
-            className={cn('max-w-80 rounded-md bg-graydark p-4 text-white')}
+            className={cn(
+              'max-w-80 rounded-md bg-black p-4 text-white dark:bg-boxdark',
+            )}
           >
             {/* Renders the arrow element */}
             <FloatingArrow
@@ -121,7 +123,7 @@ const Tooltip: React.FC<TooltipProps> = ({
               height={8}
               ref={arrowRef}
               context={context}
-              className="fill-white"
+              className="fill-black dark:bg-boxdark"
               data-testid="tooltip-arrow"
             />
             {/* Renders the content of the tooltip */}
