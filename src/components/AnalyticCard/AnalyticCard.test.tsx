@@ -9,8 +9,9 @@ describe('<AnalyticCard />', () => {
       <AnalyticCard
         title="Unique Visitors"
         changeDirection="up"
-        value="$4,350"
-        changeRate="18%"
+        value={4350}
+        changeRate={18}
+        unit="currency"
       />,
     );
 

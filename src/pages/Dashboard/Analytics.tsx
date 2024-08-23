@@ -4,6 +4,7 @@ import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
 import AnalyticCard from '@/components/AnalyticCard/AnalyticCard.lazy';
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import {
   analyticList,
@@ -184,6 +185,13 @@ export const Analytics = () => {
                   },
                 }}
               />
+            </div>
+          </div>
+          <div className="space-y-2.5 border-t border-stroke p-4 dark:border-strokedark md:p-6 xl:p-7.5">
+            <div className="flex flex-col items-center gap-2">
+              {Array.from({ length: 50 }).map((_) => (
+                <ProgressBar percent={Math.floor(Math.random() * 100)} />
+              ))}
             </div>
           </div>
         </div>
