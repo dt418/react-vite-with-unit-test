@@ -189,8 +189,11 @@ export const Analytics = () => {
           </div>
           <div className="space-y-2.5 border-t border-stroke p-4 dark:border-strokedark md:p-6 xl:p-7.5">
             <div className="flex flex-col items-center gap-2">
-              {Array.from({ length: 5 }).map((_) => (
-                <ProgressBar percent={Math.floor(Math.random() * 100)} />
+              {Array.from({ length: 5 }).map((_, index) => (
+                <ProgressBar
+                  percent={Math.floor(Math.random() * 100)}
+                  key={index}
+                />
               ))}
             </div>
           </div>
