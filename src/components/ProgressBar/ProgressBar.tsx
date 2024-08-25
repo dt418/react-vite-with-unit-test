@@ -23,7 +23,6 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   const percentWithFallback = percent > 100 ? 100 : percent < 0 ? 0 : percent;
   const percentWithFallbackString = `w-[${percentWithFallback}%]`;
-  console.log(typeof percentWithFallbackString, percentWithFallbackString);
   return (
     <div
       data-testid="progressBar"
@@ -37,10 +36,10 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
       )}
     >
       <div
-        className={`absolute left-0 top-0 flex h-full items-center justify-center rounded bg-primary text-xs font-medium text-white ${percentWithFallbackString}`}
-        style={{
-          width: `${percentWithFallback}%`,
-        }}
+        className={cn(
+          'absolute left-0 top-0 flex h-full items-center justify-center rounded bg-primary text-xs font-medium text-white',
+          percentWithFallbackString,
+        )}
       >
         {/* The inner container contains the percentage text. */}
         {percentWithFallback}%

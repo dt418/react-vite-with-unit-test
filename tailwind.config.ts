@@ -374,5 +374,6 @@ const config: Config = {
     },
   },
   plugins: [tailwindcssAnimate],
+  safelist: [...[...Array(100).keys()].flatMap((i) => [`w-[${i}%]`])],
 };
 export default config;
