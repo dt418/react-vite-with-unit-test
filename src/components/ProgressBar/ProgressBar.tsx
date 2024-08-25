@@ -26,6 +26,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <div
       data-testid="progressBar"
+      role="progressbar"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={percent}
+      aria-label="progressBar"
       {...rest}
       className={cn(
         // The outer container is a relative block element with a height of 4.5,
