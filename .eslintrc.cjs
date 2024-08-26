@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
     'plugin:tailwindcss/recommended',
+    'plugin:jsx-a11y/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -20,6 +21,7 @@ module.exports = {
     'simple-import-sort',
     'prettier',
     'unused-imports',
+    'jsx-a11y',
   ],
   rules: {
     'react-refresh/only-export-components': [

@@ -45,7 +45,7 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
     return show === true;
   };
 
-  const select = (index: number, event: React.MouseEvent) => {
+  const select = (index: number, event: React.SyntheticEvent) => {
     const newOptions = [...options];
 
     if (!newOptions[index].selected) {
@@ -95,7 +95,10 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
 
   return (
     <div className="relative z-50">
-      <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+      <label
+        className="mb-3 block text-sm font-medium text-black dark:text-white"
+        htmlFor={id}
+      >
         Multiselect Dropdown
       </label>
       <div>
@@ -110,7 +113,14 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
           <input name="values" type="hidden" defaultValue={selectedValues()} />
           <div className="relative z-20 inline-block w-full">
             <div className="relative flex flex-col items-center">
-              <div ref={trigger} onClick={open} className="w-full">
+              <div
+                ref={trigger}
+                onKeyUp={open}
+                onClick={open}
+                role="button"
+                className="w-full"
+                tabIndex={0}
+              >
                 <div className="mb-2 flex rounded border border-stroke px-3 py-2 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input">
                   <div className="flex flex-auto flex-wrap gap-3">
                     {selected.map((index) => (
@@ -123,6 +133,10 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
                         </div>
                         <div className="flex flex-auto flex-row-reverse">
                           <div
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Remove"
+                            onKeyDown={() => remove(index)}
                             onClick={() => remove(index)}
                             className="cursor-pointer pl-2 hover:text-danger"
                           >
@@ -197,6 +211,9 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
                         <div
                           className="w-full cursor-pointer rounded-t border-b border-stroke hover:bg-primary/5 dark:border-form-strokedark"
                           onClick={(event) => select(index, event)}
+                          onKeyUp={(event) => select(index, event)}
+                          role="button"
+                          tabIndex={0}
                         >
                           <div
                             className={`relative flex w-full items-center border-l-2 border-transparent p-2 ${

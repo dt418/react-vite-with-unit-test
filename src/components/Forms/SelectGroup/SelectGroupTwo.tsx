@@ -12,6 +12,7 @@ const SelectGroupTwo: React.FC = () => {
     <div>
       <label
         className="mb-3 block text-black dark:text-white"
+        htmlFor="selectCountry"
         aria-labelledby="selectCountry"
       >
         Select Country

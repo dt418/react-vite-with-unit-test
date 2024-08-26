@@ -152,7 +152,7 @@ const FormLayout = () => {
                       <input
                         type="checkbox"
                         id="formCheckbox"
-                        className="taskCheckbox sr-only"
+                        className="sr-only"
                       />
                       <div className="box mr-3 flex size-5 items-center justify-center rounded border border-stroke dark:border-strokedark">
                         <span className="text-white opacity-0">
