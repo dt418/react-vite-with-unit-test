@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 const _plugins = [
-  react(),
+  react({ devTarget: 'esnext' }),
   tsconfigPaths(),
   svgr({
     svgrOptions: {

@@ -1,0 +1,34 @@
+import React, { LabelHTMLAttributes } from 'react';
+
+import { cn } from '@/utils/cn';
+
+export type LabelProps = LabelHTMLAttributes<HTMLLabelElement> & {
+  label: string;
+  htmlFor: string;
+  required?: boolean;
+};
+
+const Label: React.FC<LabelProps> = ({
+  label,
+  required,
+  htmlFor,
+  className,
+  ...props
+}) => {
+  return (
+    <label
+      data-testid="label"
+      htmlFor={htmlFor}
+      className={cn(
+        'block text-sm font-medium text-gray-700 dark:text-gray',
+        className,
+      )}
+      {...props}
+    >
+      {label}
+      {required && <span className="ml-1 text-red-500">*</span>}
+    </label>
+  );
+};
+
+export default Label;

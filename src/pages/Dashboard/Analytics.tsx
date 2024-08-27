@@ -4,6 +4,7 @@ import ReactApexChart from 'react-apexcharts';
 import Flatpickr from 'react-flatpickr';
 
 import AnalyticCard from '@/components/AnalyticCard/AnalyticCard.lazy';
+import Input from '@/components/Forms/Input/Input';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import {
@@ -198,6 +199,14 @@ export const Analytics = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Input
+          label="Test Label"
+          id="test-input"
+          helperText="Helper text"
+          required
+        />
       </div>
     </>
   );

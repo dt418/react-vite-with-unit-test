@@ -5,7 +5,7 @@ import { configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({ devTarget: 'esnext' }),
     tsconfigPaths(),
     svgr({
       svgrOptions: {
