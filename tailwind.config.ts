@@ -1,10 +1,10 @@
 import { mauve, violet } from '@radix-ui/colors';
-import { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 import { fontFamily, screens } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
-const config: Config = {
+export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
@@ -375,5 +375,4 @@ const config: Config = {
   },
   plugins: [tailwindcssAnimate],
   safelist: [...[...Array(100).keys()].flatMap((i) => [`w-[${i}%]`])],
-};
-export default config;
+} satisfies Config;
