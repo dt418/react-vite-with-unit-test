@@ -19,10 +19,7 @@ const Label: React.FC<LabelProps> = ({
     <label
       data-testid="label"
       htmlFor={htmlFor}
-      className={cn(
-        'block text-sm font-medium text-gray-700 dark:text-gray',
-        className,
-      )}
+      className={cn('mb-3 block text-black dark:text-white', className)}
       {...props}
     >
       {label}

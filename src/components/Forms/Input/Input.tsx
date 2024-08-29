@@ -39,10 +39,7 @@ const Input: React.FC<InputProps> = ({
         aria-required={required}
         data-testid="input"
         className={cn(
-          'mt-1 block w-full rounded-md border-gray-300 p-2 text-form-input shadow-sm sm:text-sm',
-          {
-            'border-red-500': error,
-          },
+          'w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500',
         )}
         {...props}
       />

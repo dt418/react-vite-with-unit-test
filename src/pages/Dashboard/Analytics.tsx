@@ -201,12 +201,18 @@ export const Analytics = () => {
         </div>
       </div>
       <div>
-        <Input
-          label="Test Label"
-          id="test-input"
-          helperText="Helper text"
-          required
-        />
+        <form action="" noValidate>
+          <Input
+            label="Test Label"
+            id="test-input"
+            helperText="Helper text"
+            error="Error message"
+            aria-invalid="true"
+            required
+            placeholder="Email"
+            type="email"
+          />
+        </form>
       </div>
     </>
   );

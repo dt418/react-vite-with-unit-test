@@ -10,7 +10,7 @@ describe('<Label />', () => {
     render(<Label label="Test Label" htmlFor="test" required />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
-    expect(label).toHaveClass('block text-sm font-medium text-gray-700');
+    expect(label).toHaveClass('mb-3 block text-black dark:text-white');
     expect(label).toHaveTextContent('Test Label*');
   });
 
@@ -18,7 +18,7 @@ describe('<Label />', () => {
     render(<Label label="Test Label" htmlFor="test" />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
-    expect(label).toHaveClass('block text-sm font-medium text-gray-700');
+    expect(label).toHaveClass('mb-3 block text-black dark:text-white');
     expect(label).toHaveTextContent('Test Label');
   });
 
@@ -30,7 +30,7 @@ describe('<Label />', () => {
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
     expect(label).toHaveClass(
-      cn('block text-sm font-medium text-gray-700', customClassName),
+      cn('mb-3 block text-black dark:text-white', customClassName),
     );
   });
 
