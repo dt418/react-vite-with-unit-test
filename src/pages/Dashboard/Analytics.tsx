@@ -206,11 +206,7 @@ export const Analytics = () => {
             label="Test Label"
             id="test-input"
             helperText="Helper text"
-            error="Error message"
-            aria-invalid="true"
             required
-            placeholder="Email"
-            type="email"
           />
         </form>
       </div>
