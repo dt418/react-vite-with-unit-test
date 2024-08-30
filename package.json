@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
-    "preview": "vite preview",
+    "preview": "bunx --bun vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:docs": "storybook dev --docs",
     "build-storybook": "storybook build",
@@ -19,6 +19,7 @@
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
+    "test:reporter": "vitest --reporter=json",
     "gpa": "pwa-assets-generator",
     "build-icons": "node scripts/createIconNameTypes.mjs"
   },
@@ -74,6 +75,7 @@
     "@testing-library/dom": "^10.2.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
+    "@types/bun": "latest",
     "@types/human-format": "^1.0.3",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
@@ -118,12 +120,13 @@
     "vite-plugin-pwa": "^0.20.1",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.6.0",
+    "vitest": "^2.0.5",
     "workbox-window": "^7.1.0"
   },
   "msw": {
     "workerDirectory": [
       "public"
     ]
-  }
+  },
+  "module": "index.ts"
 }

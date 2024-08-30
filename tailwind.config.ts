@@ -1,6 +1,5 @@
 import { mauve, violet } from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors';
 import { fontFamily, screens } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
@@ -61,7 +60,6 @@ export default {
         stroke: '#E2E8F0',
         gray: {
           DEFAULT: '#EFF4FB',
-          ...colors.gray,
         },
         graydark: '#333A48',
         'gray-2': '#F7F9FC',
