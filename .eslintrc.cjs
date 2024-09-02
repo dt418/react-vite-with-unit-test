@@ -20,8 +20,8 @@ module.exports = {
     '@typescript-eslint',
     'simple-import-sort',
     'prettier',
-    'unused-imports',
     'jsx-a11y',
+    'unused-imports'
   ],
   rules: {
     'react-refresh/only-export-components': [

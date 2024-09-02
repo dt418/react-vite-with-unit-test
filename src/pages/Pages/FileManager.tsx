@@ -1,5 +1,4 @@
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
-import Logo from '@/images/logo/logo.svg?react';
 
 const FileManager = () => {
   return (
@@ -174,7 +173,6 @@ const FileManager = () => {
           </div>
         </div>
       </div>
-      <Logo />
     </>
   );
 };
