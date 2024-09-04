@@ -5,6 +5,7 @@ import Flatpickr from 'react-flatpickr';
 
 import AnalyticCard from '@/components/AnalyticCard/AnalyticCard.lazy';
 import Input from '@/components/Forms/Input/Input';
+import Label from '@/components/Forms/Label/Label';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
 import {
@@ -202,12 +203,10 @@ export const Analytics = () => {
       </div>
       <div>
         <form action="" noValidate>
-          <Input
-            label="Test Label"
-            id="test-input"
-            helperText="Helper text"
-            required
-          />
+          <div>
+            <Label htmlFor="test-input" label="Label" required />
+            <Input id="test-input" helperText="Helper text" required />
+          </div>
         </form>
       </div>
     </>

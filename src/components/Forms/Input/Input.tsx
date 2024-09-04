@@ -2,25 +2,22 @@ import React, { InputHTMLAttributes } from 'react';
 
 import { cn } from '@/utils/cn';
 
-import ErrorMessage from '../ErrorMessage/ErrorMessage.lazy';
-import Label from '../Label/Label.lazy';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  label: string;
   error?: string;
   helperText?: string;
   required?: boolean;
 };
 
 const Input: React.FC<InputProps> = ({
-  label,
   id,
   required,
   error,
   helperText,
   ...props
 }) => {
-  const inputId = id || label.replace(/\s+/g, '-').toLowerCase();
+  const inputId = id;
   const errorId = `${inputId}-error`;
   const helperTextId = `${inputId}-helper`;
 
@@ -31,7 +28,6 @@ const Input: React.FC<InputProps> = ({
   });
   return (
     <>
-      <Label label={label} htmlFor={inputId} required={required} />
       <input
         id={inputId}
         aria-invalid={!!error}
