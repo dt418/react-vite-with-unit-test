@@ -45,6 +45,12 @@ export default function (
         type: 'input',
         name: 'componentName',
         message: 'Component name:',
+        validate: (input) => {
+          if (input.trim() === '') {
+            return 'Component name cannot be empty';
+          }
+          return true;
+        },
       },
       {
         type: 'input',
