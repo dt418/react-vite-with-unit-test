@@ -84,6 +84,7 @@ const _plugins = [
 // _plugins.unshift(MillionLint.vite());
 
 export default defineConfig({
+  base: './',
   plugins: _plugins,
   build: {
     chunkSizeWarningLimit: 1600,
