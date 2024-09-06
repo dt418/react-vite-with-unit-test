@@ -34,20 +34,7 @@ jobs:
 
       - name: Build project
         run: |
-          echo "NODE_ENV=${NODE_ENV}" >> $GITHUB_ENV
-          echo "VITE_APP_BASE_URL=${VITE_APP_BASE_URL}" >> $GITHUB_ENV
-          echo "VITE_ENABLE_MSW=${VITE_ENABLE_MSW}" >> $GITHUB_ENV
           bun run build
-        env:
-          NODE_ENV: ${{ secrets.NODE_ENV }}
-          VITE_APP_BASE_URL: ${{ secrets.VITE_APP_BASE_URL }}
-          VITE_ENABLE_MSW: ${{ secrets.VITE_ENABLE_MSW }}
-
-      - name: Show repo env
-        run: |
-          echo ${{ secrets.NODE_ENV }}
-          echo ${{ secrets.VITE_APP_BASE_URL }}
-          echo ${{ secrets.VITE_ENABLE_MSW }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
