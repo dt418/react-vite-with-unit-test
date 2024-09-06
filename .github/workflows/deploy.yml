@@ -5,6 +5,9 @@ on:
     branches:
       - main # Change this if you use a different branch for deployment
 
+permissions:
+  contents: write # Grant write permissions to contents
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,12 +30,10 @@ jobs:
           NODE_ENV: ${{ env.NODE_ENV }}
           VITE_APP_BASE_URL: ${{ env.VITE_APP_BASE_URL }}
           VITE_ENABLE_MSW: ${{ env.VITE_ENABLE_MSW }}
-          
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} # Provided automatically by GitHub Actions
           publish_dir: ./dist # The directory where your built files are located
           publish_branch: gh-pages # Branch where the built files will be pushed
-
