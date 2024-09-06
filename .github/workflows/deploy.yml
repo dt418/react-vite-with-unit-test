@@ -1,0 +1,33 @@
+name: Deploy React Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Change this if you use a different branch for deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Bun
+        uses: Bun/bun@v0.2.0
+        with:
+          bun-version: "latest"
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build project
+        run: bun run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Provided automatically by GitHub Actions
+          publish_dir: ./dist # The directory where your built files are located
+          publish_branch: gh-pages # Branch where the built files will be pushed
+
