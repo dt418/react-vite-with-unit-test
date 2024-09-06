@@ -8,6 +8,8 @@ export type SwitchInputProps = Omit<
 > & {
   // define your props here
   label?: string;
+  activeIcon?: React.ReactNode;
+  inactiveIcon?: React.ReactNode;
 };
 
 /**
@@ -25,11 +27,24 @@ export type SwitchInputProps = Omit<
  * switch. When the switch is toggled, the `enabled` state variable is updated
  * and the component is re-rendered with the new state.
  */
-const SwitchInput: React.FC<SwitchInputProps> = ({ label, ...props }) => {
+const SwitchInput: React.FC<SwitchInputProps> = ({
+  label,
+  activeIcon,
+  inactiveIcon,
+  ...props
+}) => {
   const [enabled, setEnabled] = useState<boolean>(false);
 
   const id = useId();
   const idTemplate = `${id}-switch-input`;
+
+  /**
+   * A function that is called when the switch is toggled. It simply updates
+   * the `enabled` state variable to the opposite of its current value.
+   */
+  const handleChangeEnable = () => {
+    setEnabled((prev) => !prev);
+  };
 
   return (
     <div data-testid="switchInput" {...props}>
@@ -44,20 +59,26 @@ const SwitchInput: React.FC<SwitchInputProps> = ({ label, ...props }) => {
             className="sr-only"
             // when the switch is toggled, update the enabled state and re-render
             // the component with the new state
-            onChange={() => {
-              setEnabled(!enabled);
-            }}
+            onChange={handleChangeEnable}
+            value={String(enabled)}
           />
           <div className="block h-8 w-14 rounded-full bg-meta-9 dark:bg-[#5A616B]"></div>
           <div
             className={cn(
-              'absolute left-1 top-1 size-6 rounded-full bg-white transition',
+              'absolute left-1 top-1 flex size-6 items-center justify-center rounded-full bg-white transition',
               {
                 '!right-1 !translate-x-full !bg-primary dark:!bg-white':
                   enabled,
               },
             )}
-          ></div>
+          >
+            {inactiveIcon && (
+              <span className={cn({ hidden: enabled })}>{inactiveIcon}</span>
+            )}
+            {activeIcon && (
+              <span className={cn({ hidden: !enabled })}>{activeIcon}</span>
+            )}
+          </div>
         </div>
         {label && (
           <span className="ml-3 text-black dark:text-white">{label}</span>

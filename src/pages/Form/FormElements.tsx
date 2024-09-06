@@ -9,6 +9,7 @@ import DatePickerTwo from '@/components/Forms/DatePicker/DatePickerTwo';
 import MultiSelect from '@/components/Forms/MultiSelect';
 import SelectGroupTwo from '@/components/Forms/SelectGroup/SelectGroupTwo';
 import SwitchInput from '@/components/Forms/SwitchInput/SwitchInput';
+import SvgIcon from '@/components/SvgIcon/SvgIcon';
 import SwitcherFour from '@/components/Switchers/SwitcherFour';
 import SwitcherThree from '@/components/Switchers/SwitcherThree';
 import SwitcherTwo from '@/components/Switchers/SwitcherTwo';
@@ -88,6 +89,10 @@ const FormElements = () => {
               <SwitchInput />
               <SwitcherTwo />
               <SwitcherThree />
+              <SwitchInput
+                activeIcon={<SvgIcon icon="check" color="white" />}
+                inactiveIcon={<SvgIcon icon="cross-2" />}
+              />
               <SwitcherFour />
             </div>
           </div>

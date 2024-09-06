@@ -33,4 +33,13 @@ describe('<SwitchInput />', () => {
     expect(component).toHaveClass('mt-2');
     expect(component).toHaveStyle('color: rgb(255, 0, 0)');
   });
+
+  it('updates enabled state when switch is toggled', () => {
+    render(<SwitchInput />);
+    const input = screen.getByRole('checkbox');
+    fireEvent.click(input);
+    expect(input).toBeChecked();
+    fireEvent.click(input);
+    expect(input).not.toBeChecked();
+  });
 });
