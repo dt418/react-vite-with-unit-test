@@ -84,7 +84,7 @@ const _plugins = [
 // _plugins.unshift(MillionLint.vite());
 
 export default defineConfig({
-  base: './',
+  base: process.env.VITE_BASE_URL || '/',
   plugins: _plugins,
   build: {
     chunkSizeWarningLimit: 1600,
