@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 );
 
 async function enableMocking() {
-  if (!import.meta.env.VITE_ENABLE_MSW) {
+  if (import.meta.env.NODE_ENV !== 'development') {
     return;
   }
 

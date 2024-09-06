@@ -23,8 +23,7 @@
     "test:reporter": "vitest --reporter=json",
     "gpa": "pwa-assets-generator",
     "build-icons": "node scripts/createIconNameTypes.mjs",
-    "predeploy": "bun run build",
-    "deploy": "gh-pages -d dist"
+    "prepreview": "bun run build"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.23",
