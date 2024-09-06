@@ -1,11 +1,11 @@
 import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import { configDefaults, defineConfig } from 'vitest/config';
+import { configDefaults, defineConfig, UserConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [
-    react({ devTarget: 'esnext' }),
+    react(),
     tsconfigPaths(),
     svgr({
       svgrOptions: {
@@ -19,7 +19,7 @@ export default defineConfig({
         },
       },
     }),
-  ],
+  ] as UserConfig['plugins'],
   test: {
     globals: true,
     environment: 'jsdom',
