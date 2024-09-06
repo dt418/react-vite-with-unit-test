@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://dt418.github.io/react-vite-with-unit-test/",
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
@@ -22,6 +23,7 @@
     "test:reporter": "vitest --reporter=json",
     "gpa": "pwa-assets-generator",
     "build-icons": "node scripts/createIconNameTypes.mjs",
+    "predeploy": "bun run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
