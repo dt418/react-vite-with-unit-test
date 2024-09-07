@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main  # Change this if your deployment branch is different
-
+# Set permissions for the GITHUB_TOKEN
+permissions:
+  contents: write  # Allows pushing to the repository
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 'latest'
-          
+
       - name: Cache Bun Dependencies
         uses: actions/cache@v4
         with:
