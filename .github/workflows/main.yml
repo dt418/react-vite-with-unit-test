@@ -39,6 +39,9 @@ jobs:
       - name: Set Environment Variable for Repository Name
         run: echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" >> $GITHUB_ENV
 
+      - name: Show All Environment Variables
+        run: env  # Using Linux runner, 'env' will list all environment variables
+
       - name: Build project
         run: bun run build
 
