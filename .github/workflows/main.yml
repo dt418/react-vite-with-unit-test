@@ -7,10 +7,12 @@ on:
 # Set permissions for the GITHUB_TOKEN
 permissions:
   contents: write  # Allows pushing to the repository
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
 
     steps:
       - name: Checkout code
