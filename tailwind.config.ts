@@ -1,4 +1,3 @@
-import { mauve, violet } from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
 import { fontFamily, screens } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimate from 'tailwindcss-animate';
@@ -18,8 +17,6 @@ export default {
     },
     extend: {
       colors: {
-        ...mauve,
-        ...violet,
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',
@@ -372,5 +369,8 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-  safelist: [...[...Array(100).keys()].flatMap((i) => [`w-[${i}%]`])],
+  safelist: [
+    ...[...Array(100).keys()].flatMap((i) => [`w-[${i}%]`]),
+    'flatpickr-input',
+  ],
 } satisfies Config;

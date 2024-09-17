@@ -26,7 +26,7 @@ export const Analytics = () => {
                 console.log('date', date.toLocaleString());
               }}
               className={cn(
-                'flatpickr-input w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark',
+                'w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark',
               )}
               options={{
                 mode: 'range',

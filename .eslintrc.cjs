@@ -21,7 +21,7 @@ module.exports = {
     'simple-import-sort',
     'prettier',
     'jsx-a11y',
-    'unused-imports'
+    'unused-imports',
   ],
   rules: {
     'react-refresh/only-export-components': [
@@ -53,7 +53,22 @@ module.exports = {
   },
   settings: {
     tailwindcss: {
-      config: path.join(__dirname, './tailwind.config.ts'),
+      // These are the default values but feel free to customize
+      callees: ['classnames', 'clsx', 'cva', 'tw', 'cn'],
+      config: 'tailwind.config.ts', // returned from `loadConfig()` utility if not provided
+      cssFiles: [
+        '**/*.css',
+        '!**/node_modules',
+        '!**/.*',
+        '!**/dist',
+        '!**/build',
+      ],
+      cssFilesRefreshRate: 5_000,
+      removeDuplicates: true,
+      skipClassAttribute: false,
+      whitelist: ['flatpickr-input'],
+      tags: [], // can be set to e.g. ['tw'] for use in tw`bg-blue`
+      classRegex: '^class(Name)?$', // can be modified to support custom attributes. E.g. "^tw$" for `twin.macro`
     },
   },
 };

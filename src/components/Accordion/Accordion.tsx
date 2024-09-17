@@ -28,7 +28,7 @@ const AccordionTrigger = forwardRef<
   <RadixAccordion.Header className="flex">
     <RadixAccordion.Trigger
       className={cn(
-        'group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none text-violet11 shadow-[0_1px_0] shadow-mauve6 outline-none hover:bg-mauve2',
+        'group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none text-violet-900 shadow-[0_1px_0] shadow-zinc-600 outline-none hover:bg-zinc-200',
         className,
       )}
       {...props}
@@ -36,7 +36,7 @@ const AccordionTrigger = forwardRef<
     >
       {children}
       <RxChevronDown
-        className="text-violet10 transition-transform duration-300 ease-in group-data-[state=open]:rotate-180"
+        className="text-violet-800 transition-transform duration-300 ease-in group-data-[state=open]:rotate-180"
         aria-hidden
       />
     </RadixAccordion.Trigger>
@@ -49,7 +49,7 @@ const AccordionContent = forwardRef<
 >(({ children, className, ...props }, forwardedRef) => (
   <RadixAccordion.Content
     className={cn(
-      'overflow-hidden bg-mauve2 text-[15px] text-mauve11 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
+      'overflow-hidden bg-zinc-200 text-[15px] text-zinc-800 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown',
       className,
     )}
     {...props}
@@ -64,7 +64,7 @@ const AccordionItem = forwardRef<HTMLDivElement | null, AccordionItemProps>(
     return (
       <RadixAccordion.Item
         className={cn(
-          'focus-within:shadow-violet mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10 focus-within:shadow-[0_0_0_2px]',
+          'mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10 focus-within:shadow-[0_0_0_2px] focus-within:shadow-violet-500',
           className,
         )}
         {...props}
@@ -83,7 +83,7 @@ const Accordion: FC<AccordionProps> = ({ items = [], className, type }) => {
       collapsible
       data-testid="accordion"
       className={cn(
-        'bg-violet w-[300px] rounded-md shadow-[0_2px_10px] shadow-black/5',
+        'w-[300px] rounded-md bg-violet-500 shadow-[0_2px_10px] shadow-black/5',
         className,
       )}
     >
