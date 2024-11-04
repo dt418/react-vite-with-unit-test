@@ -123,7 +123,7 @@ const Sidebar: React.FC<SidebarProps> = memo(
                           }`}
                           onClick={(e) => {
                             e.preventDefault();
-                            sidebarExpanded
+                            return sidebarExpanded
                               ? handleClick()
                               : setSidebarExpanded(true);
                           }}
@@ -282,7 +282,7 @@ const Sidebar: React.FC<SidebarProps> = memo(
                           }`}
                           onClick={(e) => {
                             e.preventDefault();
-                            sidebarExpanded
+                            return sidebarExpanded
                               ? handleClick()
                               : setSidebarExpanded(true);
                           }}
@@ -386,7 +386,7 @@ const Sidebar: React.FC<SidebarProps> = memo(
                           }`}
                           onClick={(e) => {
                             e.preventDefault();
-                            sidebarExpanded
+                            return sidebarExpanded
                               ? handleClick()
                               : setSidebarExpanded(true);
                           }}
@@ -661,7 +661,7 @@ const Sidebar: React.FC<SidebarProps> = memo(
                           }`}
                           onClick={(e) => {
                             e.preventDefault();
-                            sidebarExpanded
+                            return sidebarExpanded
                               ? handleClick()
                               : setSidebarExpanded(true);
                           }}
@@ -781,7 +781,7 @@ const Sidebar: React.FC<SidebarProps> = memo(
                           }`}
                           onClick={(e) => {
                             e.preventDefault();
-                            sidebarExpanded
+                            return sidebarExpanded
                               ? handleClick()
                               : setSidebarExpanded(true);
                           }}

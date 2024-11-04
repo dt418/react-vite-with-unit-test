@@ -25,7 +25,7 @@ const useColorMode = () => {
 
     // If the color mode is 'dark', add the class name to the body classList.
     // Otherwise, remove the class name from the body classList.
-    colorMode === 'dark'
+    return colorMode === 'dark'
       ? bodyClass.add(className)
       : bodyClass.remove(className);
   }, [colorMode]);

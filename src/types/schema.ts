@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const contactForm = z.object({
+export const contactFormSchema = z.object({
   firstName: z.string().trim().optional(),
   lastName: z.string().trim().optional(),
   email: z
@@ -17,7 +17,7 @@ const contactForm = z.object({
   message: z.string().optional(),
 });
 
-const loginForm = z.object({
+export const loginFormSchema = z.object({
   email: z
     .string()
     .min(1, { message: 'Email is required' })
@@ -25,23 +25,18 @@ const loginForm = z.object({
   password: z.string().min(1, { message: 'Password is required' }),
 });
 
-const signUpForm = z
+export const signUpFormSchema = z
   .object({
     name: z.string().optional(),
     email: z.string().min(1, { message: 'Email is required' }),
     password: z.string().min(1, { message: 'Password is required' }),
     confirmPassword: z.string().min(1, { message: 'Confirm is required' }),
   })
-  .refine(
-    (values) => {
-      return values.password === values.confirmPassword;
-    },
-    {
-      message: 'Passwords must match!',
-      path: ['confirmPassword'],
-    },
-  );
+  .refine((values) => values.password === values.confirmPassword, {
+    message: 'Passwords must match!',
+    path: ['confirmPassword'],
+  });
 
-export type ContactFormSchemaType = z.infer<typeof contactForm>;
-export type LoginFormSchemaType = z.infer<typeof loginForm>;
-export type SignUpFormSchemaType = z.infer<typeof signUpForm>;
+export type ContactFormSchemaType = z.infer<typeof contactFormSchema>;
+export type LoginFormSchemaType = z.infer<typeof loginFormSchema>;
+export type SignUpFormSchemaType = z.infer<typeof signUpFormSchema>;

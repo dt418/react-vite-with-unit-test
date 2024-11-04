@@ -1,9 +1,8 @@
-import type { Preview, ReactRenderer } from '@storybook/react';
-import {
-  withThemeByClassName,
-} from '@storybook/addon-themes';
 import '../src/css/style.css';
 import '../src/css/montserrat.css';
+
+import { withThemeByClassName } from '@storybook/addon-themes';
+import type { Preview, ReactRenderer } from '@storybook/react';
 
 const decorators = [
   withThemeByClassName<ReactRenderer>({
