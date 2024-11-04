@@ -8,14 +8,16 @@ import Input from '@/components/Forms/Input/Input';
 import Label from '@/components/Forms/Label/Label';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import WorldMap from '@/components/WorldMap/WorldMap.lazy';
-import {
-  analyticList,
-  analyticOptions,
-  analyticSeries,
-} from '@/mocks/analytic';
+import { analyticList, analyticOptions, visitorData } from '@/mocks/analytic';
 import { cn } from '@/utils/cn';
 
 export const Analytics = () => {
+  const series = [
+    {
+      name: 'Visitors',
+      data: visitorData.map((data) => data.visitors),
+    },
+  ];
   return (
     <>
       <div className="grid grid-cols-12 gap-4 md:gap-6 2xl:gap-7.5">
@@ -116,7 +118,7 @@ export const Analytics = () => {
           </div>
           <ReactApexChart
             options={analyticOptions}
-            series={analyticSeries}
+            series={series}
             type="bar"
             height={380}
           />

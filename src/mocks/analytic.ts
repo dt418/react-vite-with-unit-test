@@ -2,6 +2,43 @@ import { ApexOptions } from 'apexcharts';
 
 import { AnalyticCardProps } from '@/components/AnalyticCard/AnalyticCard';
 
+export type VisitorData = {
+  date: number;
+  visitors: number;
+};
+
+export const visitorData: VisitorData[] = [
+  { date: 1, visitors: 150 },
+  { date: 2, visitors: 350 },
+  { date: 3, visitors: 220 },
+  { date: 4, visitors: 300 },
+  { date: 5, visitors: 160 },
+  { date: 6, visitors: 180 },
+  { date: 7, visitors: 290 },
+  { date: 8, visitors: 110 },
+  { date: 9, visitors: 220 },
+  { date: 10, visitors: 340 },
+  { date: 11, visitors: 210 },
+  { date: 12, visitors: 120 },
+  { date: 13, visitors: 280 },
+  { date: 14, visitors: 180 },
+  { date: 15, visitors: 210 },
+  { date: 16, visitors: 160 },
+  { date: 17, visitors: 250 },
+  { date: 18, visitors: 200 },
+  { date: 19, visitors: 160 },
+  { date: 20, visitors: 230 },
+  { date: 21, visitors: 120 },
+  { date: 22, visitors: 200 },
+  { date: 23, visitors: 180 },
+  { date: 24, visitors: 220 },
+  { date: 25, visitors: 220 },
+  { date: 26, visitors: 160 },
+  { date: 27, visitors: 130 },
+  { date: 28, visitors: 140 },
+  { date: 29, visitors: 320 },
+  { date: 30, visitors: 270 },
+];
 export const analyticOptions: ApexOptions = {
   chart: {
     type: 'bar',
@@ -25,7 +62,7 @@ export const analyticOptions: ApexOptions = {
     show: false,
   },
   xaxis: {
-    categories: Array.from({ length: 30 }, (_, i) => i + 1),
+    categories: visitorData.map((data) => data.date),
     labels: {
       style: {
         colors: '#ffffff',
@@ -53,16 +90,6 @@ export const analyticOptions: ApexOptions = {
     show: false,
   },
 };
-
-export const analyticSeries: ApexAxisChartSeries = [
-  {
-    name: 'Visitors',
-    data: [
-      150, 380, 220, 310, 160, 190, 300, 110, 220, 340, 210, 112, 290, 180, 210,
-      170, 270, 200, 160, 240, 120, 200, 180, 230, 220, 160, 130, 140, 330, 280,
-    ],
-  },
-];
 
 export const analyticList: AnalyticCardProps[] = [
   {
