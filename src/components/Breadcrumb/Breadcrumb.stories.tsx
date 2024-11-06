@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
 
 import Breadcrumb from './Breadcrumb';
 
@@ -15,6 +16,8 @@ const meta = {
   argTypes: {},
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: {},
+  // This decorator is necessary to make links in breadcrumb clickable
+  decorators: [(Story) => <MemoryRouter>{Story()}</MemoryRouter>],
 } satisfies Meta<typeof Breadcrumb>;
 
 export default meta;
