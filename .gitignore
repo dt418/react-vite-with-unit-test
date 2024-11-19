@@ -25,6 +25,7 @@ coverage
 *.sw?
 
 *storybook.log
+storybook-static
 # Million Lint
 .million
 .env
