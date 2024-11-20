@@ -1,5 +1,5 @@
-import { cva, VariantProps } from 'class-variance-authority';
-import React from 'react';
+import { type VariantProps, cva } from 'class-variance-authority';
+import type React from 'react';
 import {
   RxCheckCircled,
   RxCrossCircled,

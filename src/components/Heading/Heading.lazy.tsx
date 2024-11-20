@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { HeadingProps } from './Heading';
+import type { HeadingProps } from './Heading';
 
 const LazyHeading = lazy(() => import('./Heading'));
 

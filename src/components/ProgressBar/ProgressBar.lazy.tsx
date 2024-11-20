@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { ProgressBarProps } from './ProgressBar';
+import type { ProgressBarProps } from './ProgressBar';
 
 const LazyProgressBar = lazy(() => import('./ProgressBar'));
 

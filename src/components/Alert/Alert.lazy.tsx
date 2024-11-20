@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { AlertProps } from './Alert';
+import type { AlertProps } from './Alert';
 
 const LazyAlert = lazy(() => import('./Alert'));
 

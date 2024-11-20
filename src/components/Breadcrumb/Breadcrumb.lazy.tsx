@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { BreadcrumbProps } from './Breadcrumb';
+import type { BreadcrumbProps } from './Breadcrumb';
 
 const LazyBreadcrumb = lazy(() => import('./Breadcrumb'));
 

@@ -1,7 +1,8 @@
-import React, { SVGProps } from 'react';
+import type React from 'react';
+import type { SVGProps } from 'react';
 
 import { useDynamicSVGImport } from '@/hooks/useDynamicSVGImport';
-import { IconName } from '@/types/utils/iconName';
+import type { IconName } from '@/types/utils/iconName';
 
 /**
  * `SvgIconProps` defines the props for the `SvgIcon` component.

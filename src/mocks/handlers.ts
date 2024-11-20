@@ -1,4 +1,4 @@
-import { DefaultBodyType, http, PathParams } from 'msw';
+import { http, type DefaultBodyType, type PathParams } from 'msw';
 
 export const handlers = [
   http.get<PathParams, DefaultBodyType, DefaultBodyType>('/posts', () => {

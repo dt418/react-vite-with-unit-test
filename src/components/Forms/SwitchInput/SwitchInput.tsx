@@ -1,4 +1,5 @@
-import React, { HTMLAttributes, useId, useState } from 'react';
+import type React from 'react';
+import { type HTMLAttributes, useId, useState } from 'react';
 
 import { cn } from '@/utils/cn';
 

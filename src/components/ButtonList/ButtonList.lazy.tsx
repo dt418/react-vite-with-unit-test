@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { ButtonListProps } from './ButtonList';
+import type { ButtonListProps } from './ButtonList';
 
 const LazyButtonList = lazy(() => import('./ButtonList'));
 

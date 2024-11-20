@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { TooltipProps } from './Tooltip';
+import type { TooltipProps } from './Tooltip';
 
 const LazyTooltip = lazy(() => import('./Tooltip'));
 

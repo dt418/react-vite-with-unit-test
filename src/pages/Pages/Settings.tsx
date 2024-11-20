@@ -1,4 +1,10 @@
-import { ChangeEvent, SyntheticEvent, useId, useRef, useState } from 'react';
+import {
+  type ChangeEvent,
+  type SyntheticEvent,
+  useId,
+  useRef,
+  useState,
+} from 'react';
 
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import userThree from '@/images/user/user-03.png';

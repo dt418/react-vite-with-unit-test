@@ -7,15 +7,15 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
-    "lint": "eslint --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint --report-unused-disable-directives --max-warnings 0 --fix",
+    "check": "bunx biome check",
+    "lint": "bunx biome lint --write",
+    "lint:fix": "bunx biome lint --write",
     "preview": "bunx --bun vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:docs": "storybook dev --docs",
     "build-storybook": "storybook build",
     "generate": "plop component",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
-    "prepare": "husky",
+    "format": "bunx biome format --write",
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
@@ -24,7 +24,19 @@
     "gpa": "pwa-assets-generator",
     "build-icons": "node scripts/createIconNameTypes.mjs",
     "prepreview": "bun run build",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --files-ignore-unknown=true",
+      "biome check --write --no-errors-on-unmatched",
+      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+      "biome check --write --unsafe --no-errors-on-unmatched",
+      "biome format --write --no-errors-on-unmatched",
+      "biome lint --write --no-errors-on-unmatched"
+    ],
+    "*": ["biome check --no-errors-on-unmatched --files-ignore-unknown=true"]
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.27",
@@ -60,10 +72,8 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.10.0",
+    "@biomejs/biome": "1.9.4",
     "@chromatic-com/storybook": "^3.2.2",
-    "@eslint/compat": "^1.2.2",
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
     "@storybook/addon-essentials": "^8.4.1",
     "@storybook/addon-interactions": "^8.4.1",
     "@storybook/addon-links": "^8.4.1",
@@ -88,8 +98,6 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-flatpickr": "^3.8.11",
-    "@typescript-eslint/eslint-plugin": "^8.12.2",
-    "@typescript-eslint/parser": "^8.12.2",
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vitejs/plugin-react-swc": "^3.7.1",
     "@vitest/coverage-v8": "^2.1.4",
@@ -97,20 +105,12 @@
     "autoprefixer": "^10.4.20",
     "change-case": "^5.4.4",
     "chromatic": "^11.18.1",
-    "eslint": "^9.14.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-storybook": "^0.10.2",
-    "eslint-plugin-tailwindcss": "^3.17.5",
-    "eslint-plugin-unused-imports": "^4.1.4",
     "file-loader": "^6.2.0",
     "globals": "^15.12.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "jsdom": "^25.0.1",
+    "lefthook": "1.8.4",
+    "lint-staged": "^15.2.10",
     "msw": "^2.6.0",
     "plop": "^4.0.1",
     "postcss": "^8.4.47",
@@ -133,9 +133,7 @@
     "workbox-window": "^7.3.0"
   },
   "msw": {
-    "workerDirectory": [
-      "public"
-    ]
+    "workerDirectory": ["public"]
   },
   "module": "index.ts"
 }

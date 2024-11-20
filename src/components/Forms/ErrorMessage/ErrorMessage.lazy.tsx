@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { ErrorMessageProps } from './ErrorMessage';
+import type { ErrorMessageProps } from './ErrorMessage';
 
 const LazyErrorMessage = lazy(() => import('./ErrorMessage'));
 

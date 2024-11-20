@@ -5,7 +5,7 @@ import UserTwo from '../../images/user/user-02.png';
 import UserThree from '../../images/user/user-03.png';
 import UserFour from '../../images/user/user-04.png';
 import UserFive from '../../images/user/user-05.png';
-import { Chat } from '../../types/chat';
+import type { Chat } from '../../types/chat';
 
 const chatData: Chat[] = [
   {
@@ -66,18 +66,18 @@ const ChatCard = () => {
       </h4>
 
       <div>
-        {chatData.map((chat, key) => (
+        {chatData.map((chat) => (
           <Link
             to="/"
             className="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
-            key={key}
+            key={chat.name}
           >
             <div className="relative size-14 rounded-full">
               <img src={chat.avatar} alt="User" />
               <span
                 className="absolute bottom-0 right-0 size-3.5 rounded-full border-2 border-white"
                 style={{ backgroundColor: chat.color }}
-              ></span>
+              />
             </div>
 
             <div className="flex flex-1 items-center justify-between">

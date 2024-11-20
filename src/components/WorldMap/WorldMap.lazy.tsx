@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { WorldMapProps } from './WorldMap';
+import type { WorldMapProps } from './WorldMap';
 
 const LazyWorldMap = lazy(() => import('./WorldMap'));
 

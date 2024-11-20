@@ -1,4 +1,5 @@
-import React, { HtmlHTMLAttributes } from 'react';
+import type React from 'react';
+import type { HtmlHTMLAttributes } from 'react';
 
 import { cn } from '@/utils/cn';
 

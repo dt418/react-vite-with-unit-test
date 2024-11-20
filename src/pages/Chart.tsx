@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import ChartOne from '@/components/Charts/ChartOne';

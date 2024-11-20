@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { AccordionProps } from './Accordion';
+import type { AccordionProps } from './Accordion';
 
 const LazyAccordion = lazy(() => import('./Accordion'));
 

@@ -1,4 +1,5 @@
-import React, { SVGProps, useEffect, useState } from 'react';
+import type React from 'react';
+import { type SVGProps, useEffect, useState } from 'react';
 
 /**
  * Custom hook to dynamically import SVG components.

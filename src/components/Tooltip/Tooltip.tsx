@@ -1,11 +1,11 @@
 import {
+  FloatingArrow,
+  type Placement,
+  type ReferenceType,
   arrow,
   autoUpdate,
   flip,
-  FloatingArrow,
   offset,
-  type Placement,
-  type ReferenceType,
   shift,
   useDismiss,
   useFloating,
@@ -15,7 +15,7 @@ import {
   useRole,
   useTransitionStyles,
 } from '@floating-ui/react';
-import { ReactNode, useRef, useState } from 'react';
+import { type ReactNode, useRef, useState } from 'react';
 
 import { cn } from '@/utils/cn';
 

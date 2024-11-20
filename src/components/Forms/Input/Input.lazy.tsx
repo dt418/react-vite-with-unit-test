@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { InputProps } from './Input';
+import type { InputProps } from './Input';
 
 const LazyInput = lazy(() => import('./Input'));
 

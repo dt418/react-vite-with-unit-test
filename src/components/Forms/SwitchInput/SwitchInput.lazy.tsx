@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { SwitchInputProps } from './SwitchInput';
+import type { SwitchInputProps } from './SwitchInput';
 
 const LazySwitchInput = lazy(() => import('./SwitchInput'));
 

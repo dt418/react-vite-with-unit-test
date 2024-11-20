@@ -51,13 +51,13 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
 
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <span>
-                    {row.criterion == 0
+                    {row.criterion === 0
                       ? 'goes down by'
-                      : row.criterion == 1
+                      : row.criterion === 1
                         ? 'goes up by'
-                        : row.criterion == 2
+                        : row.criterion === 2
                           ? 'is smaller than'
-                          : row.criterion == 3
+                          : row.criterion === 3
                             ? 'is greater than'
                             : 'is equal to'}
                   </span>
@@ -67,9 +67,9 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <span>
-                    {row.type == 0
+                    {row.type === 0
                       ? 'Info'
-                      : row.type == 1
+                      : row.type === 1
                         ? 'Warning'
                         : 'Alert'}
                   </span>

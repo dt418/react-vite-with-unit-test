@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { SidebarProps } from './Sidebar';
+import type { SidebarProps } from './Sidebar';
 
 const LazySidebar = lazy(() => import('./Sidebar'));
 

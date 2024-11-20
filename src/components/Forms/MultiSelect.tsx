@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import type React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type Option = {
   value: string;
@@ -23,11 +24,11 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
       const select = document.getElementById(id) as HTMLSelectElement | null;
       if (select) {
         const newOptions: Option[] = [];
-        for (let i = 0; i < select.options.length; i++) {
+        for (const option of Array.from(select.options)) {
           newOptions.push({
-            value: select.options[i].value,
-            text: select.options[i].innerText,
-            selected: select.options[i].hasAttribute('selected'),
+            value: option.value,
+            text: option.textContent || '',
+            selected: option.hasAttribute('selected'),
           });
         }
         setOptions(newOptions);

@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import CardDataStats from '@/components/CardDataStats';
 import ChartOne from '@/components/Charts/ChartOne';

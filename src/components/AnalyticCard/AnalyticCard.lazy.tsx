@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { AnalyticCardProps } from './AnalyticCard';
+import type { AnalyticCardProps } from './AnalyticCard';
 
 const LazyAnalyticCard = lazy(() => import('./AnalyticCard'));
 

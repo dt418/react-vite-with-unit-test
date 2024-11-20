@@ -1,5 +1,5 @@
 import { worldMill } from '@react-jvectormap/world';
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import WorldMap from './WorldMap';
 

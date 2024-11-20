@@ -1,6 +1,6 @@
-import { ApexOptions } from 'apexcharts';
+import type { ApexOptions } from 'apexcharts';
 
-import { AnalyticCardProps } from '@/components/AnalyticCard/AnalyticCard';
+import type { AnalyticCardProps } from '@/components/AnalyticCard/AnalyticCard';
 
 export type VisitorData = {
   date: number;

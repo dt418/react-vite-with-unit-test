@@ -1,5 +1,6 @@
-import { ApexOptions } from 'apexcharts';
-import React, { useState } from 'react';
+import type { ApexOptions } from 'apexcharts';
+import type React from 'react';
+import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const options: ApexOptions = {

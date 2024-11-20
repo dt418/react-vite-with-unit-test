@@ -1,6 +1,7 @@
 import { VectorMap } from '@react-jvectormap/core';
-import { IVectorMapProps } from '@react-jvectormap/core/dist/types';
-import React, { HTMLAttributes, memo } from 'react';
+import type { IVectorMapProps } from '@react-jvectormap/core/dist/types';
+import type React from 'react';
+import { type HTMLAttributes, memo } from 'react';
 
 export type WorldMapProps = HTMLAttributes<HTMLDivElement> &
   IVectorMapProps & {

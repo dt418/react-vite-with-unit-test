@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { LabelProps } from './Label';
+import type { LabelProps } from './Label';
 
 const LazyLabel = lazy(() => import('./Label'));
 

@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
-import { AvatarProps } from './Avatar';
+import type { AvatarProps } from './Avatar';
 
 const LazyAvatar = lazy(() => import('./Avatar'));
 

@@ -1,5 +1,5 @@
 import * as RadixAccordion from '@radix-ui/react-accordion';
-import { FC, forwardRef, HTMLProps } from 'react';
+import { type FC, type HTMLProps, forwardRef } from 'react';
 import { RxChevronDown } from 'react-icons/rx';
 
 import { cn } from '@/utils/cn';
@@ -87,9 +87,9 @@ const Accordion: FC<AccordionProps> = ({ items = [], className, type }) => {
         className,
       )}
     >
-      {items?.map((item, index) => (
+      {items?.map((item) => (
         <AccordionItem
-          key={index}
+          key={item.value}
           title={item.title}
           value={item.value}
           content={item.content}

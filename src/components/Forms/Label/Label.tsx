@@ -1,4 +1,5 @@
-import React, { LabelHTMLAttributes } from 'react';
+import type React from 'react';
+import type { LabelHTMLAttributes } from 'react';
 
 import { cn } from '@/utils/cn';
 

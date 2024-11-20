@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Badge, { BageVariant } from './Badge';
+import Badge, { type BageVariant } from './Badge';
 
 const variants: BageVariant[] = [
   'gray',

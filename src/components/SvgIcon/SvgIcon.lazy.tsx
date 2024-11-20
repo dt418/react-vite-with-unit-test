@@ -1,6 +1,6 @@
-import { forwardRef, lazy, Suspense } from 'react';
+import { Suspense, forwardRef, lazy } from 'react';
 
-import { SvgIconProps } from './SvgIcon';
+import type { SvgIconProps } from './SvgIcon';
 
 const LazySvgIcon = lazy(() => import('./SvgIcon'));
 

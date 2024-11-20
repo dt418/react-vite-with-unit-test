@@ -1,4 +1,4 @@
-import { memo, ReactNode, useState } from 'react';
+import { type ReactNode, memo, useState } from 'react';
 
 type SidebarLinkGroupProps = {
   children: (handleClick: () => void, open: boolean) => ReactNode;
