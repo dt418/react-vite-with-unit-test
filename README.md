@@ -116,6 +116,11 @@ bun test
 bun storybook
 ```
 
+5. Generate components:
+```bash
+bun generate
+```
+
 ## Scripts
 
 - `dev` - Start development server
