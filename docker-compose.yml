@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./.git:/app/.git
+    environment:
+      - NODE_ENV=development
+      - HUSKY=0
+    command: ["bun", "run", "dev", "--host"]
+    stdin_open: true
+    tty: true
+
+  storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6006:6006"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./.git:/app/.git
+    environment:
+      - NODE_ENV=development
+      - HUSKY=0
+    command: ["bun", "run", "storybook", "--ci"]
+    stdin_open: true
+    tty: true
