@@ -1,71 +1,70 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Storybook + Testing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a modern React setup with TypeScript, Vite, Storybook, and comprehensive testing capabilities. It includes hot module replacement (HMR), Biome setup, and various development tools for an optimal development experience.
 
-Currently, two official plugins are available:
+## Features
 
+- ⚡️ [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- ⚛️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces
+- 📝 [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- 📚 [Storybook](https://storybook.js.org/) - UI component development environment
+- 🧪 [Vitest](https://vitest.dev/) - Unit testing framework
+- 💅 [Biome](https://biomejs.dev/) - Code formatting, linting
+- 🪝 [Lefthook](https://github.com/evilmartians/lefthook) - Git hooks manager
+- 📱 PWA Support
+- 🏗️ [Plop](https://plopjs.com/) - Code generator to generate component with test and storybook
+
+## Development Tools
+
+### Vite Plugins
+
+Two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### VS Code Extensions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-## Tailwindcss config
-
-Add [.vscode/settings](/.vscode/settings.json)
-
-```json
-{
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "tailwindCSS.experimental.classRegex": [
-    [
-      "clsx\\(([^)]*)\\)",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)",
-      ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-      ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-    ]
-  ],
-  "files.associations": {
-    "*.css": "tailwindcss"
-  }
-}
-```
-
-Install vscode extendsion to support tailwindcss auto complete and linting
-
+Install these VS Code extensions for the best development experience:
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
-Config vitest
-Create vitest.config.ts
+## Configuration
+
+### Biome Configuration
+
+The project uses Biome for code formatting and linting. Configuration is in `biome.json`:
+
+See [biome.json](./biome.json) for the configuration.
+
+You can run Biome formatting and linting using:
+```bash
+bun biome check .
+bun biome format .
+```
+
+### VS Code Settings
+
+Add these settings to `.vscode/settings.json`:
+
+```json
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "quickFix.biome": "explicit",
+        "source.fixAll.biome": "explicit",
+        "source.organizeImports.biome": "explicit",
+        "source.removeUnusedImports": "explicit"
+    },
+    "[javascript,javascriptreact,typescript,typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    }
+}
+```
+
+### Testing Configuration
+
+The project uses Vitest for testing. Configuration is in `vitest.config.ts`:
 
 ```ts
 import react from '@vitejs/plugin-react-swc';
@@ -84,14 +83,51 @@ export default defineConfig({
 });
 ```
 
-Include `test/vitest.setup.ts` into [tsconfig.app.json](./tsconfig.app.json) to load `js-dom` test global
+Make sure to include test setup files in `tsconfig.app.json`:
 
 ```json
 {
-  //existing config
   "include": [
-    //existing include,
+    // existing includes
     "tests/vitest.setup.ts"
   ]
 }
 ```
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+bun install
+```
+
+2. Start the development server:
+```bash
+bun dev
+```
+
+3. Run tests:
+```bash
+bun test
+```
+
+4. Start Storybook:
+```bash
+bun storybook
+```
+
+## Scripts
+
+- `dev` - Start development server
+- `build` - Build for production
+- `preview` - Preview production build
+- `test` - Run tests
+- `storybook` - Start Storybook
+- `build-storybook` - Build Storybook
+- `lint` - Lint code
+- `format` - Format code
+- `generate` - Run plop generators
+
+## License
+
+MIT
