@@ -25,9 +25,7 @@
     "build-icons": "node scripts/createIconNameTypes.mjs",
     "prepreview": "bun run build",
     "chromatic": "npx chromatic",
-    "prepare": "lefthook install",
-    "pre-commit": "lefthook pre-commit",
-    "pre-push": "lefthook pre-push"
+    "prepare": "lefthook install"
   },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
