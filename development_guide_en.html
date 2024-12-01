@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Development and Deployment Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { 
+            color: #1a365d;
+            border-bottom: 2px solid #2c5282;
+            padding-bottom: 10px;
+        }
+        h2 { 
+            color: #2c5282;
+            margin-top: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+        h3 { 
+            color: #2d3748;
+            margin-top: 25px;
+        }
+        code {
+            background: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            color: #2d3748;
+        }
+        pre {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Development and Deployment Guide</h1>
+
+<h2>Table of Contents</h2>
+<ol>
+    <li><a href="#system-requirements">System Requirements</a></li>
+    <li><a href="#installation-setup">Installation and Setup</a></li>
+    <li><a href="#development-process">Development Process</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#rules-standards">Rules and Standards</a></li>
+</ol>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<ul>
+    <li>Node.js (latest version)</li>
+    <li>Bun Runtime</li>
+    <li>Git</li>
+    <li>VS Code (recommended)</li>
+</ul>
+
+<h3>Required VS Code Extensions</h3>
+<ul>
+    <li>Tailwind CSS IntelliSense</li>
+    <li>ES7+ React/Redux/React-Native snippets</li>
+    <li>Biome Extension</li>
+</ul>
+
+<h2 id="installation-setup">Installation and Setup</h2>
+
+<ol>
+    <li>
+        <p>Clone the project:</p>
+        <pre><code>git clone [repository-url]
+cd react-vite-with-unit-test</code></pre>
+    </li>
+    <li>
+        <p>Install dependencies:</p>
+        <pre><code>bun install</code></pre>
+    </li>
+    <li>
+        <p>Environment setup:</p>
+        <ul>
+            <li>Copy <code>.env.example</code> to <code>.env.development</code></li>
+            <li>Update necessary environment variables</li>
+        </ul>
+    </li>
+    <li>
+        <p>Set up Git hooks:</p>
+        <pre><code>bun prepare</code></pre>
+    </li>
+</ol>
+
+<h2 id="development-process">Development Process</h2>
+
+<h3>1. Start Development Environment</h3>
+<pre><code>bun dev</code></pre>
+
+<h3>2. Component Development</h3>
+<ol>
+    <li>
+        <p>Create new component:</p>
+        <pre><code>bun generate</code></pre>
+    </li>
+    <li>
+        <p>Develop in Storybook:</p>
+        <pre><code>bun storybook</code></pre>
+    </li>
+</ol>
+
+<h3>3. Coding Workflow</h3>
+<ol>
+    <li>
+        <p>Create new branch:</p>
+        <pre><code>git checkout -b feature/feature-name</code></pre>
+    </li>
+    <li>
+        <p>Format code before committing:</p>
+        <pre><code>bun format
+bun lint</code></pre>
+    </li>
+    <li>
+        <p>Check code:</p>
+        <pre><code>bun check</code></pre>
+    </li>
+</ol>
+
+<h2 id="testing">Testing</h2>
+
+<h3>1. Unit Tests</h3>
+<pre><code># Run all tests
+bun test
+
+# Run tests in watch mode
+bun test:watch
+
+# Check coverage
+bun test:coverage</code></pre>
+
+<h3>2. Storybook Tests</h3>
+<pre><code># Run Storybook
+bun storybook
+
+# Build Storybook
+bun build-storybook</code></pre>
+
+<h2 id="deployment">Deployment</h2>
+
+<h3>1. Production Build</h3>
+<pre><code>bun build</code></pre>
+
+<h3>2. Preview Build</h3>
+<pre><code>bun preview</code></pre>
+
+<h3>3. Docker Deployment</h3>
+<pre><code># Build Docker image
+docker build -t react-vite-app .
+
+# Run container
+docker run -p 8080:80 react-vite-app</code></pre>
+
+<h2 id="rules-standards">Rules and Standards</h2>
+
+<h3>1. Code Style</h3>
+<ul>
+    <li>Use Biome for formatting and linting</li>
+    <li>Follow TypeScript strict mode</li>
+    <li>Use functional components and hooks</li>
+</ul>
+
+<h3>2. Git Commit</h3>
+<ul>
+    <li>Use conventional commits</li>
+    <li>Each commit must pass all tests</li>
+    <li>Pre-commit hooks will check:
+        <ul>
+            <li>Code formatting</li>
+            <li>Linting</li>
+            <li>Type checking</li>
+            <li>Unit tests</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>3. Component Development</h3>
+<p>1. Directory Structure:</p>
+<pre><code>src/
+  ├── components/
+  │   ├── [ComponentName]/
+  │   │   ├── index.tsx
+  │   │   ├── [ComponentName].stories.tsx
+  │   │   └── [ComponentName].test.tsx
+  │   └── ...
+  ├── hooks/
+  ├── utils/
+  └── ...</code></pre>
+
+<p>2. Component Guidelines:</p>
+<ul>
+    <li>Use TypeScript interfaces for props</li>
+    <li>Implement error boundaries</li>
+    <li>Optimize performance with React.memo when necessary</li>
+    <li>Write stories for all cases</li>
+</ul>
+
+<h3>4. Testing Guidelines</h3>
+<ul>
+    <li>Minimum coverage: 80%</li>
+    <li>Test edge cases</li>
+    <li>Mock external dependencies</li>
+    <li>Follow testing-library best practices</li>
+</ul>
+
+<h3>5. Performance Optimization</h3>
+<ul>
+    <li>Lazy loading for routes</li>
+    <li>Code splitting</li>
+    <li>Image optimization</li>
+    <li>PWA implementation</li>
+</ul>
+
+<h2>CI/CD Pipeline</h2>
+<p>GitHub Actions workflow includes:</p>
+<ol>
+    <li>Build check</li>
+    <li>Unit tests</li>
+    <li>Storybook build</li>
+    <li>Docker image build</li>
+    <li>Deployment to staging/production</li>
+</ol>
+
+<h2>Monitoring and Logging</h2>
+<ol>
+    <li>Error tracking with Error Boundary</li>
+    <li>Performance monitoring</li>
+    <li>User analytics</li>
+</ol>
+
+<h2>Security Guidelines</h2>
+<ol>
+    <li>Dependency scanning</li>
+    <li>Regular updates</li>
+    <li>Security best practices</li>
+    <li>Environment variables management</li>
+</ol>
+
+<h2>Support</h2>
+<p>If you encounter issues:</p>
+<ol>
+    <li>Check documentation</li>
+    <li>Create an issue on GitHub</li>
+    <li>Contact team lead</li>
+</ol>
+
+</body>
+</html>

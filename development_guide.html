@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hướng Dẫn Phát Triển và Triển Khai</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { 
+            color: #1a365d;
+            border-bottom: 2px solid #2c5282;
+            padding-bottom: 10px;
+        }
+        h2 { 
+            color: #2c5282;
+            margin-top: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+        h3 { 
+            color: #2d3748;
+            margin-top: 25px;
+        }
+        code {
+            background: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            color: #2d3748;
+        }
+        pre {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hướng Dẫn Phát Triển và Triển Khai</h1>
+
+<h2>Mục Lục</h2>
+<ol>
+    <li><a href="#yeu-cau-he-thong">Yêu Cầu Hệ Thống</a></li>
+    <li><a href="#cai-dat-va-thiet-lap">Cài Đặt và Thiết Lập</a></li>
+    <li><a href="#quy-trinh-phat-trien">Quy Trình Phát Triển</a></li>
+    <li><a href="#kiem-thu">Kiểm Thử</a></li>
+    <li><a href="#trien-khai">Triển Khai</a></li>
+    <li><a href="#quy-tac-va-tieu-chuan">Quy Tắc và Tiêu Chuẩn</a></li>
+</ol>
+
+<h2 id="yeu-cau-he-thong">Yêu Cầu Hệ Thống</h2>
+
+<ul>
+    <li>Node.js (phiên bản mới nhất)</li>
+    <li>Bun Runtime</li>
+    <li>Git</li>
+    <li>VS Code (khuyến nghị)</li>
+</ul>
+
+<h3>VS Code Extensions Cần Thiết</h3>
+<ul>
+    <li>Tailwind CSS IntelliSense</li>
+    <li>ES7+ React/Redux/React-Native snippets</li>
+    <li>Biome Extension</li>
+</ul>
+
+<h2 id="cai-dat-va-thiet-lap">Cài Đặt và Thiết Lập</h2>
+
+<ol>
+    <li>
+        <p>Clone dự án:</p>
+        <pre><code>git clone [repository-url]
+cd react-vite-with-unit-test</code></pre>
+    </li>
+    <li>
+        <p>Cài đặt dependencies:</p>
+        <pre><code>bun install</code></pre>
+    </li>
+    <li>
+        <p>Thiết lập môi trường:</p>
+        <ul>
+            <li>Sao chép file <code>.env.example</code> thành <code>.env.development</code></li>
+            <li>Cập nhật các biến môi trường cần thiết</li>
+        </ul>
+    </li>
+    <li>
+        <p>Thiết lập Git hooks:</p>
+        <pre><code>bun prepare</code></pre>
+    </li>
+</ol>
+
+<h2 id="quy-trinh-phat-trien">Quy Trình Phát Triển</h2>
+
+<h3>1. Khởi Động Môi Trường Phát Triển</h3>
+<pre><code>bun dev</code></pre>
+
+<h3>2. Phát Triển Component</h3>
+<ol>
+    <li>
+        <p>Tạo component mới:</p>
+        <pre><code>bun generate</code></pre>
+    </li>
+    <li>
+        <p>Phát triển trong Storybook:</p>
+        <pre><code>bun storybook</code></pre>
+    </li>
+</ol>
+
+<h3>3. Quy Trình Code</h3>
+<ol>
+    <li>
+        <p>Tạo nhánh mới:</p>
+        <pre><code>git checkout -b feature/ten-tinh-nang</code></pre>
+    </li>
+    <li>
+        <p>Format code trước khi commit:</p>
+        <pre><code>bun format
+bun lint</code></pre>
+    </li>
+    <li>
+        <p>Kiểm tra code:</p>
+        <pre><code>bun check</code></pre>
+    </li>
+</ol>
+
+<h2 id="kiem-thu">Kiểm Thử</h2>
+
+<h3>1. Unit Tests</h3>
+<pre><code># Chạy tất cả tests
+bun test
+
+# Chạy tests với watch mode
+bun test:watch
+
+# Kiểm tra coverage
+bun test:coverage</code></pre>
+
+<h3>2. Storybook Tests</h3>
+<pre><code># Chạy Storybook
+bun storybook
+
+# Build Storybook
+bun build-storybook</code></pre>
+
+<h2 id="trien-khai">Triển Khai</h2>
+
+<h3>1. Build Production</h3>
+<pre><code>bun build</code></pre>
+
+<h3>2. Preview Build</h3>
+<pre><code>bun preview</code></pre>
+
+<h3>3. Docker Deployment</h3>
+<pre><code># Build Docker image
+docker build -t react-vite-app .
+
+# Run container
+docker run -p 8080:80 react-vite-app</code></pre>
+
+<h2 id="quy-tac-va-tieu-chuan">Quy Tắc và Tiêu Chuẩn</h2>
+
+<h3>1. Code Style</h3>
+<ul>
+    <li>Sử dụng Biome cho formatting và linting</li>
+    <li>Tuân thủ TypeScript strict mode</li>
+    <li>Sử dụng functional components và hooks</li>
+</ul>
+
+<h3>2. Git Commit</h3>
+<ul>
+    <li>Sử dụng conventional commits</li>
+    <li>Mỗi commit phải pass tất cả tests</li>
+    <li>Pre-commit hooks sẽ kiểm tra:
+        <ul>
+            <li>Code formatting</li>
+            <li>Linting</li>
+            <li>Type checking</li>
+            <li>Unit tests</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>3. Component Development</h3>
+<p>1. Tổ chức thư mục:</p>
+<pre><code>src/
+  ├── components/
+  │   ├── [ComponentName]/
+  │   │   ├── index.tsx
+  │   │   ├── [ComponentName].stories.tsx
+  │   │   └── [ComponentName].test.tsx
+  │   └── ...
+  ├── hooks/
+  ├── utils/
+  └── ...</code></pre>
+
+<p>2. Component Guidelines:</p>
+<ul>
+    <li>Sử dụng TypeScript interfaces cho props</li>
+    <li>Implement error boundaries</li>
+    <li>Tối ưu performance với React.memo khi cần thiết</li>
+    <li>Viết stories cho tất cả các cases</li>
+</ul>
+
+<h3>4. Testing Guidelines</h3>
+<ul>
+    <li>Coverage tối thiểu: 80%</li>
+    <li>Test các edge cases</li>
+    <li>Mock external dependencies</li>
+    <li>Sử dụng testing-library best practices</li>
+</ul>
+
+<h3>5. Performance Optimization</h3>
+<ul>
+    <li>Lazy loading cho routes</li>
+    <li>Code splitting</li>
+    <li>Image optimization</li>
+    <li>PWA implementation</li>
+</ul>
+
+<h2>CI/CD Pipeline</h2>
+<p>GitHub Actions workflow bao gồm:</p>
+<ol>
+    <li>Build check</li>
+    <li>Unit tests</li>
+    <li>Storybook build</li>
+    <li>Docker image build</li>
+    <li>Deployment to staging/production</li>
+</ol>
+
+<h2>Monitoring và Logging</h2>
+<ol>
+    <li>Error tracking với Error Boundary</li>
+    <li>Performance monitoring</li>
+    <li>User analytics</li>
+</ol>
+
+<h2>Security Guidelines</h2>
+<ol>
+    <li>Dependency scanning</li>
+    <li>Regular updates</li>
+    <li>Security best practices</li>
+    <li>Environment variables management</li>
+</ol>
+
+<h2>Support</h2>
+<p>Nếu có vấn đề:</p>
+<ol>
+    <li>Kiểm tra documentation</li>
+    <li>Tạo issue trên GitHub</li>
+    <li>Liên hệ team lead</li>
+</ol>
+
+</body>
+</html>
