@@ -1,6 +1,7 @@
 # Development and Deployment Guide
 
 ## Table of Contents
+
 1. [System Requirements](#system-requirements)
 2. [Installation and Setup](#installation-and-setup)
 3. [Development Process](#development-process)
@@ -16,6 +17,7 @@
 - VS Code (recommended)
 
 ### Required VS Code Extensions
+
 - Tailwind CSS IntelliSense
 - ES7+ React/Redux/React-Native snippets
 - Biome Extension
@@ -23,21 +25,25 @@
 ## Installation and Setup
 
 1. Clone the project:
+
 ```bash
 git clone [repository-url]
 cd react-vite-with-unit-test
 ```
 
 2. Install dependencies:
+
 ```bash
 bun install
 ```
 
 3. Environment setup:
+
 - Copy `.env.example` to `.env.development`
 - Update necessary environment variables
 
 4. Set up Git hooks:
+
 ```bash
 bun prepare
 ```
@@ -53,11 +59,13 @@ bun dev
 ### 2. Component Development
 
 1. Create new component:
+
 ```bash
 bun generate
 ```
 
 2. Develop in Storybook:
+
 ```bash
 bun storybook
 ```
@@ -65,17 +73,20 @@ bun storybook
 ### 3. Coding Workflow
 
 1. Create new branch:
+
 ```bash
 git checkout -b feature/feature-name
 ```
 
 2. Format code before committing:
+
 ```bash
 bun format
 bun lint
 ```
 
 3. Check code:
+
 ```bash
 bun check
 ```
@@ -150,6 +161,7 @@ docker run -p 8080:80 react-vite-app
 ### 3. Component Development
 
 1. Directory Structure:
+
 ```
 src/
   ├── components/
@@ -164,6 +176,7 @@ src/
 ```
 
 2. Component Guidelines:
+
 - Use TypeScript interfaces for props
 - Implement error boundaries
 - Optimize performance with React.memo when necessary
@@ -186,6 +199,7 @@ src/
 ## CI/CD Pipeline
 
 GitHub Actions workflow includes:
+
 1. Build check
 2. Unit tests
 3. Storybook build
@@ -208,6 +222,7 @@ GitHub Actions workflow includes:
 ## Support
 
 If you encounter issues:
+
 1. Check documentation
 2. Create an issue on GitHub
 3. Contact team lead

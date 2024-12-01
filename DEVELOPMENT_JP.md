@@ -1,6 +1,7 @@
 # 開発およびデプロイメントガイド
 
 ## 目次
+
 1. [システム要件](#システム要件)
 2. [インストールとセットアップ](#インストールとセットアップ)
 3. [開発プロセス](#開発プロセス)
@@ -16,6 +17,7 @@
 - VS Code（推奨）
 
 ### 必要なVS Code拡張機能
+
 - Tailwind CSS IntelliSense
 - ES7+ React/Redux/React-Native snippets
 - Biome Extension
@@ -23,21 +25,25 @@
 ## インストールとセットアップ
 
 1. プロジェクトのクローン:
+
 ```bash
 git clone [repository-url]
 cd react-vite-with-unit-test
 ```
 
 2. 依存関係のインストール:
+
 ```bash
 bun install
 ```
 
 3. 環境設定:
+
 - `.env.example`を`.env.development`にコピー
 - 必要な環境変数を更新
 
 4. Gitフックのセットアップ:
+
 ```bash
 bun prepare
 ```
@@ -53,11 +59,13 @@ bun dev
 ### 2. コンポーネント開発
 
 1. 新しいコンポーネントの作成:
+
 ```bash
 bun generate
 ```
 
 2. Storybookでの開発:
+
 ```bash
 bun storybook
 ```
@@ -65,17 +73,20 @@ bun storybook
 ### 3. コーディングワークフロー
 
 1. 新しいブランチの作成:
+
 ```bash
 git checkout -b feature/機能名
 ```
 
 2. コミット前のコードフォーマット:
+
 ```bash
 bun format
 bun lint
 ```
 
 3. コードチェック:
+
 ```bash
 bun check
 ```
@@ -150,6 +161,7 @@ docker run -p 8080:80 react-vite-app
 ### 3. コンポーネント開発
 
 1. ディレクトリ構造:
+
 ```
 src/
   ├── components/
@@ -164,6 +176,7 @@ src/
 ```
 
 2. コンポーネントガイドライン:
+
 - TypeScriptインターフェースでpropsを定義
 - エラーバウンダリーの実装
 - 必要に応じてReact.memoでパフォーマンス最適化
@@ -186,6 +199,7 @@ src/
 ## CI/CDパイプライン
 
 GitHub Actionsワークフローには以下が含まれます:
+
 1. ビルドチェック
 2. ユニットテスト
 3. Storybookビルド
@@ -208,6 +222,7 @@ GitHub Actionsワークフローには以下が含まれます:
 ## サポート
 
 問題が発生した場合:
+
 1. ドキュメントを確認
 2. GitHubでイシューを作成
 3. チームリーダーに連絡

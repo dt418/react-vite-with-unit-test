@@ -1,6 +1,7 @@
 # Hướng Dẫn Phát Triển và Triển Khai
 
 ## Mục Lục
+
 1. [Yêu Cầu Hệ Thống](#yêu-cầu-hệ-thống)
 2. [Cài Đặt và Thiết Lập](#cài-đặt-và-thiết-lập)
 3. [Quy Trình Phát Triển](#quy-trình-phát-triển)
@@ -16,6 +17,7 @@
 - VS Code (khuyến nghị)
 
 ### VS Code Extensions Cần Thiết
+
 - Tailwind CSS IntelliSense
 - ES7+ React/Redux/React-Native snippets
 - Biome Extension
@@ -23,21 +25,25 @@
 ## Cài Đặt và Thiết Lập
 
 1. Clone dự án:
+
 ```bash
 git clone [repository-url]
 cd react-vite-with-unit-test
 ```
 
 2. Cài đặt dependencies:
+
 ```bash
 bun install
 ```
 
 3. Thiết lập môi trường:
+
 - Sao chép file `.env.example` thành `.env.development`
 - Cập nhật các biến môi trường cần thiết
 
 4. Thiết lập Git hooks:
+
 ```bash
 bun prepare
 ```
@@ -53,11 +59,13 @@ bun dev
 ### 2. Phát Triển Component
 
 1. Tạo component mới:
+
 ```bash
 bun generate
 ```
 
 2. Phát triển trong Storybook:
+
 ```bash
 bun storybook
 ```
@@ -65,17 +73,20 @@ bun storybook
 ### 3. Quy Trình Code
 
 1. Tạo nhánh mới:
+
 ```bash
 git checkout -b feature/ten-tinh-nang
 ```
 
 2. Format code trước khi commit:
+
 ```bash
 bun format
 bun lint
 ```
 
 3. Kiểm tra code:
+
 ```bash
 bun check
 ```
@@ -150,6 +161,7 @@ docker run -p 8080:80 react-vite-app
 ### 3. Component Development
 
 1. Tổ chức thư mục:
+
 ```
 src/
   ├── components/
@@ -164,6 +176,7 @@ src/
 ```
 
 2. Component Guidelines:
+
 - Sử dụng TypeScript interfaces cho props
 - Implement error boundaries
 - Tối ưu performance với React.memo khi cần thiết
@@ -186,6 +199,7 @@ src/
 ## CI/CD Pipeline
 
 GitHub Actions workflow bao gồm:
+
 1. Build check
 2. Unit tests
 3. Storybook build
@@ -208,6 +222,7 @@ GitHub Actions workflow bao gồm:
 ## Support
 
 Nếu có vấn đề:
+
 1. Kiểm tra documentation
 2. Tạo issue trên GitHub
 3. Liên hệ team lead
