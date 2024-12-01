@@ -7,15 +7,14 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
-    "check": "bunx biome check",
-    "lint": "bunx biome lint",
-    "lint:fix": "bunx biome lint --write",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write .",
     "preview": "bunx --bun vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:docs": "storybook dev --docs",
     "build-storybook": "storybook build",
     "generate": "plop component",
-    "format": "bunx biome format --write",
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
@@ -25,19 +24,12 @@
     "build-icons": "node scripts/createIconNameTypes.mjs",
     "prepreview": "bun run build",
     "chromatic": "npx chromatic",
-    "prepare": "lefthook install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-      "biome check --files-ignore-unknown=true",
-      "biome check --write --no-errors-on-unmatched",
-      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
-      "biome check --write --unsafe --no-errors-on-unmatched",
-      "biome format --write --no-errors-on-unmatched",
-      "biome lint --write --no-errors-on-unmatched"
-    ],
-    "*": [
-      "biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+      "biome check --write",
+      "biome format --write"
     ]
   },
   "dependencies": {
@@ -111,7 +103,6 @@
     "globals": "^15.12.0",
     "husky": "^9.1.7",
     "jsdom": "^25.0.1",
-    "lefthook": "^1.8.4",
     "lint-staged": "^15.2.10",
     "msw": "^2.6.6",
     "plop": "^4.0.1",
@@ -135,9 +126,7 @@
     "workbox-window": "^7.3.0"
   },
   "msw": {
-    "workerDirectory": [
-      "public"
-    ]
+    "workerDirectory": ["public"]
   },
   "module": "index.ts"
 }
