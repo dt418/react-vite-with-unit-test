@@ -128,5 +128,6 @@
   "msw": {
     "workerDirectory": ["public"]
   },
-  "module": "index.ts"
+  "module": "index.ts",
+  "trustedDependencies": ["@biomejs/biome"]
 }
