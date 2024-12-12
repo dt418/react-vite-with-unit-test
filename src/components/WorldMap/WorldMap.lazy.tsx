@@ -5,8 +5,8 @@ import type { WorldMapProps } from './WorldMap';
 const LazyWorldMap = lazy(() => import('./WorldMap'));
 
 const WorldMapSkeleton = () => (
-  <div className="animate-pulse">
-    <div className="aspect-square max-h-[500px] w-full rounded bg-gray dark:bg-graydark"></div>
+  <div className='animate-pulse'>
+    <div className='aspect-square max-h-[500px] w-full rounded bg-gray dark:bg-graydark'></div>
   </div>
 );
 

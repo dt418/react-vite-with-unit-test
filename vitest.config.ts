@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import { configDefaults, defineConfig, UserConfig } from 'vitest/config';
+import { ViteUserConfig, configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [
@@ -19,7 +19,7 @@ export default defineConfig({
         },
       },
     }),
-  ] as UserConfig['plugins'],
+  ] as ViteUserConfig['plugins'],
   test: {
     globals: true,
     environment: 'jsdom',

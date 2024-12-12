@@ -6,14 +6,14 @@ const CheckboxThree = () => {
   return (
     <div>
       <label
-        htmlFor="checkboxLabelThree"
-        className="flex cursor-pointer select-none items-center"
+        htmlFor='checkboxLabelThree'
+        className='flex cursor-pointer select-none items-center'
       >
-        <div className="relative">
+        <div className='relative'>
           <input
-            type="checkbox"
-            id="checkboxLabelThree"
-            className="sr-only"
+            type='checkbox'
+            id='checkboxLabelThree'
+            className='sr-only'
             onChange={() => {
               setIsChecked(!isChecked);
             }}
@@ -29,16 +29,16 @@ const CheckboxThree = () => {
               }`}
             >
               <svg
-                className="size-3.5 stroke-current"
-                fill="none"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+                className='size-3.5 stroke-current'
+                fill='none'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M6 18L18 6M6 6l12 12'
                 ></path>
               </svg>
             </span>

@@ -48,22 +48,22 @@ const SwitchInput: React.FC<SwitchInputProps> = ({
   };
 
   return (
-    <div data-testid="switchInput" {...props}>
+    <div data-testid='switchInput' {...props}>
       <label
         aria-labelledby={idTemplate}
-        className="flex cursor-pointer select-none items-center"
+        className='flex cursor-pointer select-none items-center'
       >
-        <div className="relative">
+        <div className='relative'>
           <input
-            type="checkbox"
+            type='checkbox'
             id={idTemplate}
-            className="sr-only"
+            className='sr-only'
             // when the switch is toggled, update the enabled state and re-render
             // the component with the new state
             onChange={handleChangeEnable}
             value={String(enabled)}
           />
-          <div className="block h-8 w-14 rounded-full bg-meta-9 dark:bg-[#5A616B]"></div>
+          <div className='block h-8 w-14 rounded-full bg-meta-9 dark:bg-[#5A616B]'></div>
           <div
             className={cn(
               'absolute left-1 top-1 flex size-6 items-center justify-center rounded-full bg-white transition',
@@ -82,7 +82,7 @@ const SwitchInput: React.FC<SwitchInputProps> = ({
           </div>
         </div>
         {label && (
-          <span className="ml-3 text-black dark:text-white">{label}</span>
+          <span className='ml-3 text-black dark:text-white'>{label}</span>
         )}
       </label>
     </div>

@@ -14,26 +14,26 @@ type TableProps<TRow> = {
 };
 export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
   return (
-    <div className="max-w-full overflow-x-auto">
-      <table className="table">
+    <div className='max-w-full overflow-x-auto'>
+      <table className='table'>
         <thead>
-          <tr className="bg-gray-2 text-left dark:bg-meta-4">
-            <th className="min-w-[220px] p-4 font-medium text-black dark:text-white xl:pl-11">
+          <tr className='bg-gray-2 text-left dark:bg-meta-4'>
+            <th className='min-w-[220px] p-4 font-medium text-black dark:text-white xl:pl-11'>
               Bond
             </th>
-            <th className="min-w-[150px] p-4 font-medium text-black dark:text-white">
+            <th className='min-w-[150px] p-4 font-medium text-black dark:text-white'>
               Paramter
             </th>
-            <th className="p-4 font-medium text-black dark:text-white">
+            <th className='p-4 font-medium text-black dark:text-white'>
               Criterion
             </th>
-            <th className="p-4 font-medium text-black dark:text-white">
+            <th className='p-4 font-medium text-black dark:text-white'>
               Value to give alert
             </th>
-            <th className="p-4 font-medium text-black dark:text-white">
+            <th className='p-4 font-medium text-black dark:text-white'>
               Alert type
             </th>
-            <th className="p-4 font-medium text-black dark:text-white">
+            <th className='p-4 font-medium text-black dark:text-white'>
               Actions
             </th>
           </tr>
@@ -41,15 +41,15 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
         <tbody>
           {rows.map((row: TableRow, idx: number) => {
             return (
-              <tr key={idx} className="content-center">
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+              <tr key={idx} className='content-center'>
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
                   {row.id}
                 </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
                   <span>{row.para}</span>
                 </td>
 
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
                   <span>
                     {row.criterion === 0
                       ? 'goes down by'
@@ -62,10 +62,10 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
                             : 'is equal to'}
                   </span>
                 </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
                   {row.value}
                 </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
                   <span>
                     {row.type === 0
                       ? 'Info'
@@ -75,15 +75,15 @@ export const Table = ({ rows, deleteRow, editRow }: TableProps<TableRow>) => {
                   </span>
                 </td>
 
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <span className="flex grid-cols-2 gap-4">
+                <td className='border-b border-[#eee] px-4 py-5 dark:border-strokedark'>
+                  <span className='flex grid-cols-2 gap-4'>
                     <BsFillTrashFill
-                      className="cursor-pointer"
+                      className='cursor-pointer'
                       onClick={() => deleteRow(idx)}
                     />
 
                     <BsFillPencilFill
-                      className="cursor-pointer"
+                      className='cursor-pointer'
                       onClick={() => editRow(idx)}
                     />
                   </span>

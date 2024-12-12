@@ -7,7 +7,7 @@ import Label from './Label';
 
 describe('<Label />', () => {
   test('renders label with required prop', () => {
-    render(<Label label="Test Label" htmlFor="test" required />);
+    render(<Label label='Test Label' htmlFor='test' required />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
     expect(label).toHaveClass('mb-3 block text-black dark:text-white');
@@ -15,7 +15,7 @@ describe('<Label />', () => {
   });
 
   test('renders label without required prop', () => {
-    render(<Label label="Test Label" htmlFor="test" />);
+    render(<Label label='Test Label' htmlFor='test' />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
     expect(label).toHaveClass('mb-3 block text-black dark:text-white');
@@ -25,7 +25,7 @@ describe('<Label />', () => {
   test('renders label with custom className', () => {
     const customClassName = 'mt-2';
     render(
-      <Label label="Test Label" htmlFor="test" className={customClassName} />,
+      <Label label='Test Label' htmlFor='test' className={customClassName} />,
     );
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
@@ -35,14 +35,14 @@ describe('<Label />', () => {
   });
 
   test('renders label with htmlFor prop', () => {
-    render(<Label label="Test Label" htmlFor="test-input" />);
+    render(<Label label='Test Label' htmlFor='test-input' />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
     expect(label).toHaveAttribute('for', 'test-input');
   });
 
   test('renders label with label prop', () => {
-    render(<Label label="Test Label" htmlFor="test" />);
+    render(<Label label='Test Label' htmlFor='test' />);
     const label = screen.getByTestId('label');
     expect(label).toBeInTheDocument();
     expect(label).toHaveTextContent('Test Label');

@@ -20,7 +20,8 @@
       "./biome.json",
       "./package.json",
       "./tsconfig.json",
-      "./vite.config.ts"
+      "./vite.config.ts",
+      "./vitest.config.ts"
     ]
   },
   "formatter": {
@@ -115,7 +116,7 @@
   },
   "javascript": {
     "formatter": {
-      "jsxQuoteStyle": "double",
+      "jsxQuoteStyle": "single",
       "quoteProperties": "asNeeded",
       "trailingCommas": "all",
       "semicolons": "always",

@@ -10,7 +10,7 @@ describe('<ErrorMessage />', () => {
   });
 
   test('renders error message with id and class name when error is truthy', () => {
-    render(<ErrorMessage error="Test error" id="test-id" />);
+    render(<ErrorMessage error='Test error' id='test-id' />);
     const errorMessage = screen.getByTestId('errorMessage');
     expect(errorMessage).toBeInTheDocument();
     expect(errorMessage).toHaveAttribute('id', 'test-id');
@@ -18,13 +18,13 @@ describe('<ErrorMessage />', () => {
   });
 
   test('renders children when provided', () => {
-    render(<ErrorMessage error="Test error">Test children</ErrorMessage>);
+    render(<ErrorMessage error='Test error'>Test children</ErrorMessage>);
     const errorMessage = screen.getByTestId('errorMessage');
     expect(errorMessage).toHaveTextContent('Test children');
   });
 
   test('renders error message when children are not provided', () => {
-    render(<ErrorMessage error="Test error" />);
+    render(<ErrorMessage error='Test error' />);
     const errorMessage = screen.getByTestId('errorMessage');
     expect(errorMessage).toHaveTextContent('Test error');
   });

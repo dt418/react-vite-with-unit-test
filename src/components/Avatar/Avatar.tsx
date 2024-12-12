@@ -56,7 +56,7 @@ const Avatar: React.FC<AvatarProps> = ({
 }) => {
   return (
     <div
-      data-testid="avatar"
+      data-testid='avatar'
       className={cn(avatarVariants({ size }), { relative: isPusle })}
     >
       <img src={src} alt={alt} {...rest} />

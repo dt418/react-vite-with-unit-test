@@ -10,7 +10,7 @@ describe('<SwitchInput />', () => {
   });
 
   it('renders with label', () => {
-    render(<SwitchInput label="Toggle me" />);
+    render(<SwitchInput label='Toggle me' />);
     expect(screen.getByText('Toggle me')).toBeInTheDocument();
   });
 
@@ -22,13 +22,13 @@ describe('<SwitchInput />', () => {
   });
 
   it('has correct id', () => {
-    render(<SwitchInput id="switch-input" />);
+    render(<SwitchInput id='switch-input' />);
     const label = screen.getByTestId('switchInput');
     expect(label).toHaveAttribute('id', 'switch-input');
   });
 
   it('applies className and style props', () => {
-    render(<SwitchInput className="mt-2" style={{ color: 'red' }} />);
+    render(<SwitchInput className='mt-2' style={{ color: 'red' }} />);
     const component = screen.getByTestId('switchInput');
     expect(component).toHaveClass('mt-2');
     expect(component).toHaveStyle('color: rgb(255, 0, 0)');

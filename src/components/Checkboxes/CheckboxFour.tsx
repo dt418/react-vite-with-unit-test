@@ -6,14 +6,14 @@ const CheckboxFour = () => {
   return (
     <div>
       <label
-        htmlFor="checkboxLabelFour"
-        className="flex cursor-pointer select-none items-center"
+        htmlFor='checkboxLabelFour'
+        className='flex cursor-pointer select-none items-center'
       >
-        <div className="relative">
+        <div className='relative'>
           <input
-            type="checkbox"
-            id="checkboxLabelFour"
-            className="sr-only"
+            type='checkbox'
+            id='checkboxLabelFour'
+            className='sr-only'
             onChange={() => {
               setIsChecked(!isChecked);
             }}

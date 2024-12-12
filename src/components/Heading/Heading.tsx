@@ -61,7 +61,7 @@ const Heading: React.FC<HeadingProps> = ({
   const Tag = as as keyof JSX.IntrinsicElements;
   return (
     <Tag
-      data-testid="heading"
+      data-testid='heading'
       className={cn(heading({ as, weight, color, margin }))}
     >
       {children}

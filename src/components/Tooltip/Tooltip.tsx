@@ -105,13 +105,13 @@ const Tooltip: React.FC<TooltipProps> = ({
       {/* Renders the tooltip if it is open */}
       {isOpen && content && (
         <div
-          data-testid="tooltip"
+          data-testid='tooltip'
           ref={setFloating}
           style={{ ...floatingStyles, zIndex: 1 }}
           {...getFloatingProps()}
         >
           <div
-            data-testid="tooltip-container"
+            data-testid='tooltip-container'
             style={transitionStyles}
             className={cn('max-w-80 rounded-md bg-black p-4 text-white')}
           >
@@ -121,8 +121,8 @@ const Tooltip: React.FC<TooltipProps> = ({
               height={8}
               ref={arrowRef}
               context={context}
-              className="fill-black"
-              data-testid="tooltip-arrow"
+              className='fill-black'
+              data-testid='tooltip-arrow'
             />
             {/* Renders the content of the tooltip */}
             {content}

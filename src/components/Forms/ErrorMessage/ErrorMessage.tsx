@@ -12,10 +12,10 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({ id, error, children }) => {
   if (!error) return null;
   return (
     <p
-      data-testid="errorMessage"
+      data-testid='errorMessage'
       id={id}
       className={cn('mt-2 text-sm text-red-600')}
-      role="alert"
+      role='alert'
     >
       {children || error}
     </p>

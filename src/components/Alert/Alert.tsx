@@ -86,9 +86,9 @@ const Alert: React.FC<AlertProps> = ({ title, message, type = 'info' }) => {
 
   const alertType = type ?? 'info';
   return (
-    <div data-testid="alert" className={alertClasses({ type })}>
+    <div data-testid='alert' className={alertClasses({ type })}>
       <div className={iconBgClasses({ type })}>{defaultIcons[alertType]}</div>
-      <div className="w-full">
+      <div className='w-full'>
         <h5 className={titleClasses({ type })}>{title}</h5>
         <p className={descriptionClasses({ type })}>{message}</p>
       </div>

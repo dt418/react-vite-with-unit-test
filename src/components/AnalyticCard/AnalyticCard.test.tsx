@@ -7,11 +7,11 @@ describe('<AnalyticCard />', () => {
   test('it should mount', () => {
     render(
       <AnalyticCard
-        title="Unique Visitors"
-        changeDirection="up"
+        title='Unique Visitors'
+        changeDirection='up'
         value={4350}
         changeRate={18}
-        unit="currency"
+        unit='currency'
       />,
     );
 

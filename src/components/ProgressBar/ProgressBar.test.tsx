@@ -35,7 +35,7 @@ describe('ProgressBar component', () => {
   it('renders progress bar with custom props (e.g. id, style)', () => {
     const color = 'red';
     const { getByTestId } = render(
-      <ProgressBar id="custom-id" style={{ backgroundColor: color }} />,
+      <ProgressBar id='custom-id' style={{ backgroundColor: color }} />,
     );
     const progressBar = getByTestId('progressBar');
 

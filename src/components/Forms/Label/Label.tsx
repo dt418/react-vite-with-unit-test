@@ -18,13 +18,13 @@ const Label: React.FC<LabelProps> = ({
 }) => {
   return (
     <label
-      data-testid="label"
+      data-testid='label'
       htmlFor={htmlFor}
       className={cn('mb-3 block text-black dark:text-white', className)}
       {...props}
     >
       {label}
-      {required && <span className="ml-1 text-red-500">*</span>}
+      {required && <span className='ml-1 text-red-500'>*</span>}
     </label>
   );
 };

@@ -7,9 +7,9 @@ describe('Input component', () => {
   test('renders the input with the correct attributes', () => {
     render(
       <Input
-        label="Test Label"
-        id="test-input"
-        helperText="Helper text"
+        label='Test Label'
+        id='test-input'
+        helperText='Helper text'
         required
       />,
     );
@@ -30,7 +30,7 @@ describe('Input component', () => {
 
   test('renders the helper text correctly', () => {
     render(
-      <Input label="Test Label" id="test-input" helperText="Helper text" />,
+      <Input label='Test Label' id='test-input' helperText='Helper text' />,
     );
 
     // Check if the helper text renders correctly

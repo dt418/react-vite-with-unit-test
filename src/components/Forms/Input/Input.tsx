@@ -34,7 +34,7 @@ const Input: React.FC<InputProps> = ({
         aria-invalid={!!error}
         aria-describedby={ariaDescribedBy || undefined}
         aria-required={required}
-        data-testid="input"
+        data-testid='input'
         className={cn(
           'w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500',
         )}
@@ -43,7 +43,7 @@ const Input: React.FC<InputProps> = ({
       {helperText && !error && (
         <p
           id={helperTextId}
-          className="mt-2 text-sm text-gray dark:text-gray-2"
+          className='mt-2 text-sm text-gray dark:text-gray-2'
         >
           {helperText}
         </p>

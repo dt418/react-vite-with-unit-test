@@ -7,7 +7,7 @@ describe('<Accordion />', () => {
   test('it should mount', () => {
     render(
       <Accordion
-        type="single"
+        type='single'
         items={[
           { value: '1', title: 'accordion 1', content: 'accordion content' },
         ]}

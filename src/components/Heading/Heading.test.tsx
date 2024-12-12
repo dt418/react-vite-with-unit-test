@@ -12,33 +12,33 @@ describe('Heading Component', () => {
   });
 
   it('renders with custom `as` prop', () => {
-    render(<Heading as="h2">Custom Heading Level 2</Heading>);
+    render(<Heading as='h2'>Custom Heading Level 2</Heading>);
     const heading = screen.getByText('Custom Heading Level 2');
     expect(heading.tagName).toBe('H2');
     expect(heading).toHaveClass('font-bold text-3xl text-black m-0');
   });
 
   it('renders with custom `weight` prop', () => {
-    render(<Heading weight="light">Light Weight Heading</Heading>);
+    render(<Heading weight='light'>Light Weight Heading</Heading>);
     const heading = screen.getByText('Light Weight Heading');
     expect(heading).toHaveClass('font-light');
   });
 
   it('renders with custom `color` prop', () => {
-    render(<Heading color="blue">Blue Heading</Heading>);
+    render(<Heading color='blue'>Blue Heading</Heading>);
     const heading = screen.getByText('Blue Heading');
     expect(heading).toHaveClass('text-blue-500');
   });
 
   it('renders with custom `margin` prop', () => {
-    render(<Heading margin="md">Heading with Margin</Heading>);
+    render(<Heading margin='md'>Heading with Margin</Heading>);
     const heading = screen.getByText('Heading with Margin');
     expect(heading).toHaveClass('m-4');
   });
 
   it('combines custom props correctly', () => {
     render(
-      <Heading as="h3" weight="medium" color="red" margin="lg">
+      <Heading as='h3' weight='medium' color='red' margin='lg'>
         Combined Props Heading
       </Heading>,
     );
