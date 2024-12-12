@@ -21,7 +21,8 @@
       "./package.json",
       "./tsconfig.json",
       "./vite.config.ts",
-      "./vitest.config.ts"
+      "./vitest.config.ts",
+      "./commitlint.config.js"
     ]
   },
   "formatter": {
