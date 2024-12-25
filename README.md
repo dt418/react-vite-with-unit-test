@@ -129,6 +129,10 @@ bun storybook
 bun generate
 ```
 
+## Storybook Guide
+
+For detailed instructions on setting up and using Storybook, refer to the [Storybook Guide](./STORYBOOK_GUIDE.md).
+
 ## Scripts
 
 - `dev` - Start development server
